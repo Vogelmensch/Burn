@@ -1,0 +1,15 @@
+# Ignore Everything
+/*
+
+
+# Except for...
+!.gitignore
+!README.md
+!ProjectSettings
+!Assets
+
+# In Assets, ignore packages from the Assetstore
+
+Assets/Assetstore
+Assets/Assetstore.meta
+
