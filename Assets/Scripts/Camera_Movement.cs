@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    private CharacterController controller;
+
     // Speed for camera movement
     public float movementSpeed = 10f;
 
@@ -10,6 +12,11 @@ public class CameraController : MonoBehaviour
 
     // Store the current rotation of the camera
     private Vector2 currentRotation = new Vector2(-63.973f, -6.016f);
+
+    void Start()
+    {
+        controller = GetComponent<CharacterController>();
+    }
 
     void Update()
     {
@@ -22,6 +29,7 @@ public class CameraController : MonoBehaviour
             HandleRotation();
         }
     }
+
 
     private void HandleMovement()
     {
@@ -40,11 +48,18 @@ public class CameraController : MonoBehaviour
             moveUp = -1f; // Move down
         }
 
+
         // Calculate the movement vector
         Vector3 movement = new Vector3(moveHorizontal, moveUp, moveVertical);
 
-        // Apply the movement to the camera
-        transform.Translate(movement * movementSpeed * Time.deltaTime, Space.Self);
+        movement = Quaternion.Euler(currentRotation.y, currentRotation.x, 0f) * movement;
+
+        // Don't Apply the movement to the camera
+        //transform.Translate(movement * movementSpeed * Time.deltaTime, Space.Self);
+
+        // Apply movement to Controller
+        controller.Move(movement * Time.deltaTime * movementSpeed);
+
     }
 
     private void HandleRotation()
