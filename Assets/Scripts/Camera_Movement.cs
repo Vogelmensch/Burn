@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
@@ -23,11 +24,9 @@ public class CameraController : MonoBehaviour
         // Handle movement
         HandleMovement();
 
-        // Handle rotation
-        if (Input.GetMouseButton(1)) // Right mouse button is pressed
-        {
-            HandleRotation();
-        }
+
+        HandleRotation();
+
     }
 
 
@@ -52,10 +51,14 @@ public class CameraController : MonoBehaviour
         // Calculate the movement vector
         Vector3 movement = new Vector3(moveHorizontal, moveUp, moveVertical);
 
-        movement = Quaternion.Euler(currentRotation.y, currentRotation.x, 0f) * movement;
+        movement = Quaternion.Euler(0, currentRotation.x, 0f) * movement;
 
-        // Don't Apply the movement to the camera
-        //transform.Translate(movement * movementSpeed * Time.deltaTime, Space.Self);
+        if (controller.isGrounded)
+        {
+            movement.y = 0;
+        } else {
+            movement.y = -5;
+        }
 
         // Apply movement to Controller
         controller.Move(movement * Time.deltaTime * movementSpeed);
@@ -64,9 +67,21 @@ public class CameraController : MonoBehaviour
 
     private void HandleRotation()
     {
-        // Get mouse movement
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = Input.GetAxis("Mouse Y");
+        float mouseX, mouseY;
+        // Use mouse if right mouse button is pressed
+        if (Input.GetMouseButton(1))
+        {
+            mouseX = Input.GetAxis("Mouse X");
+            mouseY = Input.GetAxis("Mouse Y");
+        }
+        // else, use Gamepad
+        else
+        {
+
+            mouseX = Gamepad.current.rightStick.x.ReadValue();
+            mouseY = Gamepad.current.rightStick.y.ReadValue();
+        }
+
 
         // Update rotation values
         currentRotation.x += mouseX * mouseSensitivity;
@@ -80,7 +95,8 @@ public class CameraController : MonoBehaviour
         transform.rotation = Quaternion.Euler(currentRotation.y, currentRotation.x, 0f);
 
         Camera.main.transform.rotation = Quaternion.Euler(currentRotation.y, currentRotation.x, 0);
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetMouseButtonDown(0))
+        {
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
