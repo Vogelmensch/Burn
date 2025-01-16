@@ -21644,7 +21644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1648492973}
-  distanceToPlayer: 1.5
+  distanceWhileCarrying: 1
 --- !u!54 &537852867
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -67255,6 +67255,7 @@ GameObject:
   - component: {fileID: 1648492975}
   - component: {fileID: 1648492974}
   - component: {fileID: 1648492982}
+  - component: {fileID: 1648492983}
   m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -67338,7 +67339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1305ec5accfb5374f866bfccfa777363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usingDavidsWhiteController: 1
+  usingDavidsWhiteController: 0
   movementSpeed: 4
   mouseSensitivity: 2
   controllerSensitivity: 30
@@ -67485,6 +67486,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1648492983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648492973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445ff1faa98d9e921825868cedf1fbd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceToPickUp: 5
 --- !u!1001 &1649640048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81037,7 +81051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1648492973}
-  distanceToPlayer: 1
+  distanceWhileCarrying: 1
 --- !u!1001 &2070107552
 PrefabInstance:
   m_ObjectHideFlags: 0
