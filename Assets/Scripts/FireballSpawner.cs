@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FireballSpawner : MonoBehaviour
 {
@@ -15,18 +16,25 @@ public class FireballSpawner : MonoBehaviour
     public float fireAccessRadius = 2f;
     public ThrowStrengthIndicator throwStrengthIndicator;
     private GameObject fireball;
-    private bool upPressed = false;
-    private bool downPressed = false;
-    readonly KeyCode upKey = KeyCode.U;
-    readonly KeyCode downKey = KeyCode.J;
+
+    // --- new actions :) ---
+    InputAction increaseStrengthAction;
+    InputAction decreaseStrengthAction;
+    InputAction throwAction;
+
+    void Start()
+    {
+        increaseStrengthAction = InputSystem.actions.FindAction("FireballIncrease");
+        decreaseStrengthAction = InputSystem.actions.FindAction("FireballDecrease");
+        throwAction = InputSystem.actions.FindAction("FireballThrow");
+    }
 
     // Update is called once per frame
     void Update()
     {
-        GetStrengthInput();
         ChangeStrength();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (throwAction.WasPressedThisFrame())
         {
             if (IsFireNearby(fireAccessRadius))
             {
@@ -41,29 +49,9 @@ public class FireballSpawner : MonoBehaviour
 
     }
 
-    void GetStrengthInput()
-    {
-        if (Input.GetKeyDown(upKey))
-        {
-            upPressed = true;
-        }
-        if (Input.GetKeyUp(upKey))
-        {
-            upPressed = false;
-        }
-        if (Input.GetKeyDown(downKey))
-        {
-            downPressed = true;
-        }
-        if (Input.GetKeyUp(downKey))
-        {
-            downPressed = false;
-        }
-    }
-
     void ChangeStrength()
     {
-        if (upPressed)
+        if (increaseStrengthAction.IsPressed())
         {
             forceStrength += (int)(forceChangeRate * Time.deltaTime);
             if (forceStrength > forceUpperLimit)
@@ -71,7 +59,7 @@ public class FireballSpawner : MonoBehaviour
                 forceStrength = forceUpperLimit; // Limit force strength
             }
         }
-        if (downPressed)
+        if (decreaseStrengthAction.IsPressed())
         {
             forceStrength -= (int)(forceChangeRate * Time.deltaTime);
             if (forceStrength < forceLowerLimit)
