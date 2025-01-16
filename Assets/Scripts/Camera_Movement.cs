@@ -1,9 +1,16 @@
+using System;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public class CameraController : MonoBehaviour
 {
     private CharacterController controller;
+
+    InputAction moveAction;
+    InputAction rotateAction;
+    public bool usingDavidsWhiteController = false;
 
     // Speed for camera movement
     public float movementSpeed = 10f;
@@ -11,12 +18,18 @@ public class CameraController : MonoBehaviour
     // Sensitivity for camera rotation
     public float mouseSensitivity = 2f;
 
+    public float controllerSensitivity = 2f;
+
     // Store the current rotation of the camera
     private Vector2 currentRotation = new Vector2(-63.973f, -6.016f);
+    private float lastRotation = 0; // used when playing with buggy controller :3
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        moveAction = InputSystem.actions.FindAction("Move");
+        rotateAction = InputSystem.actions.FindAction("Look");
     }
 
     void Update()
@@ -26,6 +39,7 @@ public class CameraController : MonoBehaviour
 
 
         HandleRotation();
+
 
     }
 
@@ -51,12 +65,21 @@ public class CameraController : MonoBehaviour
         // Calculate the movement vector
         Vector3 movement = new Vector3(moveHorizontal, moveUp, moveVertical);
 
+        movement.x = moveAction.ReadValue<Vector2>().x;
+        movement.y = moveAction.ReadValue<Vector2>().y;
+
+        // rotate
+        if (usingDavidsWhiteController)
+            movement = Quaternion.AngleAxis(lastRotation, Vector3.up) * movement;
+        else
         movement = Quaternion.Euler(0, currentRotation.x, 0f) * movement;
 
         if (controller.isGrounded)
         {
             movement.y = 0;
-        } else {
+        }
+        else
+        {
             movement.y = -5;
         }
 
@@ -67,6 +90,22 @@ public class CameraController : MonoBehaviour
 
     private void HandleRotation()
     {
+        if (usingDavidsWhiteController)
+        {
+            var gamepad = Joystick.current; // Oder Gamepad.current, falls es ein Gamepad ist
+            if (gamepad != null)
+            {
+                float rotateZ = gamepad.GetChildControl<AxisControl>("Z").ReadValue();
+
+                rotateZ *= Time.deltaTime * controllerSensitivity;
+
+                transform.Rotate(0, rotateZ, 0);
+                lastRotation = rotateZ;
+            }
+            return;
+        }
+
+
         float mouseX, mouseY;
         // Use mouse if right mouse button is pressed
         if (Input.GetMouseButton(1))
@@ -77,11 +116,10 @@ public class CameraController : MonoBehaviour
         // else, use Gamepad
         else
         {
-
-            mouseX = Gamepad.current.rightStick.x.ReadValue();
-            mouseY = Gamepad.current.rightStick.y.ReadValue();
+            Vector2 rotateValue = rotateAction.ReadValue<Vector2>();
+            mouseX = rotateValue.x;
+            mouseY = rotateValue.y;
         }
-
 
         // Update rotation values
         currentRotation.x += mouseX * mouseSensitivity;

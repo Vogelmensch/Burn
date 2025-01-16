@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class CarryAndShoot : MonoBehaviour
 {
+    private InputAction carryAction;
     private bool isBeingCarried = false;
     private Rigidbody rb;
     public GameObject playerCamera;
@@ -13,12 +15,14 @@ public class CarryAndShoot : MonoBehaviour
     void Start() 
     {
         rb = GetComponent<Rigidbody>();
+        
+        carryAction = InputSystem.actions.FindAction("Carry");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Joystick1Button4))
+        if (carryAction.WasPressedThisFrame())
         {
             isBeingCarried = !isBeingCarried;
         }

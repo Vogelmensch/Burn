@@ -67338,8 +67338,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1305ec5accfb5374f866bfccfa777363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usingDavidsWhiteController: 1
   movementSpeed: 4
   mouseSensitivity: 2
+  controllerSensitivity: 30
 --- !u!114 &1648492978
 MonoBehaviour:
   m_ObjectHideFlags: 0
