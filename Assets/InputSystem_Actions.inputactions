@@ -548,7 +548,7 @@
                 {
                     "name": "",
                     "id": "6e9819c9-94b5-4bfa-8dd4-98a828110f7d",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -735,10 +735,21 @@
                 {
                     "name": "",
                     "id": "b34b94c6-10ad-414c-a803-8b8323c93fb6",
-                    "path": "<Keyboard>/e",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
+                    "action": "ObjectShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f2fd4d9-e36c-4df7-96b9-9e091d2fc60e",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
                     "action": "ObjectShoot",
                     "isComposite": false,
                     "isPartOfComposite": false
