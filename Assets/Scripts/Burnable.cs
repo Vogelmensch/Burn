@@ -50,10 +50,10 @@ public class Burnable : MonoBehaviour
 
     protected virtual void Update()
     {
-        UpdateHelper(false);
+        UpdateHelper();
     }
 
-    protected void UpdateHelper(bool isWaterBarrel)
+    protected void UpdateHelper()
     {
         // Start fire
         if (temperature >= ignitionTemperature && !isOnFire) Ignite();
@@ -64,7 +64,7 @@ public class Burnable : MonoBehaviour
         // Destroy
         if (hitPoints <= 0)
         {
-            Explode(isWaterBarrel);
+            Explode();
         }
 
 
@@ -177,7 +177,7 @@ public class Burnable : MonoBehaviour
     }
 
     // If it's a water barrel, the child cubes shall not be ignited.
-    protected virtual void Explode(bool isWaterBarrel)
+    protected virtual void Explode()
     {
         Extinguish();
 
@@ -214,7 +214,7 @@ public class Burnable : MonoBehaviour
                     {
                         float randomNumber = UnityEngine.Random.Range(0.0f, 1.0f);
                         if (randomNumber < cubeSpawnChance)
-                            CreateCube(position, !isWaterBarrel);
+                            CreateCube(position);
                     }
                 }
             }
@@ -226,7 +226,7 @@ public class Burnable : MonoBehaviour
 
     // Create burning or non-burning cube
     // added non-burning for water-barrels
-    private void CreateCube(Vector3 position, bool isBurning)
+    private void CreateCube(Vector3 position)
     {
         GameObject cube = Instantiate(burningCubePrefab, position, Quaternion.identity);
         cube.transform.localScale = Vector3.one * cubeSize;
@@ -235,7 +235,7 @@ public class Burnable : MonoBehaviour
         if (burnable != null)
         {
             GeneralizedCubeDivider.allBurnables.Add(burnable); // Registriere den Cube in der globalen Liste
-            if (isBurning) burnable.Ignite();
+            burnable.Ignite();
         }
 
         Rigidbody rb = cube.GetComponent<Rigidbody>();

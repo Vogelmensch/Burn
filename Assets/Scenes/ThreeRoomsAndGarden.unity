@@ -42850,9 +42850,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
-  explosionPrefab: {fileID: 159918, guid: ab43b724dfd2e2b5783859da47cbbae0, type: 3}
-  isOil: 0
-  chanceToBeOil: 0.5
+  explosionPrefab: {fileID: 1478314613700728, guid: d179c319eefac10e4a5c7a62a1c5562a, type: 3}
   barrelExplosionRadius: 5
 --- !u!1001 &1042096476
 PrefabInstance:
@@ -74496,9 +74494,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
-  explosionPrefab: {fileID: 159918, guid: ab43b724dfd2e2b5783859da47cbbae0, type: 3}
-  isOil: 0
-  chanceToBeOil: 0.5
+  explosionPrefab: {fileID: 1478314613700728, guid: d179c319eefac10e4a5c7a62a1c5562a, type: 3}
   barrelExplosionRadius: 5
 --- !u!1001 &1867830624
 PrefabInstance:
@@ -79795,9 +79791,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
-  explosionPrefab: {fileID: 159918, guid: ab43b724dfd2e2b5783859da47cbbae0, type: 3}
-  isOil: 0
-  chanceToBeOil: 0.5
+  explosionPrefab: {fileID: 1478314613700728, guid: d179c319eefac10e4a5c7a62a1c5562a, type: 3}
   barrelExplosionRadius: 5
 --- !u!114 &2042990446
 MonoBehaviour:
