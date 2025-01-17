@@ -4584,7 +4584,7 @@ PrefabInstance:
       addedObject: {fileID: 641790394}
     - targetCorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 641790393}
+      addedObject: {fileID: 641790399}
   m_SourcePrefab: {fileID: 100100000, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
 --- !u!4 &28713419 stripped
 Transform:
@@ -6801,7 +6801,10 @@ PrefabInstance:
       addedObject: {fileID: 1349017425}
     - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1349017424}
+      addedObject: {fileID: 1349017430}
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1349017429}
   m_SourcePrefab: {fileID: 100100000, guid: 1302c983138d8344f81486021c92aa98, type: 3}
 --- !u!4 &107828499 stripped
 Transform:
@@ -7253,7 +7256,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1595453683}
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1595453682}
   m_SourcePrefab: {fileID: 100100000, guid: 1302c983138d8344f81486021c92aa98, type: 3}
 --- !u!4 &134948112 stripped
 Transform:
@@ -13720,7 +13729,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1788164506}
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1788164505}
   m_SourcePrefab: {fileID: 100100000, guid: 1302c983138d8344f81486021c92aa98, type: 3}
 --- !u!4 &316203411 stripped
 Transform:
@@ -14170,6 +14185,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4534264641828652, guid: 4663d5cca4ed98548946e758cd5979e2, type: 3}
   m_PrefabInstance: {fileID: 326596652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &328303970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+  m_PrefabInstance: {fileID: 1830175958}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &329366259
 PrefabInstance:
@@ -16236,7 +16256,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 444205952}
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 444205951}
   m_SourcePrefab: {fileID: 100100000, guid: 1302c983138d8344f81486021c92aa98, type: 3}
 --- !u!4 &388063938 stripped
 Transform:
@@ -16943,7 +16969,10 @@ PrefabInstance:
       addedObject: {fileID: 1628650722}
     - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1628650721}
+      addedObject: {fileID: 1628650727}
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1628650726}
   m_SourcePrefab: {fileID: 100100000, guid: 1302c983138d8344f81486021c92aa98, type: 3}
 --- !u!4 &416596444 stripped
 Transform:
@@ -17269,7 +17298,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
---- !u!114 &427542230
+--- !u!114 &427542234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17278,13 +17307,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 252090405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &427542235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252090405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &427694985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18039,13 +18088,54 @@ PrefabInstance:
       addedObject: {fileID: 1041667681}
     - targetCorrespondingSourceObject: {fileID: 1073511054060416, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1041667680}
+      addedObject: {fileID: 1041667687}
   m_SourcePrefab: {fileID: 100100000, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
 --- !u!4 &439218418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4597091527873500, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
   m_PrefabInstance: {fileID: 439218417}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &444205947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+  m_PrefabInstance: {fileID: 388063937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &444205951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444205947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &444205952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444205947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1 &445345026
 GameObject:
   m_ObjectHideFlags: 0
@@ -18941,7 +19031,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 760685527}
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 760685526}
   m_SourcePrefab: {fileID: 100100000, guid: 1302c983138d8344f81486021c92aa98, type: 3}
 --- !u!4 &466544330 stripped
 Transform:
@@ -25714,22 +25810,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
   m_PrefabInstance: {fileID: 28713418}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &641790393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641790389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &641790394
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25776,6 +25856,23 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
+--- !u!114 &641790399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641790389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &645209107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29048,6 +29145,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 75f355bbd6a4def47a15c78a9050ba98, type: 3}
   m_PrefabInstance: {fileID: 737106494}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &737139536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+  m_PrefabInstance: {fileID: 2012654042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &739440105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29829,6 +29931,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2931857212258991049, guid: 21c9e8ce59bd468438a5f5228271a913, type: 3}
   m_PrefabInstance: {fileID: 2128344156}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &760685522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+  m_PrefabInstance: {fileID: 466544329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &760685526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760685522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &760685527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760685522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &761490846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30411,7 +30554,10 @@ PrefabInstance:
       addedObject: {fileID: 1605698162}
     - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1605698161}
+      addedObject: {fileID: 1605698167}
+    - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1605698166}
   m_SourcePrefab: {fileID: 100100000, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
 --- !u!1001 &772112535
 PrefabInstance:
@@ -35911,7 +36057,7 @@ PrefabInstance:
       addedObject: {fileID: 1884797752}
     - targetCorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1884797751}
+      addedObject: {fileID: 1884797757}
   m_SourcePrefab: {fileID: 100100000, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
 --- !u!4 &837210934 stripped
 Transform:
@@ -36002,10 +36148,10 @@ PrefabInstance:
       addedObject: {fileID: 839388435}
     - targetCorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 839388434}
+      addedObject: {fileID: 839388441}
     - targetCorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 839388441}
+      addedObject: {fileID: 839388445}
   m_SourcePrefab: {fileID: 100100000, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
 --- !u!4 &839388431 stripped
 Transform:
@@ -36017,22 +36163,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
   m_PrefabInstance: {fileID: 839388430}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &839388434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839388432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &839388435
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -36098,6 +36228,23 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
+--- !u!114 &839388445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839388432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &842401782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42346,14 +42493,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1605645058656096, guid: 0dcc6c5952f817b4ba249a3772b04abe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1016294557}
+      addedObject: {fileID: 1016294562}
   m_SourcePrefab: {fileID: 100100000, guid: 0dcc6c5952f817b4ba249a3772b04abe, type: 3}
 --- !u!4 &1016294552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4208550900606004, guid: 0dcc6c5952f817b4ba249a3772b04abe, type: 3}
   m_PrefabInstance: {fileID: 1016294551}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1016294557
+--- !u!114 &1016294562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42362,12 +42509,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 16391612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Script: {fileID: 11500000, guid: c9806d8bca88a7994a575c1b64879f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: 
   burningCubePrefab: {fileID: 0}
-  hitPoints: 1e+9
+  hitPoints: 100
   explosionForce: 0
   explosionRadius: 4
   explosionUpward: 0.4
@@ -42506,7 +42653,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
---- !u!114 &1019057102
+--- !u!114 &1019057106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42515,13 +42662,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 1019057090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &1019057107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019057090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1019664390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43115,22 +43282,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1073511054060416, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
   m_PrefabInstance: {fileID: 439218417}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1041667680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041667675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1041667681
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43181,6 +43332,23 @@ MonoBehaviour:
   isOil: 0
   chanceToBeOil: 0.5
   barrelExplosionRadius: 5
+--- !u!114 &1041667687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041667675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1042096476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45125,7 +45293,10 @@ PrefabInstance:
       addedObject: {fileID: 1861527481}
     - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1861527482}
+      addedObject: {fileID: 1861527487}
+    - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1861527486}
   m_SourcePrefab: {fileID: 100100000, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
 --- !u!1 &1079622707 stripped
 GameObject:
@@ -46872,7 +47043,10 @@ PrefabInstance:
       addedObject: {fileID: 1890085430}
     - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1890085429}
+      addedObject: {fileID: 1890085435}
+    - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1890085434}
   m_SourcePrefab: {fileID: 100100000, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
 --- !u!1001 &1110583166
 PrefabInstance:
@@ -46955,10 +47129,10 @@ PrefabInstance:
       addedObject: {fileID: 1110583170}
     - targetCorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1110583169}
+      addedObject: {fileID: 1110583176}
     - targetCorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1110583176}
+      addedObject: {fileID: 1110583180}
   m_SourcePrefab: {fileID: 100100000, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
 --- !u!4 &1110583167 stripped
 Transform:
@@ -46970,22 +47144,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
   m_PrefabInstance: {fileID: 1110583166}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1110583169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110583168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1110583170
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -47032,6 +47190,23 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
+--- !u!114 &1110583180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110583168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1117325271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49865,7 +50040,10 @@ PrefabInstance:
       addedObject: {fileID: 1205865620}
     - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1205865619}
+      addedObject: {fileID: 1205865625}
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1205865624}
   m_SourcePrefab: {fileID: 100100000, guid: 1302c983138d8344f81486021c92aa98, type: 3}
 --- !u!4 &1205865614 stripped
 Transform:
@@ -49891,22 +50069,6 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
---- !u!114 &1205865619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381876746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1205865620
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -49934,6 +50096,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1205865624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381876746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &1205865625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381876746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1206254842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50283,7 +50481,10 @@ PrefabInstance:
       addedObject: {fileID: 427542229}
     - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 427542230}
+      addedObject: {fileID: 427542235}
+    - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 427542234}
   m_SourcePrefab: {fileID: 100100000, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
 --- !u!1001 &1210975235
 PrefabInstance:
@@ -55355,22 +55556,6 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
---- !u!114 &1349017424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349017419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1349017425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -55398,6 +55583,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1349017429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349017419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &1349017430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349017419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1357306345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60023,7 +60244,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
---- !u!114 &1481618830
+--- !u!114 &1481618834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60032,13 +60253,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 1481618818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &1481618835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481618818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1483621915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60373,7 +60614,10 @@ PrefabInstance:
       addedObject: {fileID: 1481618829}
     - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1481618830}
+      addedObject: {fileID: 1481618835}
+    - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1481618834}
   m_SourcePrefab: {fileID: 100100000, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
 --- !u!1001 &1491298818
 PrefabInstance:
@@ -64828,6 +65072,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0a3041dcda597954782f48ac8a97bf33, type: 3}
   m_PrefabInstance: {fileID: 1593688151}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1595453678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+  m_PrefabInstance: {fileID: 134948111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1595453682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595453678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &1595453683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595453678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!43 &1596226707
 Mesh:
   m_ObjectHideFlags: 0
@@ -65321,22 +65606,6 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
---- !u!114 &1605698161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605698156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1605698162
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -65364,6 +65633,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1605698166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605698156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &1605698167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605698156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1606139817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66706,22 +67011,6 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
---- !u!114 &1628650721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628650716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1628650722
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -66749,6 +67038,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1628650726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628650716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &1628650727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628650716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1629307690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67506,7 +67831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToPickUp: 5
-  shootingStrength: 1
+  shootingStrength: 50
 --- !u!1001 &1649640048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67805,7 +68130,10 @@ PrefabInstance:
       addedObject: {fileID: 1019057101}
     - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1019057102}
+      addedObject: {fileID: 1019057107}
+    - targetCorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1019057106}
   m_SourcePrefab: {fileID: 100100000, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
 --- !u!1001 &1658666114
 PrefabInstance:
@@ -71943,6 +72271,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: cba00f75539bc564fabb9136fccfac6c, type: 3}
   m_PrefabInstance: {fileID: 1786270014}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1788164501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+  m_PrefabInstance: {fileID: 316203410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1788164505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788164501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &1788164506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788164501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1793930616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73006,13 +73375,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1830175964}
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1830175963}
   m_SourcePrefab: {fileID: 100100000, guid: 1302c983138d8344f81486021c92aa98, type: 3}
 --- !u!4 &1830175959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 461458, guid: 1302c983138d8344f81486021c92aa98, type: 3}
   m_PrefabInstance: {fileID: 1830175958}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1830175963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328303970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &1830175964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328303970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1830822499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74677,7 +75088,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
---- !u!114 &1861527482
+--- !u!114 &1861527486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74686,13 +75097,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 1861527470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &1861527487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861527470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1861729363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74901,29 +75332,13 @@ PrefabInstance:
       addedObject: {fileID: 1867436590}
     - targetCorrespondingSourceObject: {fileID: 1073511054060416, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1867436589}
+      addedObject: {fileID: 1867436596}
   m_SourcePrefab: {fileID: 100100000, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
 --- !u!4 &1867436584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4597091527873500, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
   m_PrefabInstance: {fileID: 1867436583}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1867436589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791241194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1867436590
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -74974,6 +75389,23 @@ MonoBehaviour:
   isOil: 0
   chanceToBeOil: 0.5
   barrelExplosionRadius: 5
+--- !u!114 &1867436596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791241194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1867830624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75657,22 +76089,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
   m_PrefabInstance: {fileID: 837210933}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1884797751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884797747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1884797752
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -75719,6 +76135,23 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
+--- !u!114 &1884797757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884797747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1886854318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75869,29 +76302,13 @@ PrefabInstance:
       addedObject: {fileID: 1889163660}
     - targetCorrespondingSourceObject: {fileID: 1892356701372902, guid: 9b38a1021b7d3c1428119919344cbfa5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1889163659}
+      addedObject: {fileID: 1889163666}
   m_SourcePrefab: {fileID: 100100000, guid: 9b38a1021b7d3c1428119919344cbfa5, type: 3}
 --- !u!4 &1889163654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4729068536080232, guid: 9b38a1021b7d3c1428119919344cbfa5, type: 3}
   m_PrefabInstance: {fileID: 1889163653}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1889163659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548839897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1889163660
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -75938,6 +76355,23 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
+--- !u!114 &1889163666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548839897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1 &1890085424 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 155810, guid: 737f000fba6aa60458d3ec61cb22fcc3, type: 3}
@@ -75962,22 +76396,6 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
---- !u!114 &1890085429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890085424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1890085430
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -76005,6 +76423,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1890085434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890085424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &1890085435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890085424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1891572672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76669,7 +77123,7 @@ PrefabInstance:
       addedObject: {fileID: 1929969171}
     - targetCorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1929969170}
+      addedObject: {fileID: 1929969176}
   m_SourcePrefab: {fileID: 100100000, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
 --- !u!4 &1922918060 stripped
 Transform:
@@ -77301,22 +77755,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
   m_PrefabInstance: {fileID: 1922918059}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1929969170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929969166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1929969171
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -77363,6 +77801,23 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
+--- !u!114 &1929969176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929969166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!43 &1932357783
 Mesh:
   m_ObjectHideFlags: 0
@@ -78184,29 +78639,13 @@ PrefabInstance:
       addedObject: {fileID: 1969581244}
     - targetCorrespondingSourceObject: {fileID: 132162, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1969581243}
+      addedObject: {fileID: 1969581249}
   m_SourcePrefab: {fileID: 100100000, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
 --- !u!4 &1969581239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400030, guid: abf604235fd5ccd4798c42e6b60b0ae4, type: 3}
   m_PrefabInstance: {fileID: 1969581238}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1969581243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452684938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
 --- !u!54 &1969581244
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78253,6 +78692,23 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
+--- !u!114 &1969581249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452684938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &1970084590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79305,13 +79761,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2012654048}
+    - targetCorrespondingSourceObject: {fileID: 199954, guid: 1302c983138d8344f81486021c92aa98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2012654047}
   m_SourcePrefab: {fileID: 100100000, guid: 1302c983138d8344f81486021c92aa98, type: 3}
 --- !u!4 &2012654043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 461458, guid: 1302c983138d8344f81486021c92aa98, type: 3}
   m_PrefabInstance: {fileID: 2012654042}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2012654047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737139536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
+--- !u!114 &2012654048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737139536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &2013723357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80228,7 +80726,7 @@ PrefabInstance:
       addedObject: {fileID: 2042990440}
     - targetCorrespondingSourceObject: {fileID: 1073511054060416, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2042990446}
+      addedObject: {fileID: 2042990451}
   m_SourcePrefab: {fileID: 100100000, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
 --- !u!4 &2042990434 stripped
 Transform:
@@ -80285,7 +80783,7 @@ MonoBehaviour:
   isOil: 0
   chanceToBeOil: 0.5
   barrelExplosionRadius: 5
---- !u!114 &2042990446
+--- !u!114 &2042990451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80294,13 +80792,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 204054605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
+  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
+  playerCamera: {fileID: 1648492973}
+  distanceWhileCarrying: 1
+  heightOfObjects: 0.6
+  drag: 6
+  angularDrag: 1
 --- !u!1001 &2043310273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84183,12 +84682,12 @@ SceneRoots:
   - {fileID: 1648492981}
   - {fileID: 1683900249}
   - {fileID: 1410872377}
+  - {fileID: 732424782}
   - {fileID: 167511719}
   - {fileID: 925348031}
   - {fileID: 2124228527}
   - {fileID: 997586432}
   - {fileID: 217673582}
-  - {fileID: 732424782}
   - {fileID: 566608064}
   - {fileID: 2104284152}
   - {fileID: 1411187980}

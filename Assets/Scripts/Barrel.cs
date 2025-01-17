@@ -4,7 +4,7 @@ public class Barrel : Burnable
 {
     public GameObject explosionPrefab;
     public bool isOil; // If it's not oil, then it's water
-    public double chanceToBeOil = 0.5; // Chance that barrel will be oil
+    public double chanceToBeOil = 1; // Chance that barrel will be oil
     public float barrelExplosionRadius = 5.0f;
 
     protected override void Start()
