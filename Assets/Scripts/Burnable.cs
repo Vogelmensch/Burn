@@ -118,7 +118,6 @@ public class Burnable : MonoBehaviour
 
     public void Extinguish()
     {
-        Debug.Log("Extinguish called");
         if (isOnFire)
         {
             isOnFire = false;
@@ -196,12 +195,11 @@ public class Burnable : MonoBehaviour
         int cubesY = Mathf.FloorToInt(size.y / cubeSize);
         int cubesZ = Mathf.FloorToInt(size.z / cubeSize);
 
-
         // total number of cubes should be lower than maximum:
         int totalNumberOfCubes = cubesX * cubesY * cubesZ;
 
-        int numberOfSkips = (int)Mathf.Round(totalNumberOfCubes / maxNumberOfCubes);
-        int countingIndex = 1;
+        // If total number of cubes is higher in this object, the chance of actually spawning a cube is lower
+        float cubeSpawnChance = maxNumberOfCubes / ((float)totalNumberOfCubes);
 
         Vector3 startOffset = bounds.min;
 
@@ -214,14 +212,9 @@ public class Burnable : MonoBehaviour
                     Vector3 position = startOffset + new Vector3(x * cubeSize, y * cubeSize, z * cubeSize);
                     if (burningCubePrefab != null)
                     {
-                        // Skip every numberOfSkips cubes
-                        if (countingIndex < numberOfSkips)
-                            countingIndex++;
-                        else
-                        {
+                        float randomNumber = UnityEngine.Random.Range(0.0f, 1.0f);
+                        if (randomNumber < cubeSpawnChance)
                             CreateCube(position, !isWaterBarrel);
-                            countingIndex = 1;
-                        }
                     }
                 }
             }
