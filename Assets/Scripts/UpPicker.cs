@@ -6,8 +6,10 @@ public class UpPicker : MonoBehaviour
 {
     Camera mainCamera;
     InputAction carryAction;
+    InputAction shootAction;
     CarryAndShoot carriedObject;
     public float distanceToPickUp = 5.0f;
+    public float shootingStrength = 50;
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,6 +17,7 @@ public class UpPicker : MonoBehaviour
     {
         mainCamera = GetComponent<Camera>();
         carryAction = InputSystem.actions.FindAction("Carry");
+        shootAction = InputSystem.actions.FindAction("ObjectShoot");
     }
 
     // Update is called once per frame
@@ -23,6 +26,10 @@ public class UpPicker : MonoBehaviour
         if (carryAction.WasPressedThisFrame()) {
             Debug.Log("Action was pressed");
             PickUp();
+        }
+
+        if (shootAction.WasPressedThisFrame()) {
+            carriedObject.Shoot(shootingStrength);
         }
     }
 
@@ -34,7 +41,11 @@ public class UpPicker : MonoBehaviour
             return;
         }
 
-        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+
+        // Cast a ray from center of screen and try to carry the first object it hits
+        // Stolen from Igniter hehe
+        Ray ray = mainCamera.ScreenPointToRay(screenCenter);
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
                 Debug.Log("Ray Hit Something");

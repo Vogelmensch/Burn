@@ -148,6 +148,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ObjectShoot",
+                    "type": "Button",
+                    "id": "54c00678-95e3-4abe-90b3-5bffe1af800b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -571,6 +580,17 @@
                 },
                 {
                     "name": "",
+                    "id": "61dcd982-9bd9-4745-bdc8-163dd22dcb7a",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Carry",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5975699a-c6bb-42dc-8870-5e0375b05f98",
                     "path": "Joystick/axis4",
                     "interactions": "",
@@ -698,6 +718,28 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "FireballThrow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e52ffcd7-13f2-4255-bc26-6907ce25648b",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "ObjectShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b34b94c6-10ad-414c-a803-8b8323c93fb6",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "ObjectShoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
