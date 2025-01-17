@@ -43328,9 +43328,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
-  explosionPrefab: {fileID: 159918, guid: ab43b724dfd2e2b5783859da47cbbae0, type: 3}
-  isOil: 0
-  chanceToBeOil: 0.5
+  explosionPrefab: {fileID: 1478314613700728, guid: d179c319eefac10e4a5c7a62a1c5562a, type: 3}
   barrelExplosionRadius: 5
 --- !u!114 &1041667687
 MonoBehaviour:
@@ -54555,7 +54553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
-  burningCubePrefab: {fileID: 0}
+  burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   hitPoints: 100
   explosionForce: 0
   explosionRadius: 4
@@ -75385,9 +75383,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
-  explosionPrefab: {fileID: 159918, guid: ab43b724dfd2e2b5783859da47cbbae0, type: 3}
-  isOil: 0
-  chanceToBeOil: 0.5
+  explosionPrefab: {fileID: 1478314613700728, guid: d179c319eefac10e4a5c7a62a1c5562a, type: 3}
   barrelExplosionRadius: 5
 --- !u!114 &1867436596
 MonoBehaviour:
@@ -80779,9 +80775,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
-  explosionPrefab: {fileID: 159918, guid: ab43b724dfd2e2b5783859da47cbbae0, type: 3}
-  isOil: 0
-  chanceToBeOil: 0.5
+  explosionPrefab: {fileID: 1478314613700728, guid: d179c319eefac10e4a5c7a62a1c5562a, type: 3}
   barrelExplosionRadius: 5
 --- !u!114 &2042990451
 MonoBehaviour:

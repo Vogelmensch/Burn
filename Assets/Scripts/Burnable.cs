@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 public class Burnable : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class Burnable : MonoBehaviour
     protected float damageCoefficient = 15; // amount of hitpoints lost per second when burning (rounded later)
     // End new variables
 
-    private float cubeSize = 0.15f; // Size of each smaller cube
+    private float cubeSize = 0.15f; // MAXIMAL Size of each smaller cube
     private int maxNumberOfCubes = 32;
     public float explosionForce = 0f; // Force of the explosion
     public float explosionRadius = 4f; // Radius of the explosion
@@ -49,10 +50,10 @@ public class Burnable : MonoBehaviour
 
     protected virtual void Update()
     {
-        UpdateHelper(false);
+        UpdateHelper();
     }
 
-    protected void UpdateHelper(bool isWaterBarrel)
+    protected void UpdateHelper()
     {
         // Start fire
         if (temperature >= ignitionTemperature && !isOnFire) Ignite();
@@ -63,7 +64,7 @@ public class Burnable : MonoBehaviour
         // Destroy
         if (hitPoints <= 0)
         {
-            Explode(isWaterBarrel);
+            Explode();
         }
 
 
@@ -117,7 +118,6 @@ public class Burnable : MonoBehaviour
 
     public void Extinguish()
     {
-        Debug.Log("Extinguish called");
         if (isOnFire)
         {
             isOnFire = false;
@@ -177,12 +177,19 @@ public class Burnable : MonoBehaviour
     }
 
     // If it's a water barrel, the child cubes shall not be ignited.
-    protected virtual void Explode(bool isWaterBarrel)
+    protected virtual void Explode()
     {
         Extinguish();
 
         Bounds bounds = GetComponent<Renderer>().bounds;
         Vector3 size = bounds.size;
+
+        float[] sizes = { size.x, size.y, size.z };
+        float smallestEdge = sizes.Min<float>();
+
+        // If Object is thin, the cubes are smaller
+        if (smallestEdge < cubeSize)
+            cubeSize = smallestEdge;
 
         int cubesX = Mathf.FloorToInt(size.x / cubeSize);
         int cubesY = Mathf.FloorToInt(size.y / cubeSize);
@@ -191,14 +198,8 @@ public class Burnable : MonoBehaviour
         // total number of cubes should be lower than maximum:
         int totalNumberOfCubes = cubesX * cubesY * cubesZ;
 
-        /*
-            Example: maxNumberOfCubes = 10; totalNumberOfCubes = 26;
-            => acceptedIndex = Round(26/10) = Round(2.6) = 3
-            => Every 3rd Cube gets accepted
-            => We are left with Floor(26/3) = 8 Cubes that are evenly spread
-        */
-        int acceptedIndex = (int)Mathf.Round(totalNumberOfCubes / maxNumberOfCubes);
-        int countingIndex = 1;
+        // If total number of cubes is higher in this object, the chance of actually spawning a cube is lower
+        float cubeSpawnChance = maxNumberOfCubes / ((float)totalNumberOfCubes);
 
         Vector3 startOffset = bounds.min;
 
@@ -211,15 +212,9 @@ public class Burnable : MonoBehaviour
                     Vector3 position = startOffset + new Vector3(x * cubeSize, y * cubeSize, z * cubeSize);
                     if (burningCubePrefab != null)
                     {
-                        if (countingIndex < acceptedIndex)
-                        {
-                            countingIndex++;
-                        }
-                        else
-                        {
-                            CreateCube(position, !isWaterBarrel);
-                            countingIndex = 1;
-                        }
+                        float randomNumber = UnityEngine.Random.Range(0.0f, 1.0f);
+                        if (randomNumber < cubeSpawnChance)
+                            CreateCube(position);
                     }
                 }
             }
@@ -231,7 +226,7 @@ public class Burnable : MonoBehaviour
 
     // Create burning or non-burning cube
     // added non-burning for water-barrels
-    private void CreateCube(Vector3 position, bool isBurning)
+    private void CreateCube(Vector3 position)
     {
         GameObject cube = Instantiate(burningCubePrefab, position, Quaternion.identity);
         cube.transform.localScale = Vector3.one * cubeSize;
@@ -240,7 +235,7 @@ public class Burnable : MonoBehaviour
         if (burnable != null)
         {
             GeneralizedCubeDivider.allBurnables.Add(burnable); // Registriere den Cube in der globalen Liste
-            if (isBurning) burnable.Ignite();
+            burnable.Ignite();
         }
 
         Rigidbody rb = cube.GetComponent<Rigidbody>();
