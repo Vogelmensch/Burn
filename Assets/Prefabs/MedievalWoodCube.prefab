@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1093018170962544947}
   - component: {fileID: 1430872213752188710}
   - component: {fileID: 6134337692005047463}
+  - component: {fileID: 8108449615914273534}
   - component: {fileID: 4799982519216865147}
   - component: {fileID: 4449361317626793272}
-  - component: {fileID: -2876279799700229257}
   m_Layer: 0
   m_Name: MedievalWoodCube
   m_TagString: Untagged
@@ -111,6 +111,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8108449615914273534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6117026140062700152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  burnTime: 10
+  spreadDelay: 2
+  cubeSize: 0.2
+  explosionForce: 20
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
 --- !u!54 &4799982519216865147
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150,26 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd5a664982eba948b24faa9ff39be45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwForceMultiplier: 10
-  maxThrowForce: 5
-  maxDragDistance: 5
-  maxHoldTime: 1.5
---- !u!114 &-2876279799700229257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6117026140062700152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8410913c62ad5f6e8976323e0cfad55a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireName: firePrefab
-  burningCubePrefab: {fileID: 0}
-  hitPoints: 100
-  explosionForce: 0
-  explosionRadius: 4
-  explosionUpward: 0.4
-  isOnFire: 0
+  forceMultiplier: 5
+  maxForce: 20
