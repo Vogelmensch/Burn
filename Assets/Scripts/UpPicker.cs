@@ -24,18 +24,18 @@ public class UpPicker : MonoBehaviour
     void Update()
     {
         if (carryAction.WasPressedThisFrame()) {
-            Debug.Log("Action was pressed");
             PickUp();
         }
 
         if (shootAction.WasPressedThisFrame()) {
             carriedObject.Shoot(shootingStrength);
+            carriedObject = null;
         }
     }
 
     void PickUp()
     {
-        if (carriedObject != null) {
+        if (IsCurrentlyCarrying()) {
             carriedObject.Drop();
             carriedObject = null;
             return;
@@ -48,15 +48,18 @@ public class UpPicker : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(screenCenter);
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                Debug.Log("Ray Hit Something");
                 // Check if the clicked object is carryable
                 CarryAndShoot carryAndShoot = hit.collider.GetComponent<CarryAndShoot>();
                 if (carryAndShoot != null && Vector3.Distance(transform.position, hit.transform.position) < distanceToPickUp)
                 {
-                    Debug.Log("Hit a carryable Item");
                     carryAndShoot.Carry();
                     carriedObject = carryAndShoot;
                 }
             }
+    }
+
+    public bool IsCurrentlyCarrying()
+    {
+        return carriedObject != null;
     }
 }
