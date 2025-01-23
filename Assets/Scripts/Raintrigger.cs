@@ -41,8 +41,9 @@ public class RainTrigger : MonoBehaviour
             else StopRain();
         }
 
-        if (passedTime > timeOfLightRain && rainScript != null)
-            rainScript.IncreaseIntensity(intensityIncreasePerSecond * Time.deltaTime);
+        if (passedTime > timeOfLightRain && rainScript != null){
+            //rainScript.IncreaseIntensity(intensityIncreasePerSecond * Time.deltaTime);
+        }
     }
 
     public void StartRain()
@@ -52,8 +53,9 @@ public class RainTrigger : MonoBehaviour
         {
             rainEffectInstance = Instantiate(rainPrefab);
             rainScript = rainEffectInstance.GetComponent<RainScript>();
-            if (rainScript != null)
-                rainScript.SetIntensity(startIntensity);
+            if (rainScript != null){
+                //rainScript.SetIntensity(startIntensity);
+            }
         }
     }
 
