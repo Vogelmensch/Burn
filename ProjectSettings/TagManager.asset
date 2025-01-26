@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - WinBlock
+  - Chair
   layers:
   - Default
   - TransparentFX
