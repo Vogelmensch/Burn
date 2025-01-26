@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WinBlock
   - Chair
+  - Level2Block
   layers:
   - Default
   - TransparentFX
