@@ -20,7 +20,7 @@ public class Burnable : MonoBehaviour
     protected float temperatureIncreaseCoefficient = 10; // amount of temp increase per second when burning
     protected float temperatureDecreaseAtRainHit = 8; // amount of temp decrease per raindrop hit
     protected float heatTransferCoefficient = 10; // amount of heat transferred to nearby objects per second when burning
-    public float hitPoints = 100;
+    protected float hitPoints = 100;
     protected float damageCoefficient = 15; // amount of hitpoints lost per second when burning (rounded later)
     // End new variables
 
@@ -29,7 +29,7 @@ public class Burnable : MonoBehaviour
     public float explosionForce = 0f; // Force of the explosion
     public float explosionRadius = 4f; // Radius of the explosion
     public float explosionUpward = 0.4f; // Upward modifier for the explosion force
-    private float spreadRadius = 1f; // Radius for spreading
+    protected float spreadRadius = 1f; // Radius for spreading
     public bool isOnFire = false;
     private GameObject fireEffectInstance;
     private int BurningLayer = 6;

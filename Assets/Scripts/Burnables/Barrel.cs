@@ -5,6 +5,13 @@ public class Barrel : Burnable
     public GameObject explosionPrefab;
     public float barrelExplosionRadius = 5.0f;
 
+    protected override void Start()
+    {
+        ignitionTemperature = 70;
+        hitPoints = 70;
+        base.Start();
+    }
+
     protected override void Update()
     {
         UpdateHelper();

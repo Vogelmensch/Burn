@@ -7,6 +7,7 @@ public class Candle : Burnable
         hitPoints = 10000f;
         ignitionTemperature = 0;
         isOnFire = true;
+        spreadRadius = 0.5f;
         base.Start();
     }
 }
