@@ -6,11 +6,7 @@ using UnityEngine.InputSystem.Controls;
 
 public class CameraController : MonoBehaviour
 {
-    private CharacterController controller;
-
-    InputAction moveAction;
-    InputAction rotateAction;
-    public bool usingDavidsWhiteController = false;
+    public bool standStillWhenCarrying = false;
 
     // Speed for camera movement
     public float movementSpeed = 10f;
@@ -20,58 +16,48 @@ public class CameraController : MonoBehaviour
 
     public float controllerSensitivity = 2f;
 
+
+    private CharacterController controller;
+    private UpPicker upPicker;
+    InputAction moveAction;
+    InputAction rotateAction;
     // Store the current rotation of the camera
     private Vector2 currentRotation = new Vector2(-63.973f, -6.016f);
-    private float lastRotation = 0; // used when playing with buggy controller :3
+
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        upPicker = GetComponent<UpPicker>();
 
         moveAction = InputSystem.actions.FindAction("Move");
         rotateAction = InputSystem.actions.FindAction("Look");
+
+        if (standStillWhenCarrying && upPicker == null)
+            Debug.LogError("You need to apply an upPicker-object to the camera to use this option!");
     }
 
     void Update()
     {
-        // Handle movement
-        HandleMovement();
-
-
         HandleRotation();
-
-
+        HandleMovement();
     }
 
 
     private void HandleMovement()
     {
-        // Get the input for movement along X and Z axes
-        float moveHorizontal = Input.GetAxis("Horizontal"); // A, D or Left, Right arrows
-        float moveVertical = Input.GetAxis("Vertical");     // W, S or Up, Down arrows
-
-        // Input for moving up and down
-        float moveUp = 0f;
-        if (Input.GetKey(KeyCode.E))
-        {
-            moveUp = 1f; // Move up
-        }
-        else if (Input.GetKey(KeyCode.Q))
-        {
-            moveUp = -1f; // Move down
-        }
-
-
         // Calculate the movement vector
-        Vector3 movement = new Vector3(moveHorizontal, moveUp, moveVertical);
+        Vector3 movement = new Vector3();
 
-        movement.x = moveAction.ReadValue<Vector2>().x;
-        movement.y = moveAction.ReadValue<Vector2>().y;
+        if (standStillWhenCarrying && upPicker.IsCurrentlyCarrying()) {
+            movement.x = 0;
+            movement.z = 0;
+        } else {
+            movement.x = moveAction.ReadValue<Vector2>().x;
+            movement.z = moveAction.ReadValue<Vector2>().y;
+        }
 
         // rotate
-        if (usingDavidsWhiteController)
-            movement = Quaternion.AngleAxis(lastRotation, Vector3.up) * movement;
-        else
         movement = Quaternion.Euler(0, currentRotation.x, 0f) * movement;
 
         if (controller.isGrounded)
@@ -83,30 +69,13 @@ public class CameraController : MonoBehaviour
             movement.y = -5;
         }
 
+
         // Apply movement to Controller
         controller.Move(movement * Time.deltaTime * movementSpeed);
-
     }
 
     private void HandleRotation()
     {
-        // This code is work in progress. It's only for enabling a certain controller of mine. Don't worry about it.
-        if (usingDavidsWhiteController)
-        {
-            var gamepad = Joystick.current; // Oder Gamepad.current, falls es ein Gamepad ist
-            if (gamepad != null)
-            {
-                float rotateZ = gamepad.GetChildControl<AxisControl>("Z").ReadValue();
-
-                rotateZ *= Time.deltaTime * controllerSensitivity;
-
-                transform.Rotate(0, rotateZ, 0);
-                lastRotation = rotateZ;
-            }
-            return;
-        }
-
-
         float mouseX, mouseY;
         // Use mouse if right mouse button is pressed
         if (Input.GetMouseButton(1))
