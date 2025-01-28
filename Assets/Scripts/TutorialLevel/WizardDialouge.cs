@@ -1,10 +1,12 @@
 using TMPro;
 using UnityEngine;
+using System.Collections;
 public class WizardDialogue : MonoBehaviour
 {
     public GameObject dialogueBox; //Der Magier und die Sprechblase :))
     public TextMeshProUGUI dialogueText; // Das TMP-Textfeld für den Text
-    public GameObject triggerObject;
+    [SerializeField] private RevealLevel2 doorDetector;
+    private bool hasTriggered = false;
     private string[][] dialogueSets = 
 {
     new string[] 
@@ -17,7 +19,9 @@ public class WizardDialogue : MonoBehaviour
     new string[] 
     {
         "Great Job!",
-        "Level 2 is waiting!"
+        "Go to the next room - if you are not allready there!",
+        "Now take one of the Chairs and burn it using the canlde in the cupboard",
+        "Once thats done, use this chair and enlight the fire at the fireplace!"
     }
 };
 
@@ -25,7 +29,26 @@ public class WizardDialogue : MonoBehaviour
     private int currentArray = 0;
     private void Start()
     {
-        Collider collider = triggerObject.GetComponent<Collider>();
+        if (doorDetector == null)
+        {
+            doorDetector = FindObjectOfType<RevealLevel2>();
+        }
+        doorDetector.DoorOpenedEvent += OnDoorOpened;
+        ShowDialogue(dialogueSets[currentArray][currentIndex]);
+        
+    }
+    private void OnDoorOpened()
+    {
+        Debug.Log("Tür wurde geöffnet - Event empfangen!");
+        hasTriggered = true;
+        Debug.LogError("Invoke Next Dialoge");
+        Invoke("ShowNextDialoge", 3f);
+    }
+
+    public void ShowNextDialoge()
+    {
+        Debug.LogError($"CurrentArry = {currentArray}");
+        Debug.LogError($"CurrentIndex = {currentIndex}");
         ShowDialogue(dialogueSets[currentArray][currentIndex]);
     }
 
@@ -45,7 +68,6 @@ public class WizardDialogue : MonoBehaviour
     }
 
 
-
     public void ShowDialogue(string text)
     {
         dialogueBox.SetActive(true); // Sprechblase anzeigen
@@ -56,17 +78,4 @@ public class WizardDialogue : MonoBehaviour
     {
         dialogueBox.SetActive(false); 
     }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Trigger Enter erkannt: " + other.gameObject.name);
-        if(other.CompareTag("MainCamera"))
-        {
-            ShowDialogue(dialogueSets[currentArray][currentIndex]);
-            Debug.Log("Kamera hat den Trigger betreten!");
-        }
-    }
-
-
-
 }

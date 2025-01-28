@@ -7,6 +7,7 @@ public class RevealLevel2 : MonoBehaviour
     public GameObject door1;
     private AudioSource audioSource;
     private bool played = false;
+    public event System.Action DoorOpenedEvent;
 
     void Start()
     {
@@ -36,7 +37,9 @@ public class RevealLevel2 : MonoBehaviour
             // Sound abspielen, falls Clip zugewiesen ist
             if (doorSoundClip != null && audioSource != null)
             {
+                DoorOpenedEvent?.Invoke();
                 audioSource.PlayOneShot(doorSoundClip);
+                
             }
             else
             {
