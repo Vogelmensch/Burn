@@ -10,8 +10,8 @@ public class UpPicker : MonoBehaviour
     CarryAndShoot carriedObject;
     public float distanceToPickUp = 5.0f;
     public float shootingStrength = 50;
-
-
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,25 +23,19 @@ public class UpPicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!PauseMenu.isPaused)
-        {
-            if (carryAction.WasPressedThisFrame())
-            {
-                Debug.Log("Action was pressed");
-                PickUp();
-            }
+        if (carryAction.WasPressedThisFrame()) {
+            PickUp();
+        }
 
-            if (shootAction.WasPressedThisFrame())
-            {
-                carriedObject.Shoot(shootingStrength);
-            }
+        if (shootAction.WasPressedThisFrame()) {
+            carriedObject.Shoot(shootingStrength);
+            carriedObject = null;
         }
     }
 
     void PickUp()
     {
-        if (carriedObject != null)
-        {
+        if (IsCurrentlyCarrying()) {
             carriedObject.Drop();
             carriedObject = null;
             return;
@@ -52,17 +46,20 @@ public class UpPicker : MonoBehaviour
         // Cast a ray from center of screen and try to carry the first object it hits
         // Stolen from Igniter hehe
         Ray ray = mainCamera.ScreenPointToRay(screenCenter);
-        if (Physics.Raycast(ray, out RaycastHit hit))
-        {
-            Debug.Log("Ray Hit Something");
-            // Check if the clicked object is carryable
-            CarryAndShoot carryAndShoot = hit.collider.GetComponent<CarryAndShoot>();
-            if (carryAndShoot != null && Vector3.Distance(transform.position, hit.transform.position) < distanceToPickUp)
+            if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                Debug.Log("Hit a carryable Item");
-                carryAndShoot.Carry();
-                carriedObject = carryAndShoot;
+                // Check if the clicked object is carryable
+                CarryAndShoot carryAndShoot = hit.collider.GetComponent<CarryAndShoot>();
+                if (carryAndShoot != null && Vector3.Distance(transform.position, hit.transform.position) < distanceToPickUp)
+                {
+                    carryAndShoot.Carry();
+                    carriedObject = carryAndShoot;
+                }
             }
-        }
+    }
+
+    public bool IsCurrentlyCarrying()
+    {
+        return carriedObject != null;
     }
 }
