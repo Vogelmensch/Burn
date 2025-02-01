@@ -14,13 +14,13 @@ public class Burnable : MonoBehaviour
     // IDEA:
     // temperatures of Burnables stay constant unless it's burning (increase) or raining (decrease)
     // Burnables transfer heat to nearby Burnables only when they're burning
-    private float temperature = 0;
+    public float temperature = 0;
     protected float ignitionTemperature = 100;
     protected float maxTemperature = 200;
     protected float temperatureIncreaseCoefficient = 10; // amount of temp increase per second when burning
     protected float temperatureDecreaseAtRainHit = 8; // amount of temp decrease per raindrop hit
     protected float heatTransferCoefficient = 10; // amount of heat transferred to nearby objects per second when burning
-    protected float hitPoints = 100;
+    public float hitPoints = 100;
     protected float damageCoefficient = 15; // amount of hitpoints lost per second when burning (rounded later)
     // End new variables
 
