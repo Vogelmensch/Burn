@@ -32,6 +32,7 @@ public class DragAndAutoThrow : MonoBehaviour
 
             // Logge die Haltezeit und die Drag-Distanz
             float dragDistance = Vector3.Distance(dragStartPos, currentMouseWorldPos);
+            Debug.Log($"Hold Time: {holdTime}s, Drag Distance: {dragDistance}");
 
             // Wenn die Haltezeit zu lang wird, das Objekt automatisch werfen
             if (holdTime > maxHoldTime)
