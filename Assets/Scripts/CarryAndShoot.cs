@@ -9,8 +9,10 @@ public class CarryAndShoot : MonoBehaviour
     private bool isBeingCarried = false;
     private Rigidbody rb;
     public GameObject playerCamera;
-    public float distanceWhileCarrying = 1.0f;
+    public float distanceWhileCarrying = 1.5f;
+    public float rotationSpeed = 100f; // Speed of rotation
 
+    Quaternion initialRelativeRotation;
     // 0 -> ground; 1 -> 45°
     public float heightOfObjects = 0.6f;
 
@@ -23,6 +25,7 @@ public class CarryAndShoot : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerCamera = GameObject.Find("PlayerCam");
     }
 
     void Update()
@@ -30,7 +33,36 @@ public class CarryAndShoot : MonoBehaviour
         if (isBeingCarried)
         {
             MoveInFrontOfPlayer();
+            HandleRotationInput();
         }
+    }
+
+    private void HandleRotationInput()
+    {
+        if (Input.GetKey(KeyCode.I))
+        {
+            RotateObject(playerCamera.transform.right);
+        }
+        if (Input.GetKey(KeyCode.K))
+        {
+            RotateObject(-playerCamera.transform.right);
+        }
+        if (Input.GetKey(KeyCode.J))
+        {
+            RotateObject(playerCamera.transform.up);
+        }
+        if (Input.GetKey(KeyCode.L))
+        {
+            RotateObject(-playerCamera.transform.up);
+        }
+    }
+    private void RotateObject(Vector3 direction)
+    {
+        // Create a rotation quaternion based on the input direction and rotation speed
+        Quaternion rotation = Quaternion.AngleAxis(rotationSpeed * Time.deltaTime, direction);
+
+        // Update the initialRelativeRotation by multiplying it with the new rotation
+        initialRelativeRotation = rotation * initialRelativeRotation;
     }
 
     void MoveInFrontOfPlayer()
@@ -42,6 +74,9 @@ public class CarryAndShoot : MonoBehaviour
 
 
         rb.AddForce(force, ForceMode.Acceleration);
+
+        // make sure objects orientation stays the same
+        transform.rotation = playerCamera.transform.rotation * initialRelativeRotation;
     }
 
     public void Shoot(float shootingStrength) 
@@ -53,6 +88,8 @@ public class CarryAndShoot : MonoBehaviour
 
     public void Carry()
     {
+        // Store the initial relative rotation between the object and the player's camera
+        initialRelativeRotation = Quaternion.Inverse(playerCamera.transform.rotation) * transform.rotation;
         isBeingCarried = true;
 
         // When carrying, we need a high drag 
