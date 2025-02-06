@@ -14,6 +14,7 @@ public class FireballSpawner : MonoBehaviour
     public int forceUpperLimit = 350;
     public double forceChangeRate = 700;
     public float fireAccessRadius = 2f;
+    public Vector3 spawnShift = new Vector3(0,1,0);
     public ThrowStrengthIndicator throwStrengthIndicator;
     private GameObject fireball;
 
@@ -73,8 +74,7 @@ public class FireballSpawner : MonoBehaviour
 
     GameObject SpawnBall()
     {
-        Debug.Log("Spawning Fireball at " + cameraTransform.position);
-        return Instantiate(fireballPrefab, cameraTransform.position, Quaternion.identity);
+        return Instantiate(fireballPrefab, cameraTransform.position + spawnShift, Quaternion.identity);
     }
 
     void Throw(GameObject ball)
