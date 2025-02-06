@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using Mono.Cecil;
 
 public class Burnable : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class Burnable : MonoBehaviour
     protected float damageCoefficient = 15; // amount of hitpoints lost per second when burning (rounded later)
     // End new variables
 
-    private float cubeSize = 0.15f; // MAXIMAL Size of each smaller cube
+    private float cubeSize = 0.07f; // MAXIMAL Size of each smaller cube
     private int maxNumberOfCubes = 32;
     public float explosionForce = 0f; // Force of the explosion
     public float explosionRadius = 4f; // Radius of the explosion
@@ -37,6 +38,11 @@ public class Burnable : MonoBehaviour
     protected virtual void Start()
     {
         GeneralizedCubeDivider.allBurnables.Add(this);
+
+        if (burningCubePrefab == null)
+        {
+            burningCubePrefab = Resources.Load<GameObject>("MedievalWoodCube");
+        }
     }
 
     void OnDestroy()
@@ -230,13 +236,6 @@ public class Burnable : MonoBehaviour
     {
         GameObject cube = Instantiate(burningCubePrefab, position, Quaternion.identity);
         cube.transform.localScale = Vector3.one * cubeSize;
-
-        Burnable burnable = cube.GetComponent<Burnable>();
-        if (burnable != null)
-        {
-            GeneralizedCubeDivider.allBurnables.Add(burnable); // Registriere den Cube in der globalen Liste
-            burnable.Ignite();
-        }
 
         Rigidbody rb = cube.GetComponent<Rigidbody>();
         if (rb == null)

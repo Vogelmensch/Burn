@@ -6167,10 +6167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
-  distanceWhileCarrying: 1.5
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!54 &91281125
@@ -18201,10 +18198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
-  distanceWhileCarrying: 1.5
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!54 &384928845
@@ -19629,10 +19623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &427694985
@@ -24139,10 +24130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1.5
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!54 &537852867
@@ -27478,10 +27466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
-  distanceWhileCarrying: 1.5
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!54 &618187148
@@ -28660,10 +28645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &643389938
@@ -33227,10 +33209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &761490846
@@ -39683,7 +39662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
-  burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
+  burningCubePrefab: {fileID: 0}
   temperature: 0
   hitPoints: 100
   explosionForce: 0
@@ -39722,10 +39701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &842401782
@@ -46697,10 +46673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1019664390
@@ -46877,10 +46850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
-  distanceWhileCarrying: 1.5
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!54 &1024821062
@@ -47518,10 +47488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1042096476
@@ -48248,10 +48215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
-  distanceWhileCarrying: 1.5
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!54 &1053923811
@@ -51633,10 +51597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1115249603
@@ -54719,10 +54680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
-  distanceWhileCarrying: 1.5
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1206254842
@@ -55832,10 +55790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
-  distanceWhileCarrying: 1.5
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!54 &1224970949
@@ -61024,10 +60979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
-  distanceWhileCarrying: 1.5
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1357306345
@@ -66069,10 +66021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1483621915
@@ -72002,10 +71951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1606139817
@@ -73690,10 +73636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
-  distanceWhileCarrying: 1.5
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1629307690
@@ -80393,10 +80336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1830822499
@@ -82096,10 +82036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1861729363
@@ -82378,10 +82315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1867830624
@@ -83302,10 +83236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1886854318
@@ -83524,10 +83455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1 &1890085424 stripped
@@ -83614,10 +83542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1891572672
@@ -85211,10 +85136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!43 &1932357783
@@ -86260,10 +86182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1970084590
@@ -87441,10 +87360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &2013723357
@@ -88571,10 +88487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &2043310273
@@ -89413,10 +89326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1648492973}
-  distanceWhileCarrying: 1
   rotationSpeed: 100
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &2070107552
