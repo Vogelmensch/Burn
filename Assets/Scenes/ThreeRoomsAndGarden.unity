@@ -15130,63 +15130,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: cba00f75539bc564fabb9136fccfac6c, type: 3}
   m_PrefabInstance: {fileID: 304847166}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &306188161
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2527298531764070769, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527298531764070769, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.214
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527298531764070769, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527298531764070769, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527298531764070769, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527298531764070769, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527298531764070769, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527298531764070769, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527298531764070769, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527298531764070769, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2527298531764070780, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-      propertyPath: m_Name
-      value: DaddyFireball
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
 --- !u!1001 &307716367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32029,7 +31972,7 @@ PrefabInstance:
     - target: {fileID: 1863213617433584067, guid: a1f413e5f68b62c4b8f5d490492b7a79, type: 3}
       propertyPath: fireballPrefab
       value: 
-      objectReference: {fileID: 1466037553}
+      objectReference: {fileID: 2527298531764070780, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
     - target: {fileID: 1863213617433584067, guid: a1f413e5f68b62c4b8f5d490492b7a79, type: 3}
       propertyPath: cameraTransform
       value: 
@@ -47561,7 +47504,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
-  explosionPrefab: {fileID: 1478314613700728, guid: d179c319eefac10e4a5c7a62a1c5562a, type: 3}
+  explosionPrefab: {fileID: 1121192042590650, guid: 773f2f4ead0f3d7f9809aee0cd07f620, type: 3}
   barrelExplosionRadius: 5
 --- !u!114 &1041667687
 MonoBehaviour:
@@ -65679,11 +65622,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f99df1970d4b71441a320ce6acc52709, type: 3}
   m_PrefabInstance: {fileID: 1464650754}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1466037553 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2527298531764070780, guid: bf5429aea7afe51648649b8d88ab62fd, type: 3}
-  m_PrefabInstance: {fileID: 306188161}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1468456571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82426,7 +82364,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
-  explosionPrefab: {fileID: 1478314613700728, guid: d179c319eefac10e4a5c7a62a1c5562a, type: 3}
+  explosionPrefab: {fileID: 1121192042590650, guid: 773f2f4ead0f3d7f9809aee0cd07f620, type: 3}
   barrelExplosionRadius: 5
 --- !u!114 &1867436596
 MonoBehaviour:
@@ -88619,7 +88557,7 @@ MonoBehaviour:
   explosionRadius: 4
   explosionUpward: 0.4
   isOnFire: 0
-  explosionPrefab: {fileID: 1478314613700728, guid: d179c319eefac10e4a5c7a62a1c5562a, type: 3}
+  explosionPrefab: {fileID: 1121192042590650, guid: 773f2f4ead0f3d7f9809aee0cd07f620, type: 3}
   barrelExplosionRadius: 5
 --- !u!114 &2042990451
 MonoBehaviour:
@@ -92889,4 +92827,3 @@ SceneRoots:
   - {fileID: 1530133549}
   - {fileID: 1009796169}
   - {fileID: 223538391}
-  - {fileID: 306188161}
