@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 122763304}
   - component: {fileID: 122763303}
   - component: {fileID: 122763302}
+  - component: {fileID: 122763306}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -279,6 +280,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &122763306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122763301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d188d59f2af7948bcf2fd7cf08d8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons: []
 --- !u!1 &125853589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,7 +1931,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1838924269}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: f9d188d59f2af7948bcf2fd7cf08d8fa, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1838924269
 MonoBehaviour:
   m_ObjectHideFlags: 0

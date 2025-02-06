@@ -1,6 +1,9 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class LevelMenu : MonoBehaviour
 {
@@ -20,6 +23,15 @@ public class LevelMenu : MonoBehaviour
 
         SceneManager.LoadScene(levelID);
 
+    }
+
+    public void ExitGame()
+    {
+        #if UNITY_EDITOR
+            EditorApplication.isPlaying = false;  // Stoppt das Spiel im Editor
+        #else
+            Application.Quit();  // Beendet das Spiel im Build
+        #endif
     }
     
 }
