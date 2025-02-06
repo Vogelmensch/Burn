@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a18e4d8b84f3e06eeb44e0286725f700
+guid: db1471092e49b7445bfbd374a17ea61a
 timeCreated: 1428512483
 licenseType: Store
 AudioImporter:
@@ -19,3 +19,10 @@ AudioImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Prefab/rain_heavy.ogg
+  uploadId: 500403

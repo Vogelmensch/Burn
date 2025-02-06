@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bc891985dac649cdbabf512d7faf555c
+guid: 18214e9d6af6248559d501391856f1c7
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -66,3 +66,10 @@ TextureImporter:
   spritePackingTag: 
   userData: 
   assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Demo/Standard Assets/Environment/TerrainAssets/SurfaceTextures/CliffAlbedoSpecular.psd
+  uploadId: 500403

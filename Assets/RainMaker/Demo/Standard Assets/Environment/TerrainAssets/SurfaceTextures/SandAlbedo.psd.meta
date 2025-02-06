@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9205a62f444147a1b9d6f62752d008d4
+guid: bfd675cc0db1d4656b75dc6d6ba91142
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -66,3 +66,10 @@ TextureImporter:
   spritePackingTag: 
   userData: 
   assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Demo/Standard Assets/Environment/TerrainAssets/SurfaceTextures/SandAlbedo.psd
+  uploadId: 500403

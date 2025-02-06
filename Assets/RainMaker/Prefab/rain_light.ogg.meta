@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cd105493c3a5c36cb92b68d24c829c19
+guid: c980eda1ec9b9ff4b930005976b00f41
 timeCreated: 1428512481
 licenseType: Store
 AudioImporter:
@@ -19,3 +19,10 @@ AudioImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Prefab/rain_light.ogg
+  uploadId: 500403

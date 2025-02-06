@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cee99de0795bf996fb79dc1975cc40c2
+guid: f9826f595784348498b57bcf6b2c8b1f
 timeCreated: 1428541481
 licenseType: Store
 AudioImporter:
@@ -75,3 +75,10 @@ AudioImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Prefab/wind_normal1.ogg
+  uploadId: 500403

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b1f951f53bb7016f6a4dc29ffc0303d9
+guid: 6ff5b1f04dece7440b6f0886ee13f147
 labels:
 - Weather
 - Rain
@@ -29,3 +29,10 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Prefab/RainScript.cs
+  uploadId: 500403

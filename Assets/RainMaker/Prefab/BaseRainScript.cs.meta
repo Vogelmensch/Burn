@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b0104ba65d95a70d89719cfa0eeb4caa
+guid: 5fadb2792073be54387ad764e856d440
 timeCreated: 1448044358
 licenseType: Store
 MonoImporter:
@@ -10,3 +10,10 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Prefab/BaseRainScript.cs
+  uploadId: 500403

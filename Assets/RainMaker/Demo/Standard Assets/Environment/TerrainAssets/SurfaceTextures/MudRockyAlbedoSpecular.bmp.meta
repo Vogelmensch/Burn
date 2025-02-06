@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 457bae38528acc7188de435f5cf4f896
+guid: ef5c51cfa2ce46043a41a376b560c525
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -66,3 +66,10 @@ TextureImporter:
   spritePackingTag: 
   userData: 
   assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Demo/Standard Assets/Environment/TerrainAssets/SurfaceTextures/MudRockyAlbedoSpecular.bmp
+  uploadId: 500403

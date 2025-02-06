@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cfcffcb71fd7bb60fbbb4ae62c5d4710
+guid: 440eb36db91ca410f800ff3cfe43572f
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -66,3 +66,10 @@ TextureImporter:
   spritePackingTag: 
   userData: 
   assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Demo/Standard Assets/Environment/TerrainAssets/SurfaceTextures/GrassRockyAlbedo.psd
+  uploadId: 500403

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7b5090fb3ff16fdc8a1feff95747c1c8
+guid: 0bf90ccca9a75684795d89669e00f773
 timeCreated: 1428528102
 licenseType: Store
 TextureImporter:
@@ -54,3 +54,10 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Prefab/RainTexture.png
+  uploadId: 500403

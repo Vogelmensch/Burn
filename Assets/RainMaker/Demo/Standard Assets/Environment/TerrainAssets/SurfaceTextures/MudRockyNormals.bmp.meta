@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 455953e70ed3c6185994a6a1a1fbc6aa
+guid: 58a059b07b093a745b47c2191525ddce
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -66,3 +66,10 @@ TextureImporter:
   spritePackingTag: 
   userData: 
   assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Demo/Standard Assets/Environment/TerrainAssets/SurfaceTextures/MudRockyNormals.bmp
+  uploadId: 500403

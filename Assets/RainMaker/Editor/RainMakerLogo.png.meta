@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8df977939b1cb2d009baee6aedc525b7
+guid: 03b1d349318691d4a9d3c7e1803fd7e5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -126,3 +126,10 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Editor/RainMakerLogo.png
+  uploadId: 500403

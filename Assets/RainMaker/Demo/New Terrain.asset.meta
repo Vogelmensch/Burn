@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: c764ce84d9acc5c808978fdeaffc136c
+guid: ad080ee1067846b4fae6efc824b8cfbc
+timeCreated: 1429217180
+licenseType: Store
 NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 15600000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 34938
+  packageName: Rain Maker - 2D and 3D Rain Particle System for Unity
+  packageVersion: 2.1.2
+  assetPath: Assets/RainMaker/Demo/New Terrain.asset
+  uploadId: 500403
