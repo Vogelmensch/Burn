@@ -59,6 +59,13 @@ namespace DigitalRuby.RainMaker
                     Emit(RainExplosion, ref pos);
                 }
             }
+
+            // Custom Code for Burnables
+            Burnable burnable = obj.GetComponent<Burnable>();
+            if (burnable != null)
+            {
+                burnable.RainHit();
+            }
         }
     }
 }
