@@ -175,9 +175,9 @@ public class Burnable : MonoBehaviour
             if (col.transform != transform && col.transform.parent != transform)
             {
                 Burnable burnable = col.GetComponent<Burnable>();
-                float distance = Vector3.Distance(transform.position, col.transform.position);
                 if (burnable != null)
                 {
+                    float distance = Vector3.Distance(transform.position, col.transform.position);
                     burnable.IncreaseTemperature(heatTransferCoefficient * Time.deltaTime * (spreadRadius - distance) / spreadRadius);
                 }
             }
