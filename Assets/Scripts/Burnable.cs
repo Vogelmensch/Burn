@@ -11,6 +11,7 @@ public class Burnable : MonoBehaviour
     private GameObject firePrefab; // Reference to the fire particle  prefab
     public GameObject burningCubePrefab; // Prefab for the burning cubes
 
+    public float colorationReduction = 100f; // Divides the interpolation % by this value
     // New fire spreading variables
     // IDEA:
     // temperatures of Burnables stay constant unless it's burning (increase) or raining (decrease)
@@ -62,6 +63,9 @@ public class Burnable : MonoBehaviour
 
     protected void UpdateHelper()
     {
+        // Change color of object based on temperature
+        GetComponent<Renderer>().material.color = Color.Lerp(GetComponent<Renderer>().material.color, Color.red, (temperature / maxTemperature) / colorationReduction);
+
         // Start fire
         if (temperature >= ignitionTemperature && !isOnFire) Ignite();
 
