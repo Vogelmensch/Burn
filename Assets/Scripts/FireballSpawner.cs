@@ -12,7 +12,7 @@ public class FireballSpawner : MonoBehaviour
     public int forceStrength = 150;
     public int forceLowerLimit = 100;
     public int forceUpperLimit = 350;
-    public double forceChangeRate = 300;
+    public double forceChangeRate = 700;
     public float fireAccessRadius = 2f;
     public ThrowStrengthIndicator throwStrengthIndicator;
     private GameObject fireball;
@@ -73,6 +73,7 @@ public class FireballSpawner : MonoBehaviour
 
     GameObject SpawnBall()
     {
+        Debug.Log("Spawning Fireball at " + cameraTransform.position);
         return Instantiate(fireballPrefab, cameraTransform.position, Quaternion.identity);
     }
 
