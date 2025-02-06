@@ -1,43 +1,37 @@
 using UnityEngine;
-
-public class RevealLevel2 : MonoBehaviour
-{   
-    public AudioClip doorSoundClip;  
-    public Level1ChairDetector chairDetector;
-    public GameObject door1;
+public class RevealLevel3 : MonoBehaviour
+{
+    public GameObject door2;
+    public AudioClip doorSoundClip; 
     private AudioSource audioSource;
-    private bool played = false;
-    public event System.Action DoorOpenedEvent;
-
+    private Level2Block fireDetector;
+    public event System.Action DoorOpenedEvent2;
     void Start()
     {
         // AudioSource auf dem gleichen GameObject automatisch suchen
-        audioSource = GetComponent<AudioSource>();
+        audioSource = gameObject.AddComponent<AudioSource>();
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>(); // Falls keine AudioSource vorhanden ist, hinzufügen
         }
+         if (fireDetector == null)
+        {
+            fireDetector = FindObjectOfType<Level2Block>();
+        }
+        fireDetector.FireOnEvent += OpenDoor;
     }
 
-    void Update()
-    {
-        if (chairDetector != null && chairDetector.IsChairOnTable() && !played)
-        {
-            played = true;
-            OpenDoor();
-        }
-    }
 
     public void OpenDoor()
     {
-        if (door1 != null)
+        if (door2 != null)
         {
-            door1.transform.rotation = Quaternion.Euler(0, 10, 0);
+            door2.transform.rotation = Quaternion.Euler(0, 10, 0);
             
             // Sound abspielen, falls Clip zugewiesen ist
             if (doorSoundClip != null && audioSource != null)
             {
-                DoorOpenedEvent?.Invoke();
+                DoorOpenedEvent2?.Invoke();
                 audioSource.PlayOneShot(doorSoundClip);
                 
             }
@@ -51,4 +45,5 @@ public class RevealLevel2 : MonoBehaviour
             Debug.LogError("Kein Prefab für Tür zugewiesen!");
         }
     }
+
 }

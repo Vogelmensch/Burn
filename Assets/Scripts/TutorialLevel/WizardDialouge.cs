@@ -6,7 +6,9 @@ public class WizardDialogue : MonoBehaviour
     public GameObject dialogueBox; //Der Magier und die Sprechblase :))
     public TextMeshProUGUI dialogueText; // Das TMP-Textfeld für den Text
     [SerializeField] private RevealLevel2 doorDetector;
+    private RevealLevel3 doorDetector2;
     private bool hasTriggered = false;
+    private bool hasTriggered2 = false;
     private string[][] dialogueSets = 
 {
     new string[] 
@@ -22,6 +24,11 @@ public class WizardDialogue : MonoBehaviour
         "Go to the next room - if you are not allready there!",
         "Now take one of the Chairs and burn it using the canlde in the cupboard",
         "Once thats done, use this chair and enlight the fire at the fireplace!"
+    },
+    new string[]
+    {
+        "Great Job!",
+        "Now you will learn to handle the FIREBALL!"
     }
 };
 
@@ -33,7 +40,12 @@ public class WizardDialogue : MonoBehaviour
         {
             doorDetector = FindObjectOfType<RevealLevel2>();
         }
+        if(doorDetector2 == null)
+        {
+             doorDetector2 = FindObjectOfType<RevealLevel3>();
+        }
         doorDetector.DoorOpenedEvent += OnDoorOpened;
+        doorDetector2.DoorOpenedEvent2 += OnDoorOpened2;
         ShowDialogue(dialogueSets[currentArray][currentIndex]);
         
     }
@@ -42,6 +54,12 @@ public class WizardDialogue : MonoBehaviour
         Debug.Log("Tür wurde geöffnet - Event empfangen!");
         hasTriggered = true;
         Debug.LogError("Invoke Next Dialoge");
+        Invoke("ShowNextDialoge", 3f);
+    }
+    private void OnDoorOpened2()
+    {
+        Debug.Log("Tür wurde geöffnet - Event empfangen!");
+        hasTriggered2 = true;
         Invoke("ShowNextDialoge", 3f);
     }
 
