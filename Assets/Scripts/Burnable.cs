@@ -6,6 +6,7 @@ using System.Linq;
 
 public class Burnable : MonoBehaviour
 {
+    [Header("Metadata")]
     public string fireName = "firePrefab"; // Name of the fire prefab file in the resources folder
     private GameObject firePrefab; // Reference to the fire particle  prefab
     public GameObject burningCubePrefab; // Prefab for the burning cubes
@@ -14,23 +15,29 @@ public class Burnable : MonoBehaviour
     // IDEA:
     // temperatures of Burnables stay constant unless it's burning (increase) or raining (decrease)
     // Burnables transfer heat to nearby Burnables only when they're burning
-    public float temperature = 0;
+    
     protected float ignitionTemperature = 100;
     protected float maxTemperature = 200;
     protected float temperatureIncreaseCoefficient = 10; // amount of temp increase per second when burning
     protected float temperatureDecreaseAtRainHit = 8; // amount of temp decrease per raindrop hit
     protected float heatTransferCoefficient = 10; // amount of heat transferred to nearby objects per second when burning
+    [Header("Fire Variables")]
     public float hitPoints = 100;
+    public float temperature = 0;
+    public float spreadRadius = 1f; // Radius for spreading
+    public bool isOnFire = false;
     protected float damageCoefficient = 15; // amount of hitpoints lost per second when burning (rounded later)
     // End new variables
 
     private float cubeSize = 0.15f; // MAXIMAL Size of each smaller cube
     private int maxNumberOfCubes = 32;
+
+    [Header("Explosion Variables")]
+
     public float explosionForce = 0f; // Force of the explosion
     public float explosionRadius = 4f; // Radius of the explosion
     public float explosionUpward = 0.4f; // Upward modifier for the explosion force
-    private float spreadRadius = 1f; // Radius for spreading
-    public bool isOnFire = false;
+
     private GameObject fireEffectInstance;
     private int BurningLayer = 6;
 
@@ -168,9 +175,10 @@ public class Burnable : MonoBehaviour
             if (col.transform != transform && col.transform.parent != transform)
             {
                 Burnable burnable = col.GetComponent<Burnable>();
+                float distance = Vector3.Distance(transform.position, col.transform.position);
                 if (burnable != null)
                 {
-                    burnable.IncreaseTemperature(heatTransferCoefficient * Time.deltaTime);
+                    burnable.IncreaseTemperature(heatTransferCoefficient * Time.deltaTime * (spreadRadius - distance) / spreadRadius);
                 }
             }
         }
