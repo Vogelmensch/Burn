@@ -9,12 +9,14 @@ public class CarryAndShoot : MonoBehaviour
     private bool isBeingCarried = false;
     private Rigidbody rb;
     private GameObject playerCamera;
-    private float distanceWhileCarrying = 1.0f;
     public float rotationSpeed = 100f; // Speed of rotation
 
     Quaternion initialRelativeRotation;
     // 0 -> ground; 1 -> 45°
-    private float heightOfObjects = 0.1f;
+    [Header("Carry and Shoot Settings")]
+    public float distanceWhileCarrying = 1.0f;
+
+    public float heightOfObjects = 0.1f;
 
     // Drag get applied only when carrying
     public float drag = 6;
