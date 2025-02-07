@@ -28,9 +28,10 @@ public class RevealLevel3 : MonoBehaviour
         if (door2 != null && !played)
         {
             played = true;
-            Vector3 originalScale = door2.transform.localScale;
-            door2.transform.rotation = Quaternion.Euler(0, 10, 0);
-            door2.transform.localScale = originalScale;
+            door2.transform.localRotation = Quaternion.Euler(0, 90, 0);
+            door2.transform.localScale = new Vector3(0.5f, 1f, 1f);
+
+
             
             // Sound abspielen, falls Clip zugewiesen ist
             if (doorSoundClip != null && audioSource != null)

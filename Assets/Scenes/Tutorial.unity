@@ -3361,6 +3361,10 @@ PrefabInstance:
       value: Wall_door_01 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
