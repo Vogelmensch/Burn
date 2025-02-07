@@ -57,12 +57,17 @@ public class RainTrigger : MonoBehaviour
         }
     }
 
-    public void StopRain()
+    void StopRain()
     {
         isRaining = false;
         if (rainEffectInstance != null)
         {
             Destroy(rainEffectInstance);
         }
+    }
+
+    public bool IsRaining()
+    {
+        return isRaining;
     }
 }
