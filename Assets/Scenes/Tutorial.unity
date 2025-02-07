@@ -1722,7 +1722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToPickUp: 5
-  shootingStrength: 50
+  shootingStrength: 5
 --- !u!114 &90068456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3359,6 +3359,26 @@ PrefabInstance:
     - target: {fileID: 100002, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
       propertyPath: m_Name
       value: Wall_door_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
       propertyPath: m_LocalScale.z
@@ -37703,6 +37723,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1693286890156758, guid: 599cf5a3dfd294b40a32c9e6752985a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1899123037}
+    - targetCorrespondingSourceObject: {fileID: 1693286890156758, guid: 599cf5a3dfd294b40a32c9e6752985a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1899123038}
   m_SourcePrefab: {fileID: 100100000, guid: 599cf5a3dfd294b40a32c9e6752985a5, type: 3}
 --- !u!4 &1899123034 stripped
 Transform:
@@ -37728,8 +37751,27 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 8, y: 5.387237, z: 2}
-  m_Center: {x: 0, y: 1.8936188, z: 0}
+  m_Size: {x: 8, y: 3.660718, z: 2}
+  m_Center: {x: 0, y: 1.0303595, z: 0}
+--- !u!114 &1899123038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822513832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9806d8bca88a7994a575c1b64879f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 0}
+  hitPoints: 100000
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
 --- !u!1 &1902989248 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d1036e9bede007244859666e135887a1, type: 3}

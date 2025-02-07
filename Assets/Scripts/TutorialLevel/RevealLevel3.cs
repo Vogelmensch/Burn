@@ -6,6 +6,7 @@ public class RevealLevel3 : MonoBehaviour
     private AudioSource audioSource;
     private Level2Block fireDetector;
     public event System.Action DoorOpenedEvent2;
+    private bool played = false;
     void Start()
     {
         // AudioSource auf dem gleichen GameObject automatisch suchen
@@ -24,9 +25,12 @@ public class RevealLevel3 : MonoBehaviour
 
     public void OpenDoor()
     {
-        if (door2 != null)
+        if (door2 != null && !played)
         {
+            played = true;
+            Vector3 originalScale = door2.transform.localScale;
             door2.transform.rotation = Quaternion.Euler(0, 10, 0);
+            door2.transform.localScale = originalScale;
             
             // Sound abspielen, falls Clip zugewiesen ist
             if (doorSoundClip != null && audioSource != null)
