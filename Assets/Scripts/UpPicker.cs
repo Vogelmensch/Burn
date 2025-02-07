@@ -27,7 +27,7 @@ public class UpPicker : MonoBehaviour
             PickUp();
         }
 
-        if (shootAction.WasPressedThisFrame()) {
+        if (shootAction.WasPressedThisFrame() && IsCurrentlyCarrying()) {
             carriedObject.Shoot(shootingStrength);
             carriedObject = null;
         }

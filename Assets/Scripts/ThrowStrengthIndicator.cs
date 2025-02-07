@@ -20,9 +20,7 @@ public class ThrowStrengthIndicator : MonoBehaviour
     public IEnumerator PrintNoFireMessage()
     {
         GameObject message = gameObject.transform.GetChild(0).gameObject;
-        Debug.Log(message);
         TextMeshProUGUI tmp = message.GetComponent<TextMeshProUGUI>();
-        Debug.Log(tmp);
         tmp.enabled = true;
         yield return new WaitForSeconds(2);
         tmp.enabled = false;

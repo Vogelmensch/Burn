@@ -8,13 +8,13 @@ public class CarryAndShoot : MonoBehaviour
 {
     private bool isBeingCarried = false;
     private Rigidbody rb;
-    public GameObject playerCamera;
-    public float distanceWhileCarrying = 1.5f;
+    private GameObject playerCamera;
+    private float distanceWhileCarrying = 1.0f;
     public float rotationSpeed = 100f; // Speed of rotation
 
     Quaternion initialRelativeRotation;
     // 0 -> ground; 1 -> 45°
-    public float heightOfObjects = 0.6f;
+    private float heightOfObjects = 0.1f;
 
     // Drag get applied only when carrying
     public float drag = 6;
@@ -25,7 +25,7 @@ public class CarryAndShoot : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        playerCamera = GameObject.Find("PlayerCam");
+        playerCamera = GameObject.Find("Main Camera");
     }
 
     void Update()

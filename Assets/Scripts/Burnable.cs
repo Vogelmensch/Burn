@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using Mono.Cecil;
 
 public class Burnable : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class Burnable : MonoBehaviour
     protected float damageCoefficient = 15; // amount of hitpoints lost per second when burning (rounded later)
     // End new variables
 
-    private float cubeSize = 0.15f; // MAXIMAL Size of each smaller cube
+    private float cubeSize = 0.07f; // MAXIMAL Size of each smaller cube
     private int maxNumberOfCubes = 32;
 
     [Header("Explosion Variables")]
@@ -45,6 +46,11 @@ public class Burnable : MonoBehaviour
     protected virtual void Start()
     {
         GeneralizedCubeDivider.allBurnables.Add(this);
+
+        if (burningCubePrefab == null)
+        {
+            burningCubePrefab = Resources.Load<GameObject>("MedievalWoodCube");
+        }
     }
 
     void OnDestroy()
@@ -179,7 +185,7 @@ public class Burnable : MonoBehaviour
             if (col.transform != transform && col.transform.parent != transform)
             {
                 Burnable burnable = col.GetComponent<Burnable>();
-                if (burnable != null)
+                if (burnable != null && !IsWallInBetween(burnable))
                 {
                     float distance = Vector3.Distance(transform.position, col.transform.position);
                     burnable.IncreaseTemperature(heatTransferCoefficient * Time.deltaTime * (spreadRadius - distance) / spreadRadius);
@@ -188,7 +194,17 @@ public class Burnable : MonoBehaviour
         }
     }
 
-    // If it's a water barrel, the child cubes shall not be ignited.
+    // Checks whether between this Burnable and another is a wall
+    // For it to work, you need to add specific layers to the walls
+    protected bool IsWallInBetween(Burnable destination, int wallLayer = 8)
+    {
+        Vector3 direction = destination.transform.position - transform.position;
+        float distance = direction.magnitude;
+        int layerMask = 1 << wallLayer;
+
+        return Physics.Raycast(transform.position, direction, distance, layerMask);
+    }
+
     protected virtual void Explode()
     {
         Extinguish();
@@ -242,13 +258,6 @@ public class Burnable : MonoBehaviour
     {
         GameObject cube = Instantiate(burningCubePrefab, position, Quaternion.identity);
         cube.transform.localScale = Vector3.one * cubeSize;
-
-        Burnable burnable = cube.GetComponent<Burnable>();
-        if (burnable != null)
-        {
-            GeneralizedCubeDivider.allBurnables.Add(burnable); // Registriere den Cube in der globalen Liste
-            burnable.Ignite();
-        }
 
         Rigidbody rb = cube.GetComponent<Rigidbody>();
         if (rb == null)
