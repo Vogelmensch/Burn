@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RevealLevel2 : MonoBehaviour
 {   
-    public AudioClip doorSoundClip;  // Jetzt als AudioClip speichern!
+    public AudioClip doorSoundClip;  
     public Level1ChairDetector chairDetector;
     public GameObject door1;
     private AudioSource audioSource;
@@ -28,7 +28,7 @@ public class RevealLevel2 : MonoBehaviour
         }
     }
 
-    void OpenDoor()
+    public void OpenDoor()
     {
         if (door1 != null)
         {
