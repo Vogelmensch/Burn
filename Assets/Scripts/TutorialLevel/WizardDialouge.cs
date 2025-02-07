@@ -12,24 +12,27 @@ public class WizardDialogue : MonoBehaviour
     private string[][] dialogueSets = 
 {
     new string[] 
-    {
-        "Hello there, young traveler!",
-        "In this level you will need to take one of the chairs in front of you",
-        "Once you have done this, drag the chair onto the table to your left",
-        "Good luck!"
-    },
-    new string[] 
-    {
-        "Great Job!",
-        "Go to the next room - if you are not allready there!",
-        "Now take one of the Chairs and burn it using the canlde in the cupboard",
-        "Once thats done, use this chair and enlight the fire at the fireplace!"
-    },
-    new string[]
-    {
-        "Great Job!",
-        "Now you will learn to handle the FIREBALL!"
-    }
+{
+    "Ah, welcome, young traveler!",
+    "In this trial, you must take one of the chairs before you.",
+    "Once you have done so, place it upon the table to your left – as if guided by unseen forces.",
+    "May fate be on your side!"
+},
+new string[] 
+{
+    "A most excellent deed!",
+    "Step forth into the next chamber – if you have not done so already!",
+    "Now, take a chair and let the sacred flame from the cupboard's candle consume it.",
+    "Once this is done, wield its burning remains to ignite the great fire in the hearth!"
+},
+new string[]
+{
+    "Splendid work, apprentice of the arcane arts!",
+    "Now, you shall learn a most potent craft – the art of hurling fire-laden objects!",
+    "With this newfound power, you shall set ablaze that which lies beyond your reach!"
+}
+
+
 };
 
     private int currentIndex = 0;
