@@ -18,7 +18,7 @@ public class Barrel : Burnable
             if (col.transform != transform && col.transform.parent != transform)
             {
                 Burnable burnable = col.GetComponent<Burnable>();
-                if (burnable != null && !burnable.isOnFire)
+                if (burnable != null && !burnable.isOnFire && !IsWallInBetween(burnable))
                 {
                     burnable.Ignite();
                 }

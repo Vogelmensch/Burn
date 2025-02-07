@@ -174,7 +174,7 @@ public class Burnable : MonoBehaviour
             if (col.transform != transform && col.transform.parent != transform)
             {
                 Burnable burnable = col.GetComponent<Burnable>();
-                if (burnable != null)
+                if (burnable != null && !IsWallInBetween(burnable))
                 {
                     burnable.IncreaseTemperature(heatTransferCoefficient * Time.deltaTime);
                 }
@@ -182,7 +182,17 @@ public class Burnable : MonoBehaviour
         }
     }
 
-    // If it's a water barrel, the child cubes shall not be ignited.
+    // Checks whether between this Burnable and another is a wall
+    // For it to work, you need to add specific layers to the walls
+    protected bool IsWallInBetween(Burnable destination, int wallLayer = 8)
+    {
+        Vector3 direction = destination.transform.position - transform.position;
+        float distance = direction.magnitude;
+        int layerMask = 1 << wallLayer;
+
+        return Physics.Raycast(transform.position, direction, distance, layerMask);
+    }
+
     protected virtual void Explode()
     {
         Extinguish();
