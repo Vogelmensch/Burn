@@ -5,6 +5,22 @@ using System;
 using System.Linq;
 using Mono.Cecil;
 
+/*
+                        --- OVERVIEW OF BURNABLES ---
+
+                Ign.Temp.   Max.Temp.   Heat.Trans. Spr.Rad.    HitPoints   
+
+    Standard:   100         200         10          1           100    
+    Book:       60          120         5           1           100              
+    Crate:      100         200         10          1           200
+    Wood Pile:  150         400         20          1.5         400
+    Hay:        60          150         10          1           80
+    Tree:       300         600         30          3           1000
+    Stone:      500         600         10          1           50
+*/
+
+
+
 public class Burnable : MonoBehaviour
 {
     [Header("Metadata")]
