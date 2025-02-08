@@ -8,6 +8,7 @@ TagManager:
   - Chair
   - Level2Block
   - TriggerArea1
+  - EndTutorialBlock
   layers:
   - Default
   - TransparentFX

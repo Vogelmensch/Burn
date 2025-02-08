@@ -4,6 +4,7 @@ public class Level2Block : MonoBehaviour
 {
     private bool isOnFire = false;
     public event System.Action FireOnEvent;
+    public event System.Action FireOnEvent2;
 
     void Start()
     {
@@ -23,6 +24,12 @@ public class Level2Block : MonoBehaviour
             {
                 isOnFire = true;
                 FireOnEvent?.Invoke();
+                return;
+            }
+            if(burnable != null && burnable.gameObject.CompareTag("EndTutorialBlock") && burnable.isOnFire)
+            {
+                
+                FireOnEvent2?.Invoke();
                 return;
             }
         }
