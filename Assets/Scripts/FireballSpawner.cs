@@ -41,7 +41,7 @@ public class FireballSpawner : MonoBehaviour
             Burnable nearbyFire = NearbyFire(fireAccessRadius);
             if (nearbyFire != null)
             {
-                nearbyFire.IncreaseTemperature(-fireballThrowTemperatureDecrease);
+                nearbyFire.FeedFireball();
                 fireball = SpawnBall();
                 Throw(fireball);
             }

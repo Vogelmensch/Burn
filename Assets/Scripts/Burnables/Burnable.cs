@@ -38,6 +38,7 @@ public class Burnable : MonoBehaviour
     protected float maxTemperature = 200;
     protected float temperatureIncreaseCoefficient = 10; // amount of temp increase per second when burning
     protected float temperatureDecreaseAtRainHit = 16; // amount of temp decrease per raindrop hit
+    protected float temperatureDecreaseAtFireballThrow = 100f;
     protected float heatTransferCoefficient = 10; // amount of heat transferred to nearby objects per second when burning
     [Header("Fire Variables")]
     public float hitPoints = 100;
@@ -151,6 +152,11 @@ public class Burnable : MonoBehaviour
     public void RainHit()
     {
         temperature -= temperatureDecreaseAtRainHit; // decrease temp when raining
+    }
+
+    public void FeedFireball()
+    {
+        temperature -= temperatureDecreaseAtFireballThrow;
     }
 
 

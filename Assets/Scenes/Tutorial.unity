@@ -1919,7 +1919,6 @@ GameObject:
   - component: {fileID: 90068448}
   - component: {fileID: 90068453}
   - component: {fileID: 90068455}
-  - component: {fileID: 90068456}
   - component: {fileID: 90068458}
   - component: {fileID: 90068457}
   m_Layer: 0
@@ -2060,20 +2059,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceToPickUp: 5
   shootingStrength: 5
---- !u!114 &90068456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90068447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23467d0bf47ef4d87bfe22abe6d13cd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  hasIgnite: 100
 --- !u!143 &90068457
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3938,6 +3923,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 199894675551769026, guid: 31e886e829cf6e74995556552f6894ad, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3945,9 +3934,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1836934675440148, guid: 31e886e829cf6e74995556552f6894ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 834794999}
-    - targetCorrespondingSourceObject: {fileID: 1836934675440148, guid: 31e886e829cf6e74995556552f6894ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 834795000}
     - targetCorrespondingSourceObject: {fileID: 1836934675440148, guid: 31e886e829cf6e74995556552f6894ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 834795003}
@@ -5342,7 +5328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
+  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!1001 &262228655
@@ -5431,7 +5417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
+  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!54 &263479759
@@ -9863,8 +9849,8 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
-  hitPoints: 100
-  temperature: 70
+  hitPoints: 150
+  temperature: 90
   spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
@@ -9884,7 +9870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
+  heightOfObjects: 0
   drag: 6
   angularDrag: 1
 --- !u!54 &459219961
@@ -13777,7 +13763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
+  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!54 &641423835
@@ -17843,28 +17829,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8, y: 0.89966, z: 8.000003}
   m_Center: {x: 0, y: -0.330926, z: 0.0000014305115}
---- !u!114 &834795000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834794996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireName: firePrefab
-  burningCubePrefab: {fileID: 0}
-  colorationReduction: 100
-  hitPoints: 1e+9
-  temperature: 0
-  spreadRadius: 1
-  isOnFire: 1
-  explosionForce: 0
-  explosionRadius: 4
-  explosionUpward: 0.4
 --- !u!114 &834795003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17874,13 +17838,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 834794996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9806d8bca88a7994a575c1b64879f49, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f30742911d6e0b02ad973801a094f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 1000000
+  hitPoints: 100
   temperature: 0
   spreadRadius: 1
   isOnFire: 0
@@ -27504,7 +27468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
+  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!1 &1310143473 stripped
@@ -27897,10 +27861,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1564418491}
     m_Modifications:
-    - target: {fileID: 4799982519216865147, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
-      propertyPath: m_Mass
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 6117026140062700152, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
       propertyPath: m_Name
       value: MedievalWoodCube
@@ -27960,6 +27920,10 @@ PrefabInstance:
     - target: {fileID: 8490520714802979198, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799982519216865147, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
+      propertyPath: m_Mass
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28844,8 +28808,8 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
-  hitPoints: 100
-  temperature: 70
+  hitPoints: 150
+  temperature: 90
   spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
@@ -28865,7 +28829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
+  heightOfObjects: 0
   drag: 6
   angularDrag: 1
 --- !u!54 &1385368923
@@ -36124,7 +36088,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1601753399162230, guid: 68f8cf3372c588f4a94bf2c9bd255d3b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f8cf3372c588f4a94bf2c9bd255d3b, type: 3}
@@ -36466,7 +36431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
+  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!224 &1726305829 stripped
@@ -40291,8 +40256,8 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
-  hitPoints: 100
-  temperature: 70
+  hitPoints: 150
+  temperature: 90
   spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
@@ -40312,7 +40277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
+  heightOfObjects: 0
   drag: 6
   angularDrag: 1
 --- !u!54 &1885551822
@@ -40881,9 +40846,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1693286890156758, guid: 599cf5a3dfd294b40a32c9e6752985a5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1899123037}
-    - targetCorrespondingSourceObject: {fileID: 1693286890156758, guid: 599cf5a3dfd294b40a32c9e6752985a5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1899123038}
   m_SourcePrefab: {fileID: 100100000, guid: 599cf5a3dfd294b40a32c9e6752985a5, type: 3}
 --- !u!4 &1899123034 stripped
 Transform:
@@ -40911,28 +40873,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8, y: 3.660718, z: 2}
   m_Center: {x: 0, y: 1.0303595, z: 0}
---- !u!114 &1899123038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822513832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9806d8bca88a7994a575c1b64879f49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireName: firePrefab
-  burningCubePrefab: {fileID: 0}
-  colorationReduction: 100
-  hitPoints: 100000
-  temperature: 0
-  spreadRadius: 1
-  isOnFire: 0
-  explosionForce: 0
-  explosionRadius: 4
-  explosionUpward: 0.4
 --- !u!1 &1902989248 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d1036e9bede007244859666e135887a1, type: 3}
@@ -43896,7 +43836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
+  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!1001 &2035060388
