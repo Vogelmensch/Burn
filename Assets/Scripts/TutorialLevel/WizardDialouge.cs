@@ -57,7 +57,7 @@ new string[]
     void Update(){
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            ShowNextDialoge();
+            NextDialogue();
             Debug.Log("button pressed!");
         }
     }
