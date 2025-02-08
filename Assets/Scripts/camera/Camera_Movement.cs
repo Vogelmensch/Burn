@@ -2,18 +2,14 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-<<<<<<< HEAD:Assets/Scripts/camera/Camera_Movement.cs
     public bool standStillWhenCarrying = false;
 
-=======
->>>>>>> Tutorial:Assets/Scripts/Camera_Movement.cs
     // Speed for camera movement
     public float movementSpeed = 10f;
 
     // Sensitivity for camera rotation
     public float mouseSensitivity = 2f;
 
-<<<<<<< HEAD:Assets/Scripts/camera/Camera_Movement.cs
     public float controllerSensitivity = 2f;
 
 
@@ -41,47 +37,13 @@ public class CameraController : MonoBehaviour
     {
         HandleRotation();
         HandleMovement();
-=======
-    // Store the current rotation of the camera
-    private Vector2 currentRotation = new Vector2(-63.973f, -6.016f);
-
-    void Update()
-    {
-        // Handle movement
-        HandleMovement();
-
-        // Handle rotation
-        if (Input.GetMouseButton(1)) // Right mouse button is pressed
-        {
-            HandleRotation();
-        }
->>>>>>> Tutorial:Assets/Scripts/Camera_Movement.cs
     }
 
     private void HandleMovement()
     {
-<<<<<<< HEAD:Assets/Scripts/camera/Camera_Movement.cs
-=======
-        // Get the input for movement along X and Z axes
-        float moveHorizontal = Input.GetAxis("Horizontal"); // A, D or Left, Right arrows
-        float moveVertical = Input.GetAxis("Vertical");     // W, S or Up, Down arrows
-
-        // Input for moving up and down
-        float moveUp = 0f;
-        if (Input.GetKey(KeyCode.E))
-        {
-            moveUp = 1f; // Move up
-        }
-        else if (Input.GetKey(KeyCode.Q))
-        {
-            moveUp = -1f; // Move down
-        }
-
->>>>>>> Tutorial:Assets/Scripts/Camera_Movement.cs
         // Calculate the movement vector
         Vector3 movement = new Vector3();
 
-<<<<<<< HEAD:Assets/Scripts/camera/Camera_Movement.cs
         if (standStillWhenCarrying && upPicker.IsCurrentlyCarrying()) {
             movement.x = 0;
             movement.z = 0;
@@ -105,15 +67,10 @@ public class CameraController : MonoBehaviour
 
         // Apply movement to Controller
         controller.Move(movement * Time.deltaTime * movementSpeed);
-=======
-        // Apply the movement to the camera
-        transform.Translate(movement * movementSpeed * Time.deltaTime, Space.Self);
->>>>>>> Tutorial:Assets/Scripts/Camera_Movement.cs
     }
 
     private void HandleRotation()
     {
-<<<<<<< HEAD:Assets/Scripts/camera/Camera_Movement.cs
         float mouseX, mouseY;
         // Use mouse if right mouse button is pressed
         if (Input.GetMouseButton(1))
@@ -128,11 +85,6 @@ public class CameraController : MonoBehaviour
             mouseX = rotateValue.x;
             mouseY = rotateValue.y;
         }
-=======
-        // Get mouse movement
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = Input.GetAxis("Mouse Y");
->>>>>>> Tutorial:Assets/Scripts/Camera_Movement.cs
 
         // Update rotation values
         currentRotation.x += mouseX * mouseSensitivity;
