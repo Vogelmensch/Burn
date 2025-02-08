@@ -50,6 +50,10 @@ public class UpPicker : MonoBehaviour
             {
                 // Check if the clicked object is carryable
                 CarryAndShoot carryAndShoot = hit.collider.GetComponent<CarryAndShoot>();
+                // Try objects parent
+                if (carryAndShoot == null)
+                    carryAndShoot = hit.collider.GetComponentInParent<CarryAndShoot>();
+
                 if (carryAndShoot != null && Vector3.Distance(transform.position, hit.transform.position) < distanceToPickUp)
                 {
                     carryAndShoot.Carry();
