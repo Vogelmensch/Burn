@@ -91,7 +91,7 @@ public class Burnable : MonoBehaviour
     protected void UpdateHelper()
     {
         // Change color of object based on temperature
-        //GetComponent<Renderer>().material.color = Color.Lerp(GetComponent<Renderer>().material.color, Color.red, (temperature / maxTemperature) / colorationReduction);
+        GetComponent<Renderer>().material.color = Color.Lerp(GetComponent<Renderer>().material.color, Color.red, (temperature / maxTemperature) / colorationReduction);
 
         // Start fire
         if (temperature >= ignitionTemperature && !isOnFire) Ignite();
