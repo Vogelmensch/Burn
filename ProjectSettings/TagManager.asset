@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - WinBlock
+  - Chair
+  - Level2Block
+  - TriggerArea1
+  - EndTutorialBlock
   layers:
   - Default
   - TransparentFX
