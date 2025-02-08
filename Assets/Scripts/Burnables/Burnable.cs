@@ -37,7 +37,7 @@ public class Burnable : MonoBehaviour
     protected float ignitionTemperature = 100;
     protected float maxTemperature = 200;
     protected float temperatureIncreaseCoefficient = 10; // amount of temp increase per second when burning
-    protected float temperatureDecreaseAtRainHit = 8; // amount of temp decrease per raindrop hit
+    protected float temperatureDecreaseAtRainHit = 16; // amount of temp decrease per raindrop hit
     protected float heatTransferCoefficient = 10; // amount of heat transferred to nearby objects per second when burning
     [Header("Fire Variables")]
     public float hitPoints = 100;
@@ -62,6 +62,10 @@ public class Burnable : MonoBehaviour
     protected virtual void Start()
     {
         GeneralizedCubeDivider.allBurnables.Add(this);
+
+        // Add some randomness to Hitpoints
+        float deviation = hitPoints * 0.2f;
+        hitPoints += UnityEngine.Random.Range(-deviation, +deviation);
 
         if (burningCubePrefab == null)
         {
@@ -232,7 +236,7 @@ public class Burnable : MonoBehaviour
         float smallestEdge = sizes.Min<float>();
 
         // If Object is thin, the cubes are smaller
-        if (smallestEdge < cubeSize)
+        if (smallestEdge < cubeSize && smallestEdge > 0)
             cubeSize = smallestEdge;
 
         int cubesX = Mathf.FloorToInt(size.x / cubeSize);

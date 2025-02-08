@@ -14,7 +14,7 @@ public class CarryAndShoot : MonoBehaviour
 
     Quaternion initialRelativeRotation;
     // 0 -> ground; 1 -> 45°
-    private float heightOfObjects = 0.1f;
+    private float heightOfObjects = 0f;
 
     // Drag get applied only when carrying
     public float drag = 6;

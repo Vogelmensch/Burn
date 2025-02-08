@@ -4,6 +4,7 @@ public class Barrel : Burnable
 {
     public GameObject explosionPrefab;
     public float barrelExplosionRadius = 5.0f;
+    public float explosionTemperatureIncrease = 100f;
 
     protected override void Start()
     {
@@ -20,7 +21,7 @@ public class Barrel : Burnable
                 Burnable burnable = col.GetComponent<Burnable>();
                 if (burnable != null && !burnable.isOnFire && !IsWallInBetween(burnable))
                 {
-                    burnable.Ignite();
+                    burnable.IncreaseTemperature(explosionTemperatureIncrease);
                 }
             }
         }

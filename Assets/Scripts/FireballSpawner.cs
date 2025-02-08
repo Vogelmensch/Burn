@@ -14,6 +14,7 @@ public class FireballSpawner : MonoBehaviour
     public int forceUpperLimit = 350;
     public double forceChangeRate = 700;
     public float fireAccessRadius = 2f;
+    public float fireballThrowTemperatureDecrease = 100f;
     public Vector3 spawnShift = new Vector3(0,1,0);
     public ThrowStrengthIndicator throwStrengthIndicator;
     private GameObject fireball;
@@ -37,8 +38,10 @@ public class FireballSpawner : MonoBehaviour
 
         if (throwAction.WasPressedThisFrame())
         {
-            if (IsFireNearby(fireAccessRadius))
+            Burnable nearbyFire = NearbyFire(fireAccessRadius);
+            if (nearbyFire != null)
             {
+                nearbyFire.IncreaseTemperature(-fireballThrowTemperatureDecrease);
                 fireball = SpawnBall();
                 Throw(fireball);
             }
@@ -88,7 +91,8 @@ public class FireballSpawner : MonoBehaviour
         rb.AddForce(force);
     }
 
-    bool IsFireNearby(float fireAccessRadius)
+
+    Burnable NearbyFire(float fireAccessRadius)
     {
         Collider[] nearbyObjects = Physics.OverlapSphere(cameraTransform.position, fireAccessRadius);
         foreach (Collider col in nearbyObjects)
@@ -96,9 +100,9 @@ public class FireballSpawner : MonoBehaviour
             Burnable burnable = col.GetComponent<Burnable>();
             if (burnable != null && burnable.isOnFire)
             {
-                return true;
+                return burnable;
             }
         }
-        return false;
+        return null;
     }
 }
