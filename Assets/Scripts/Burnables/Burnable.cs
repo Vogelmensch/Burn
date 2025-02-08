@@ -48,6 +48,7 @@ public class Burnable : MonoBehaviour
     // End new variables
 
     private float cubeSize = 0.07f; // MAXIMAL Size of each smaller cube
+    private float cubeSizeMin = 0.01f;
     private int maxNumberOfCubes = 32;
 
     [Header("Explosion Variables")]
@@ -236,7 +237,7 @@ public class Burnable : MonoBehaviour
         float smallestEdge = sizes.Min<float>();
 
         // If Object is thin, the cubes are smaller
-        if (smallestEdge < cubeSize && smallestEdge > 0)
+        if (smallestEdge < cubeSize && smallestEdge > cubeSizeMin)
             cubeSize = smallestEdge;
 
         int cubesX = Mathf.FloorToInt(size.x / cubeSize);

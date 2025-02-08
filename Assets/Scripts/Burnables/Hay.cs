@@ -7,7 +7,7 @@ public class Hay : Burnable
         ignitionTemperature = 60;
         maxTemperature = 150;
         heatTransferCoefficient = 10;
-        hitPoints = 10;
+        hitPoints = 50;
 
         base.Start();
     }
