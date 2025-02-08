@@ -53,6 +53,14 @@ new string[]
         ShowDialogue(dialogueSets[currentArray][currentIndex]);
         
     }
+
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            ShowNextDialoge();
+            Debug.Log("button pressed!");
+        }
+    }
     private void OnDoorOpened()
     {
         Debug.Log("Tür wurde geöffnet - Event empfangen!");
