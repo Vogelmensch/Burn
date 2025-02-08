@@ -29,7 +29,8 @@ new string[]
 {
     "Splendid work, apprentice of the arcane arts!",
     "Now, you shall learn a most potent craft – the art of hurling fire-laden objects!",
-    "With this newfound power, you shall set ablaze that which lies beyond your reach!"
+    "With this newfound power, you shall set ablaze that which lies beyond your reach!",
+    "Burn the Barrel behind the fence!"
 }
 
 
