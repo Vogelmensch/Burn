@@ -12359,7 +12359,7 @@ Transform:
   m_GameObject: {fileID: 627596046}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -955.3397, y: -255.3938, z: 3.8854702}
+  m_LocalPosition: {x: -955.3397, y: -514, z: 3.8854702}
   m_LocalScale: {x: 1.0637119, y: 1.0637119, z: 1.0637119}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13699,8 +13699,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1403218986323942, guid: 0e9d4178a328fdd46a3501eeef8cb5c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 787808594}
   m_SourcePrefab: {fileID: 100100000, guid: 0e9d4178a328fdd46a3501eeef8cb5c9, type: 3}
+--- !u!1 &702286799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1403218986323942, guid: 0e9d4178a328fdd46a3501eeef8cb5c9, type: 3}
+  m_PrefabInstance: {fileID: 702286798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &709634108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15538,6 +15546,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4971851827277358, guid: 0e9d4178a328fdd46a3501eeef8cb5c9, type: 3}
   m_PrefabInstance: {fileID: 702286798}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &787808594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702286799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  burningCubePrefab: {fileID: 1310143473}
+  hitPoints: 100
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
+  isOnFire: 0
 --- !u!4 &787815665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 14878b47cb26a4540bc3f098367b6d7b, type: 3}
@@ -17646,7 +17673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345, y: 99.08116}
+  m_AnchoredPosition: {x: 345, y: 98}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &881531579
