@@ -46,7 +46,7 @@ public class Burnable : MonoBehaviour
     public float temperature = 0;
     public float spreadRadius = 2f; // Radius for spreading
     public bool isOnFire = false;
-    protected float damageCoefficient = 15; // amount of hitpoints lost per second when burning (rounded later)
+    protected float damageCoefficient = 10; // amount of hitpoints lost per second when burning (rounded later)
     // End new variables
 
     private float cubeSize = 0.07f; // MAXIMAL Size of each smaller cube
