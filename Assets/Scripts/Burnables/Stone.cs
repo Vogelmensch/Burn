@@ -7,9 +7,9 @@ public class Stone : Burnable
 
     protected override void Start()
     {
-        ignitionTemperature = 200;
-        maxTemperature = 300;
-        hitPoints = 450;
+        ignitionTemperature = 300;
+        maxTemperature = 310;
+        hitPoints = 600;
         spreadRadius = 0;
         temperatureDecreaseAtRainHit = 50;
 

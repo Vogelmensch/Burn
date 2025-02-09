@@ -11,7 +11,7 @@ public class Roof : Burnable
         maxTemperature = 400;
         heatTransferCoefficient = 2;
         spreadRadius *= 2;
-        hitPoints = 250;
+        hitPoints = 150;
 
         base.Start();
     }
