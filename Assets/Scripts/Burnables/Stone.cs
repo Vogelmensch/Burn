@@ -11,6 +11,7 @@ public class Stone : Burnable
         maxTemperature = 300;
         hitPoints = 450;
         spreadRadius = 0;
+        temperatureDecreaseAtRainHit = 50;
 
         base.Start();
     }

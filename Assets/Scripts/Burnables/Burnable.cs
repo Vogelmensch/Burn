@@ -7,7 +7,7 @@ using System.Linq;
 /*
                         --- OVERVIEW OF BURNABLES ---
 
-                Ign.Temp.   Max.Temp.   Heat.Trans. Spr.Rad.    HitPoints   
+                Ign.Temp.   Max.Temp.   Heat.Trans. Spr.Rad.    HitPoints   Temp.Dec.atRainHit   
 
     Standard:   100         200         10          1           100    
     Book:       60          120         5           1           100              
@@ -16,7 +16,8 @@ using System.Linq;
     Hay:        60          150         30          1           100
     Tree:       300         600         30          3           1000
     Stone:      200         300         10          0           450
-    Roof:       300         400         2           2           250
+    Door:       400         450         10          1           200         0
+    Roof:       300         400         2           2           250         50
 */
 
 
@@ -37,7 +38,7 @@ public class Burnable : MonoBehaviour
     protected float ignitionTemperature = 100;
     protected float maxTemperature = 200;
     protected float temperatureIncreaseCoefficient = 10; // amount of temp increase per second when burning
-    protected float temperatureDecreaseAtRainHit = 70; // amount of temp decrease per raindrop hit
+    protected float temperatureDecreaseAtRainHit = 10; // amount of temp decrease per raindrop hit
     protected float temperatureDecreaseAtFireballThrow = 100f;
     protected float heatTransferCoefficient = 10; // amount of heat transferred to nearby objects per second when burning
     [Header("Fire Variables")]
@@ -225,6 +226,9 @@ public class Burnable : MonoBehaviour
     // For it to work, you need to add specific layers to the walls
     protected bool IsWallInBetween(Burnable destination, int wallLayer = 8)
     {
+        if (destination is Door)
+            return false;
+
         Vector3 direction = destination.transform.position - transform.position;
         float distance = direction.magnitude;
         int layerMask = 1 << wallLayer;
