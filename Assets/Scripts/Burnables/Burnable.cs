@@ -43,7 +43,7 @@ public class Burnable : MonoBehaviour
     [Header("Fire Variables")]
     public float hitPoints = 100;
     public float temperature = 0;
-    public float spreadRadius = 1f; // Radius for spreading
+    public float spreadRadius = 2f; // Radius for spreading
     public bool isOnFire = false;
     protected float damageCoefficient = 15; // amount of hitpoints lost per second when burning (rounded later)
     // End new variables
