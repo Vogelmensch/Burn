@@ -6,7 +6,7 @@ public class Roof : Burnable
     {
         temperatureDecreaseAtRainHit = 0;
 
-        ignitionTemperature = 300;
+        ignitionTemperature = 100;
         maxTemperature = 400;
         heatTransferCoefficient = 2;
         spreadRadius = 2;

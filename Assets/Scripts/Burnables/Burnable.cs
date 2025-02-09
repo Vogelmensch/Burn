@@ -16,7 +16,7 @@ using System.Linq;
     Hay:        60          150         30          1           100
     Tree:       300         600         30          3           1000
     Stone:      200         300         10          0           450
-    Roof (Hay): 300         400         2           2           250
+    Roof:       300         400         2           2           250
 */
 
 
@@ -215,7 +215,7 @@ public class Burnable : MonoBehaviour
                 if (burnable != null && !IsWallInBetween(burnable))
                 {
                     float distance = Vector3.Distance(transform.position, col.transform.position);
-                    burnable.IncreaseTemperature(heatTransferCoefficient * Time.deltaTime * (spreadRadius - distance) / spreadRadius);
+                    burnable.IncreaseTemperature(Math.Abs(heatTransferCoefficient * Time.deltaTime * (spreadRadius - distance) / spreadRadius));
                 }
             }
         }
