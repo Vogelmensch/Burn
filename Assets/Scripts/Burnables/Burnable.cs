@@ -208,8 +208,8 @@ public class Burnable : MonoBehaviour
                 Burnable burnable = col.GetComponent<Burnable>();
                 if (burnable != null && !IsWallInBetween(burnable))
                 {
-                    float distance = Vector3.Distance(transform.position, col.transform.position);
-                    burnable.IncreaseTemperature(heatTransferCoefficient * Time.deltaTime * (spreadRadius - distance) / spreadRadius);
+                    //float distance = Vector3.Distance(transform.position, col.transform.position);
+                    burnable.IncreaseTemperature(heatTransferCoefficient * Time.deltaTime);
                 }
             }
         }
