@@ -7,7 +7,7 @@ public class Hay : Burnable
         ignitionTemperature = 30;
         maxTemperature = 150;
         heatTransferCoefficient = 60;
-        spreadRadius = 2;
+        spreadRadius = 1.5f;
         hitPoints = 100;
 
         base.Start();

@@ -9,7 +9,7 @@ public class Stone : Burnable
     {
         ignitionTemperature = 300;
         maxTemperature = 310;
-        hitPoints = 600;
+        hitPoints = 300;
         spreadRadius = 0;
         temperatureDecreaseAtRainHit = 50;
 
