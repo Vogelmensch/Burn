@@ -13753,9 +13753,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -14473,9 +14471,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -14642,9 +14638,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -15020,9 +15014,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -16018,9 +16010,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -19602,9 +19592,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -20428,9 +20416,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -21332,9 +21318,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -21660,9 +21644,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -22512,9 +22494,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -23295,9 +23275,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -25956,9 +25934,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -26624,9 +26600,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -27587,9 +27561,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -27834,9 +27806,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -28178,9 +28148,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -31946,9 +31914,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -32274,9 +32240,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -33764,9 +33728,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -34270,9 +34232,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -35461,9 +35421,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -36318,9 +36276,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -36778,9 +36734,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -37466,9 +37420,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -37733,9 +37685,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -38379,9 +38329,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -39096,9 +39044,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -39322,9 +39268,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -40174,9 +40118,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -40987,9 +40929,7 @@ MonoBehaviour:
   fireName: 
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -41140,9 +41080,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -41167,9 +41105,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -41392,9 +41328,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -41820,9 +41754,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -42111,9 +42043,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -42763,9 +42693,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -42956,9 +42884,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -44704,9 +44630,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -44795,9 +44719,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -45316,9 +45238,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -46116,9 +46036,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -46606,9 +46524,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -47159,9 +47075,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -47624,9 +47538,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -47962,9 +47874,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -49122,9 +49032,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -50070,9 +49978,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -51074,9 +50980,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -51179,9 +51083,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -51764,9 +51666,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -51940,9 +51840,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -52123,9 +52021,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -52649,9 +52545,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 2
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -52676,9 +52570,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -52993,9 +52885,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -53497,9 +53387,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 2
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -53736,9 +53624,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -53952,9 +53838,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -53979,9 +53863,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -54615,9 +54497,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -55488,9 +55368,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 2
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -56436,9 +56314,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -56600,9 +56476,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -56691,9 +56565,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -56845,9 +56717,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -57290,9 +57160,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -58558,9 +58426,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -58780,9 +58646,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -58956,9 +58820,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -59307,9 +59169,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -59697,9 +59557,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -60856,9 +60714,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -61725,9 +61581,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -61897,9 +61751,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -62287,9 +62139,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -62806,9 +62656,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -63302,9 +63150,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -63393,9 +63239,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -64310,9 +64154,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -64541,9 +64383,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -64706,9 +64546,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -65879,9 +65717,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -66048,9 +65884,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -66207,8 +66041,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standStillWhenCarrying: 0
   movementSpeed: 4
-  mouseSensitivity: 0.7
-  controllerSensitivity: 30
 --- !u!114 &1648492978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67206,9 +67038,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -67935,9 +67765,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -68391,9 +68219,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -68915,9 +68741,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -69036,9 +68860,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -69127,9 +68949,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -69468,9 +69288,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -69715,9 +69533,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -70509,9 +70325,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -70678,9 +70492,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -70943,9 +70755,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -71115,9 +70925,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -71385,9 +71193,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -71611,9 +71417,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -72195,9 +71999,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -72820,9 +72622,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -73067,9 +72867,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -73450,9 +73248,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -73574,9 +73370,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -73899,9 +73693,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -74456,9 +74248,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -74730,9 +74520,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -75124,9 +74912,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -75299,9 +75085,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -75482,9 +75266,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -75733,9 +75515,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -75841,9 +75621,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -75932,9 +75710,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -76128,9 +75904,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
-  hitPoints: 200
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -76322,9 +76096,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -77158,9 +76930,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -77322,9 +77092,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -77684,9 +77452,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -78308,9 +78074,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -78539,9 +78303,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -79030,9 +78792,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -79137,9 +78897,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -79524,9 +79282,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -79857,9 +79613,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -80067,9 +79821,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -80262,9 +80014,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -80500,9 +80250,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -80979,9 +80727,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -81562,9 +81308,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -81697,9 +81441,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -81788,9 +81530,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -82187,9 +81927,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
-  hitPoints: 200
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -82330,9 +82068,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -82577,9 +82313,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -82746,9 +82480,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -83369,9 +83101,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -84498,9 +84228,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -85179,9 +84907,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -85380,9 +85106,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -85471,9 +85195,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
