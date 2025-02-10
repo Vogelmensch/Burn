@@ -13753,6 +13753,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -14471,6 +14472,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -14638,6 +14640,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -15014,6 +15017,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -16010,6 +16014,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -18388,7 +18393,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1557097991392492, guid: f79efa6806383d2498f1ec4ad778833d, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1622143814703610, guid: f79efa6806383d2498f1ec4ad778833d, type: 3}
       propertyPath: m_Name
@@ -18396,7 +18401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1622143814703610, guid: f79efa6806383d2498f1ec4ad778833d, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4092155130614376, guid: f79efa6806383d2498f1ec4ad778833d, type: 3}
       propertyPath: m_LocalScale.x
@@ -19592,6 +19597,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -20416,6 +20422,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -21318,6 +21325,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -21644,6 +21652,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -22494,6 +22503,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -23275,6 +23285,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -25934,6 +25945,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -26600,6 +26612,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -27561,6 +27574,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -27806,6 +27820,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -28148,6 +28163,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -31914,6 +31930,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -32240,6 +32257,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -33728,6 +33746,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -34232,6 +34251,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -35421,6 +35441,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -36276,6 +36297,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -36734,6 +36756,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -37420,6 +37443,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -37685,6 +37709,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -38329,6 +38354,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -39044,6 +39070,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -39268,6 +39295,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -40118,6 +40146,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -40929,6 +40958,7 @@ MonoBehaviour:
   fireName: 
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -41080,6 +41110,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -41105,6 +41136,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -41328,6 +41360,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -41754,6 +41787,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -42043,6 +42077,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -42693,6 +42728,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -42884,6 +42920,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -44630,6 +44667,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -44719,6 +44757,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -45238,6 +45277,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -46036,6 +46076,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -46524,6 +46565,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -47075,6 +47117,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -47538,6 +47581,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -47874,6 +47918,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -49032,6 +49077,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -49978,6 +50024,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -50980,6 +51027,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -51083,6 +51131,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -51666,6 +51715,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -51840,6 +51890,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -52021,6 +52072,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -52545,6 +52597,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -52570,6 +52623,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -52885,6 +52939,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -53387,6 +53442,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -53624,6 +53680,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -53838,6 +53895,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -53863,6 +53921,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -54497,6 +54556,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -55368,6 +55428,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -56314,6 +56375,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -56476,6 +56538,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -56565,6 +56628,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -56717,6 +56781,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -57160,6 +57225,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -58426,6 +58492,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -58646,6 +58713,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -58820,6 +58888,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -59169,6 +59238,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -59557,6 +59627,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -60714,6 +60785,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -61581,6 +61653,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -61751,6 +61824,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -62139,6 +62213,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -62656,6 +62731,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -63150,6 +63226,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -63239,6 +63316,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -64154,6 +64232,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -64383,6 +64462,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -64546,6 +64626,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -65717,6 +65798,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -65884,6 +65966,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -67038,6 +67121,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -67765,6 +67849,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -68219,6 +68304,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -68741,6 +68827,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -68860,6 +68947,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -68949,6 +69037,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -69288,6 +69377,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -69533,6 +69623,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -70325,6 +70416,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -70492,6 +70584,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -70755,6 +70848,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -70925,6 +71019,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -71193,6 +71288,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -71417,6 +71513,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -71999,6 +72096,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -72622,6 +72720,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -72867,6 +72966,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -73248,6 +73348,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -73370,6 +73471,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -73693,6 +73795,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -74248,6 +74351,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -74520,6 +74624,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -74912,6 +75017,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -75085,6 +75191,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -75266,6 +75373,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -75515,6 +75623,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -75621,6 +75730,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -75710,6 +75820,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -75904,6 +76015,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -76096,6 +76208,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -76930,6 +77043,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -77092,6 +77206,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -77452,6 +77567,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -78074,6 +78190,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -78303,6 +78420,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -78792,6 +78910,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -78897,6 +79016,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -79282,6 +79402,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -79613,6 +79734,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -79821,6 +79943,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -80014,6 +80137,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -80250,6 +80374,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -80727,6 +80852,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -81308,6 +81434,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -81441,6 +81568,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -81530,6 +81658,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -81927,6 +82056,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -82068,6 +82198,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -82313,6 +82444,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -82480,6 +82612,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -83101,6 +83234,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -84228,6 +84362,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -84907,6 +85042,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -85106,6 +85242,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -85195,6 +85332,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
