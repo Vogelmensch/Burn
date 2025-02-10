@@ -9,7 +9,6 @@ public class CameraMovementNew : MonoBehaviour
     float yRotation;
     private void Start(){
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
     private void Update(){
         float MouseX = Input.GetAxis("Mouse X") * sensX * Time.deltaTime;
