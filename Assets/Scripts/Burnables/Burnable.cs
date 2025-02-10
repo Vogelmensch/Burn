@@ -3,20 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Linq;
-using Mono.Cecil;
 
 /*
                         --- OVERVIEW OF BURNABLES ---
 
-                Ign.Temp.   Max.Temp.   Heat.Trans. Spr.Rad.    HitPoints   
+                Ign.Temp.   Max.Temp.   Heat.Trans. Spr.Rad.    HitPoints   Temp.Dec.atRainHit   
 
     Standard:   100         200         10          1           100    
     Book:       60          120         5           1           100              
     Crate:      100         200         10          1           200
     Wood Pile:  150         400         20          1.5         400
-    Hay:        60          150         10          1           80
-    Tree:       300         600         30          3           1000
-    Stone:      500         600         10          1           50
+    Hay:        60          150         30          1           100
+    Tree:       300         600         30          3           1500        10
+    Stone:      200         300         10          0           450
+    Door:       400         450         10          0           200         0         
+    Roof:       300         400         2           2           250         0
 */
 
 
@@ -37,14 +38,15 @@ public class Burnable : MonoBehaviour
     protected float ignitionTemperature = 100;
     protected float maxTemperature = 200;
     protected float temperatureIncreaseCoefficient = 10; // amount of temp increase per second when burning
-    protected float temperatureDecreaseAtRainHit = 16; // amount of temp decrease per raindrop hit
-    protected float heatTransferCoefficient = 10; // amount of heat transferred to nearby objects per second when burning
+    protected float temperatureDecreaseAtRainHit = 30; // amount of temp decrease per raindrop hit
+    protected float temperatureDecreaseAtFireballThrow = 100f;
+    protected float heatTransferCoefficient = 12; // amount of heat transferred to nearby objects per second when burning
     [Header("Fire Variables")]
-    public float hitPoints = 100;
+    protected float hitPoints = 100;
     public float temperature = 0;
-    public float spreadRadius = 1f; // Radius for spreading
+    protected float spreadRadius = 1f; // Radius for spreading
     public bool isOnFire = false;
-    protected float damageCoefficient = 15; // amount of hitpoints lost per second when burning (rounded later)
+    protected float damageCoefficient = 10; // amount of hitpoints lost per second when burning (rounded later)
     // End new variables
 
     private float cubeSize = 0.07f; // MAXIMAL Size of each smaller cube
@@ -153,6 +155,11 @@ public class Burnable : MonoBehaviour
         temperature -= temperatureDecreaseAtRainHit; // decrease temp when raining
     }
 
+    public void FeedFireball()
+    {
+        temperature -= temperatureDecreaseAtFireballThrow;
+    }
+
 
     public void Extinguish()
     {
@@ -219,6 +226,9 @@ public class Burnable : MonoBehaviour
     // For it to work, you need to add specific layers to the walls
     protected bool IsWallInBetween(Burnable destination, int wallLayer = 8)
     {
+        if (destination is Door)
+            return false;
+
         Vector3 direction = destination.transform.position - transform.position;
         float distance = direction.magnitude;
         int layerMask = 1 << wallLayer;

@@ -2,12 +2,24 @@ using UnityEngine;
 
 public class Stone : Burnable
 {
+    [Header("Stone")]
+    public GameObject youWonCanvas;
+
     protected override void Start()
     {
-        ignitionTemperature = 500;
-        maxTemperature = 600;
-        hitPoints = 50;
+        ignitionTemperature = 300;
+        maxTemperature = 310;
+        hitPoints = 600;
+        spreadRadius = 0;
+        temperatureDecreaseAtRainHit = 50;
 
         base.Start();
+    }
+
+    protected override void Explode()
+    {
+        youWonCanvas.SetActive(true);
+
+        base.Explode();
     }
 }

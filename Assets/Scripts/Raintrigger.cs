@@ -15,8 +15,8 @@ public class RainTrigger : MonoBehaviour
     private RainScript rainScript;
     private float startIntensity = 0.02f; // Nieselregen
     private float intensityIncreasePerSecond = 0.05f;
-    public float timeOfLightRain = 30;
-    public float timeToFullIntensity = 3 * 60;
+    public float timeOfLightRain = 0;
+    public float timeToFullIntensity = 60;
     private float passedTime = 0;
 
     void OnTriggerEnter()
@@ -33,16 +33,8 @@ public class RainTrigger : MonoBehaviour
     {
         if (isRaining) passedTime += Time.deltaTime;
 
-        // DEBUG ONLY
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Debug.Log("Got R");
-            if (!isRaining) StartRain();
-            else StopRain();
-        }
-
         if (passedTime > timeOfLightRain && rainScript != null){
-            //rainScript.IncreaseIntensity(intensityIncreasePerSecond * Time.deltaTime);
+            rainScript.IncreaseIntensity(intensityIncreasePerSecond * Time.deltaTime);
         }
     }
 
@@ -54,7 +46,7 @@ public class RainTrigger : MonoBehaviour
             rainEffectInstance = Instantiate(rainPrefab);
             rainScript = rainEffectInstance.GetComponent<RainScript>();
             if (rainScript != null){
-                //rainScript.SetIntensity(startIntensity);
+                rainScript.SetIntensity(startIntensity);
             }
         }
     }

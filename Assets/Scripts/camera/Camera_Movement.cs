@@ -72,6 +72,9 @@ public class CameraController : MonoBehaviour
 
     private void HandleRotation()
     {
+        if (PauseMenu.isPaused) 
+            return;
+
         float mouseX, mouseY;
         // Use mouse if right mouse button is pressed
         if (Input.GetMouseButton(1))

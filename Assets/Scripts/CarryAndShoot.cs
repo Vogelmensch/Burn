@@ -16,7 +16,7 @@ public class CarryAndShoot : MonoBehaviour
     [Header("Carry and Shoot Settings")]
     public float distanceWhileCarrying = 1.0f;
 
-    public float heightOfObjects = 0.1f;
+    private float heightOfObjects = 0f;
 
     // Drag get applied only when carrying
     public float drag = 6;

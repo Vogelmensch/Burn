@@ -4,10 +4,11 @@ public class Hay : Burnable
 {
     protected override void Start()
     {
-        ignitionTemperature = 60;
+        ignitionTemperature = 30;
         maxTemperature = 150;
-        heatTransferCoefficient = 10;
-        hitPoints = 50;
+        heatTransferCoefficient = 60;
+        spreadRadius = 2;
+        hitPoints = 100;
 
         base.Start();
     }
