@@ -1674,9 +1674,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -1722,7 +1720,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &89608900
@@ -1940,7 +1937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standStillWhenCarrying: 0
   movementSpeed: 5
-  mouseSensitivity: 2
+  mouseSensitivity: 0.7
   controllerSensitivity: 2
 --- !u!54 &90068453
 Rigidbody:
@@ -5252,7 +5249,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!1001 &262228655
@@ -5341,7 +5337,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!54 &263479759
@@ -9773,9 +9768,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
-  hitPoints: 150
   temperature: 90
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -9794,7 +9787,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0
   drag: 6
   angularDrag: 1
 --- !u!54 &459219961
@@ -12691,9 +12683,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 1
   explosionForce: 0
   explosionRadius: 4
@@ -13621,9 +13611,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 1
   explosionForce: 0
   explosionRadius: 4
@@ -13642,7 +13630,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!54 &641423835
@@ -16605,9 +16592,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -17587,9 +17572,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -27056,7 +27039,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!1 &1310143473 stripped
@@ -27449,6 +27431,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1564418491}
     m_Modifications:
+    - target: {fileID: 4799982519216865147, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6117026140062700152, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
       propertyPath: m_Name
       value: MedievalWoodCube
@@ -27509,10 +27495,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4799982519216865147, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
-      propertyPath: m_Mass
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27541,9 +27523,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
-  hitPoints: 10000000
   temperature: 90
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -28401,9 +28381,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
-  hitPoints: 150
   temperature: 90
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -28422,7 +28400,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0
   drag: 6
   angularDrag: 1
 --- !u!54 &1385368923
@@ -31350,9 +31327,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -31398,7 +31373,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1523789000
@@ -34329,9 +34303,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -34377,7 +34349,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1 &1646294839 stripped
@@ -35811,7 +35782,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!1001 &1732045793
@@ -38822,9 +38792,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -38870,7 +38838,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1865798005
@@ -39358,9 +39325,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -39406,7 +39371,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1881334278
@@ -39631,9 +39595,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
-  hitPoints: 150
   temperature: 90
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -39652,7 +39614,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0
   drag: 6
   angularDrag: 1
 --- !u!54 &1885551822
@@ -41381,9 +41342,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
-  hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
@@ -41429,7 +41388,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.6
   drag: 6
   angularDrag: 1
 --- !u!1001 &1976072251
@@ -43211,7 +43169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   distanceWhileCarrying: 1
-  heightOfObjects: 0.1
   drag: 6
   angularDrag: 1
 --- !u!1001 &2035060388

@@ -16,7 +16,7 @@ public class EndTutorial : MonoBehaviour
 
     void FinishTut()
     {   
-        
-        SceneManager.LoadScene("MainMenu");
+        Cursor.lockState = CursorLockMode.Confined;
+        SceneManager.LoadScene(0);
     }
 }
