@@ -45,10 +45,13 @@ public class CameraController : MonoBehaviour
         // Calculate the movement vector
         Vector3 movement = new Vector3();
 
-        if (standStillWhenCarrying && upPicker.IsCurrentlyCarrying()) {
+        if (standStillWhenCarrying && upPicker.IsCurrentlyCarrying())
+        {
             movement.x = 0;
             movement.z = 0;
-        } else {
+        }
+        else
+        {
             movement.x = moveAction.ReadValue<Vector2>().x;
             movement.z = moveAction.ReadValue<Vector2>().y;
         }
@@ -72,23 +75,15 @@ public class CameraController : MonoBehaviour
 
     private void HandleRotation()
     {
-        if (PauseMenu.isPaused) 
+        if (PauseMenu.isPaused)
             return;
 
         float mouseX, mouseY;
-        // Use mouse if right mouse button is pressed
-        if (Input.GetMouseButton(1))
-        {
-            mouseX = Input.GetAxis("Mouse X");
-            mouseY = Input.GetAxis("Mouse Y");
-        }
-        // else, use Gamepad
-        else
-        {
-            Vector2 rotateValue = rotateAction.ReadValue<Vector2>();
-            mouseX = rotateValue.x;
-            mouseY = rotateValue.y;
-        }
+
+        Vector2 rotateValue = rotateAction.ReadValue<Vector2>();
+        mouseX = rotateValue.x;
+        mouseY = rotateValue.y;
+
 
         // Update rotation values
         currentRotation.x += mouseX * mouseSensitivity;
@@ -102,7 +97,8 @@ public class CameraController : MonoBehaviour
         transform.rotation = Quaternion.Euler(currentRotation.y, currentRotation.x, 0f);
 
         Camera.main.transform.rotation = Quaternion.Euler(currentRotation.y, currentRotation.x, 0);
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetMouseButtonDown(0))
+        {
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
