@@ -9,15 +9,14 @@ public class CameraController : MonoBehaviour
     public float movementSpeed = 10f;
 
     // Sensitivity for camera rotation
-    public float mouseSensitivity = 2f;
-
-    public float controllerSensitivity = 2f;
-
+    private float controllerSensitivity = 250f;
+    private float mouseSensitivity = 30f;
 
     private CharacterController controller;
     private UpPicker upPicker;
     InputAction moveAction;
-    InputAction rotateAction;
+    InputAction controllerRotateAction;
+    InputAction mouseRotateAction;
     // Store the current rotation of the camera
     private Vector2 currentRotation = new Vector2(-63.973f, -6.016f);
 
@@ -28,7 +27,8 @@ public class CameraController : MonoBehaviour
         upPicker = GetComponent<UpPicker>();
 
         moveAction = InputSystem.actions.FindAction("Move");
-        rotateAction = InputSystem.actions.FindAction("Look");
+        controllerRotateAction = InputSystem.actions.FindAction("LookController");
+        mouseRotateAction = InputSystem.actions.FindAction("LookMouse");
 
         if (standStillWhenCarrying && upPicker == null)
             Debug.LogError("You need to apply an upPicker-object to the camera to use this option!");
@@ -78,16 +78,29 @@ public class CameraController : MonoBehaviour
         if (PauseMenu.isPaused)
             return;
 
-        float mouseX, mouseY;
+        // Controller
+        float contX, contY;
 
-        Vector2 rotateValue = rotateAction.ReadValue<Vector2>();
-        mouseX = rotateValue.x;
-        mouseY = rotateValue.y;
-
+        Vector2 contRotateValue = controllerRotateAction.ReadValue<Vector2>();
+        contX = contRotateValue.x;
+        contY = contRotateValue.y;
 
         // Update rotation values
-        currentRotation.x += mouseX * mouseSensitivity;
-        currentRotation.y -= mouseY * mouseSensitivity;
+        currentRotation.x += contX * controllerSensitivity * Time.deltaTime;
+        currentRotation.y -= contY * controllerSensitivity * Time.deltaTime;
+
+        // Mouse
+        float mouseX, mouseY;
+
+        Vector2 mouseRotateValue = mouseRotateAction.ReadValue<Vector2>();
+        mouseX = mouseRotateValue.x;
+        mouseY = mouseRotateValue.y;
+
+        // Update rotation values
+        currentRotation.x += mouseX * mouseSensitivity * Time.deltaTime;
+        currentRotation.y -= mouseY * mouseSensitivity * Time.deltaTime;
+
+
 
         // Clamp the vertical rotation to avoid flipping
         currentRotation.x = Mathf.Repeat(currentRotation.x, 360);

@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem;
 public class WizardDialogue : MonoBehaviour
 {
     public GameObject dialogueBox; //Der Magier und die Sprechblase :))
@@ -9,6 +10,7 @@ public class WizardDialogue : MonoBehaviour
     private RevealLevel3 doorDetector2;
     private bool hasTriggered = false;
     private bool hasTriggered2 = false;
+    private InputAction nextDialogueAction;
     private string[][] dialogueSets = 
 {
     new string[] 
@@ -58,10 +60,11 @@ new string[]
         doorDetector2.DoorOpenedEvent2 += OnDoorOpened2;
         ShowDialogue(dialogueSets[currentArray][currentIndex]);
         
+        nextDialogueAction = InputSystem.actions.FindAction("Jump");
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(nextDialogueAction.WasPressedThisFrame())
         {
             NextDialogue();
             Debug.Log("button pressed!");

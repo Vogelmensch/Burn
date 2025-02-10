@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
     public static bool isPaused;
 
     void Start(){
-        pauseMenu.SetActive(false);
+        ResumeGame();
     }
 
     void Update(){
