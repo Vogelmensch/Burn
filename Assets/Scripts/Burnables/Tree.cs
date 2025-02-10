@@ -8,7 +8,8 @@ public class Tree : Burnable
         maxTemperature = 600;
         heatTransferCoefficient = 30;
         spreadRadius *= 3;
-        hitPoints = 1000;
+        hitPoints = 1500;
+        temperatureDecreaseAtRainHit = 10;
 
         base.Start();
     }

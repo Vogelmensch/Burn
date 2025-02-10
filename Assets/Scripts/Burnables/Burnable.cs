@@ -14,9 +14,9 @@ using System.Linq;
     Crate:      100         200         10          1           200
     Wood Pile:  150         400         20          1.5         400
     Hay:        60          150         30          1           100
-    Tree:       300         600         30          3           1000
+    Tree:       300         600         30          3           1500        10
     Stone:      200         300         10          0           450
-    Door:       400         450         10          1           200         
+    Door:       400         450         10          0           200         0         
     Roof:       300         400         2           2           250         0
 */
 
@@ -38,13 +38,13 @@ public class Burnable : MonoBehaviour
     protected float ignitionTemperature = 100;
     protected float maxTemperature = 200;
     protected float temperatureIncreaseCoefficient = 10; // amount of temp increase per second when burning
-    protected float temperatureDecreaseAtRainHit = 60; // amount of temp decrease per raindrop hit
+    protected float temperatureDecreaseAtRainHit = 30; // amount of temp decrease per raindrop hit
     protected float temperatureDecreaseAtFireballThrow = 100f;
-    protected float heatTransferCoefficient = 10; // amount of heat transferred to nearby objects per second when burning
+    protected float heatTransferCoefficient = 12; // amount of heat transferred to nearby objects per second when burning
     [Header("Fire Variables")]
-    public float hitPoints = 100;
+    protected float hitPoints = 100;
     public float temperature = 0;
-    public float spreadRadius = 2f; // Radius for spreading
+    protected float spreadRadius = 1f; // Radius for spreading
     public bool isOnFire = false;
     protected float damageCoefficient = 10; // amount of hitpoints lost per second when burning (rounded later)
     // End new variables

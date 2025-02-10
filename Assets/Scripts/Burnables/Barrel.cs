@@ -3,8 +3,8 @@ using UnityEngine;
 public class Barrel : Burnable
 {
     public GameObject explosionPrefab;
-    public float barrelExplosionRadius = 5.0f;
-    public float explosionTemperatureIncrease = 100f;
+    private float barrelExplosionRadius = 5.0f;
+    private float explosionTemperatureIncrease = 150f;
 
     protected override void Start()
     {
