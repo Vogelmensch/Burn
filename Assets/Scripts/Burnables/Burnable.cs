@@ -42,7 +42,7 @@ public class Burnable : MonoBehaviour
     protected float temperatureDecreaseAtFireballThrow = 100f;
     protected float heatTransferCoefficient = 12; // amount of heat transferred to nearby objects per second when burning
     [Header("Fire Variables")]
-    protected float hitPoints = 100;
+    public float hitPoints = 100;
     public float temperature = 0;
     protected float spreadRadius = 1f; // Radius for spreading
     public bool isOnFire = false;
