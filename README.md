@@ -33,8 +33,8 @@ You are our last hope: Can you ignite the fire in the hearth to fill our Great H
 |---|---|
 
 ### &#x1F3F0; The Castle
-The kind-hearted witch Ellen has been captured by the Evil! They have cursed her with a spell of eternal sleep.\ 
-Can you move the candle's fire through the castle to burn down the glowing stone which holds the curse? There is no time to waste: A storm is coming!
+The kind-hearted witch Ellen has been captured by the Evil! They have cursed her with a spell of eternal sleep.<br> 
+Can you move the candle's flame through the castle to burn down the glowing stone which holds the curse? There is no time to waste: A storm is coming!
 |![Castle 1](Images/pngs/burn_castle1.png)|![Castle 2](Images/pngs/burn_castle2.png)|
 |---|---|
 
