@@ -6,9 +6,9 @@ public class Ground : Burnable
     {
         base.Start();
 
-        hitPoints = float.MaxValue;
-        temperature = float.MaxValue;
-        maxTemperature = float.MaxValue;
+        damageCoefficient = 0f;
+        temperature = 150;
+        maxTemperature = 200;
         temperatureDecreaseAtFireballThrow = 0f;
     }
 }

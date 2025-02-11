@@ -1389,6 +1389,10 @@ PrefabInstance:
       value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 1863213617433584067, guid: a1f413e5f68b62c4b8f5d490492b7a79, type: 3}
+      propertyPath: fireAccessRadius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863213617433584067, guid: a1f413e5f68b62c4b8f5d490492b7a79, type: 3}
       propertyPath: throwStrengthIndicator
       value: 
       objectReference: {fileID: 1533183753}
@@ -1674,6 +1678,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -2189,6 +2194,7 @@ MonoBehaviour:
   fireName: 
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -3807,6 +3813,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1209571964}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1904809331}
   m_SourcePrefab: {fileID: 100100000, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
 --- !u!1001 &176284294
 PrefabInstance:
@@ -9905,6 +9914,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 90
   isOnFire: 0
   explosionForce: 0
@@ -13624,6 +13634,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 1
   explosionForce: 0
@@ -16605,6 +16616,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -17723,6 +17735,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -27557,8 +27570,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
-  burningCubePrefab: {fileID: 1310143473}
+  burningCubePrefab: {fileID: 0}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 90
   isOnFire: 0
   explosionForce: 0
@@ -28412,6 +28426,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 90
   isOnFire: 0
   explosionForce: 0
@@ -31358,6 +31373,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -34407,6 +34423,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -38896,6 +38913,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -39429,6 +39447,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0
@@ -39699,6 +39718,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 90
   isOnFire: 0
   explosionForce: 0
@@ -40411,6 +40431,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: ab2bb0f2df700694f8228696f3570ef1, type: 3}
   m_PrefabInstance: {fileID: 169420844}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1904809331
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904809330}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9000003, y: 2, z: 0.11999901}
+  m_Center: {x: -0.44999984, y: 0.99999994, z: -0.019999895}
 --- !u!1001 &1905731109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41508,6 +41549,7 @@ MonoBehaviour:
   fireName: firePrefab
   burningCubePrefab: {fileID: 1310143473}
   colorationReduction: 100
+  hitPoints: 100
   temperature: 0
   isOnFire: 0
   explosionForce: 0

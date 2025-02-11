@@ -62,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
         } else if (!grounded){
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
             rb.AddForce(Vector3.down * rb.mass * extraGravityMultiplier, ForceMode.Acceleration);
-            Debug.Log("Airborne");
         }
     }
     private void SpeedControl(){
