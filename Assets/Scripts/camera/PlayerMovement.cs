@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public float jumpCooldown = 0.25f;
     bool readyToJump = true;
+    public float extraGravityMultiplier = 2.5f;
     public float airMultiplier = 0.4f;
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
@@ -59,7 +60,8 @@ public class PlayerMovement : MonoBehaviour
         if (grounded){
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
         } else if (!grounded){
-            rb.AddForce(moveDirection.normalized * moveSpeed * 5f * airMultiplier, ForceMode.Force);
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+            rb.AddForce(Vector3.down * rb.mass * extraGravityMultiplier, ForceMode.Acceleration);
         }
     }
     private void SpeedControl(){
