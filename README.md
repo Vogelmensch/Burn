@@ -37,7 +37,9 @@ _TODO_
 - **Storage:** 2GB free disk space  
 
 ### 🔹 How to Install  
-_TODO_
+- Go to our [itch.io](https://lightninggroup.itch.io/burn)-page
+- Scroll all the way down
+- Simply download and run the version for your operating system!
 
 ## 🛠️ Development Team  
 👨‍💻 Lightning Group
