@@ -27,13 +27,14 @@ Learn the arts of bending the elements in this engaging introduction to the worl
 |---|---|
 
 ### &#x1F37A; The Great Hall
-The great feast is about to begin! There is only one problem: It's pretty damn cold!\
-You are our last hope: Can you ignite the fire in the great hearth to fill our Great Hall with welcoming warmth?
+The feast is about to begin! There is only one problem: It's pretty damn cold!\
+You are our last hope: Can you ignite the fire in the hearth to fill our Great Hall with welcoming warmth?
 |![Viking 1](Images/pngs/burn_viking1.png)|![Viking 2](Images/pngs/burn_viking2.png)|
 |---|---|
 
 ### &#x1F3F0; The Castle
-The kind-hearted witch Ellen has been captured by the Evil! They have cursed her with a spell of eternal sleep. Can you move the candle's fire through the castle to burn down the glowing stone which holds the curse? There is no time to waste: A storm is coming!
+The kind-hearted witch Ellen has been captured by the Evil! They have cursed her with a spell of eternal sleep.\ 
+Can you move the candle's fire through the castle to burn down the glowing stone which holds the curse? There is no time to waste: A storm is coming!
 |![Castle 1](Images/pngs/burn_castle1.png)|![Castle 2](Images/pngs/burn_castle2.png)|
 |---|---|
 
