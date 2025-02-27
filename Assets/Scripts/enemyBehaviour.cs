@@ -102,6 +102,7 @@ public class enemyBehaviour : MonoBehaviour
         if (!alreadyAttacked)
         {
             // TODO: Attack code here
+            createWaterBeam();
             Debug.Log("Attacking");
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -130,5 +131,9 @@ public class enemyBehaviour : MonoBehaviour
         if (fireInSightRange && !fireInAttackRange) GoToFire();
         if (fireInSightRange && fireInAttackRange) PutOutFire();
         
+    }
+
+    void createWaterBeam() {
+        //waterBeam beam = new waterBeam();
     }
 }

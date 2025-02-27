@@ -26,6 +26,8 @@ public class Burnable : MonoBehaviour
 {
     [Header("Metadata")]
     public string fireName = "firePrefab"; // Name of the fire prefab file in the resources folder
+    public string waterSplashName = "waterSplashPrefab";
+    private GameObject waterSplashPrefab;
     private GameObject firePrefab; // Reference to the fire particle  prefab
     public GameObject burningCubePrefab; // Prefab for the burning cubes
 
@@ -60,7 +62,9 @@ public class Burnable : MonoBehaviour
     public float explosionUpward = 0.4f; // Upward modifier for the explosion force
 
     private GameObject fireEffectInstance;
-    private int BurningLayer = 6;
+    private GameObject waterSplashInstance;
+    private bool wett = false;
+    private int BurningLayer = 1 << 6;
 
     protected virtual void Start()
     {
@@ -81,13 +85,40 @@ public class Burnable : MonoBehaviour
         if (GeneralizedCubeDivider.allBurnables.Contains(this))
         {
             GeneralizedCubeDivider.allBurnables.Remove(this);
-            Debug.Log($"Removed {name} from allBurnables.");
         }
     }
 
     protected virtual void Update()
     {
         UpdateHelper();
+    }
+
+    public void StartWaterEffect()
+    {
+        
+            // always when we want to make wett add 1 to wett
+            wett = true;
+            // only create a new instance if there is no existing one
+            Debug.Log(wett);
+            if(waterSplashInstance == null){
+                waterSplashPrefab = Resources.Load<GameObject>(waterSplashName);
+                if (waterSplashPrefab != null)
+                {
+                    Renderer renderer = GetComponent<Renderer>();
+                    waterSplashInstance = Instantiate(waterSplashPrefab, renderer.bounds.center, Quaternion.identity, transform);
+                    waterSplashInstance.transform.localScale = transform.localScale;
+                }
+            }
+            Invoke(nameof(makeDry), 1);
+        
+    }
+
+    public void makeDry()
+    {
+        wett = false;
+    
+        // once all StartWaterEffect's are done destroy the effect
+        Destroy(waterSplashInstance);
     }
 
     protected void UpdateHelper()
@@ -153,6 +184,7 @@ public class Burnable : MonoBehaviour
     public void RainHit()
     {
         temperature -= temperatureDecreaseAtRainHit; // decrease temp when raining
+        StartWaterEffect();
     }
 
     public void FeedFireball()
@@ -166,7 +198,6 @@ public class Burnable : MonoBehaviour
         if (isOnFire)
         {
             isOnFire = false;
-            temperature = 0;
             if (fireEffectInstance != null)
             {
                 Destroy(fireEffectInstance);
