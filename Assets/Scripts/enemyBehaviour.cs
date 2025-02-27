@@ -4,15 +4,20 @@ using System.Collections.Generic;
 
 public class enemyBehaviour : MonoBehaviour
 {
+
+    [Header("Components")]
     public NavMeshAgent agent;
     private Transform target;
     public LayerMask whatIsGround;
-    // Patroling
+    public waterBeam waterBeam;
+
+
+    [Header("Patroling")]
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
 
-    // Attack variables
+    [Header("Attacking")]
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     // States
@@ -33,7 +38,6 @@ public class enemyBehaviour : MonoBehaviour
     {
         List<Burnable> burnables = new List<Burnable>();
         Collider[] colliders = Physics.OverlapSphere(transform.position, range, BurningLayerMask);
-        Debug.Log("Found " + colliders.Length + " colliders");
         foreach (Collider col in colliders)
         {
             Burnable burnable = col.GetComponent<Burnable>();
@@ -42,7 +46,6 @@ public class enemyBehaviour : MonoBehaviour
                 burnables.Add(burnable);
             }
         }
-        Debug.Log("Found " + burnables.Count + " burning objects");
         return burnables;
     }
 
@@ -68,6 +71,8 @@ public class enemyBehaviour : MonoBehaviour
     }
     private void Patroling()
     {
+        Debug.Log("Patroling");
+        DeactivateWaterBeam();
         if (!walkPointSet) SearchWalkPoint();
         if (walkPointSet)
             agent.SetDestination(walkPoint);
@@ -93,19 +98,20 @@ public class enemyBehaviour : MonoBehaviour
     }
     private void GoToFire()
     {
+        Debug.Log("Going to fire");
+        DeactivateWaterBeam();
         agent.SetDestination(target.position);
     }
     private void PutOutFire()
     {
+        Debug.Log("Putting out fire");
         agent.SetDestination(transform.position);
         transform.LookAt(target);
         if (!alreadyAttacked)
         {
-            // TODO: Attack code here
-            createWaterBeam();
-            Debug.Log("Attacking");
             alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            ActivateWaterBeam();
+            //Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }
     private void ResetAttack()
@@ -130,10 +136,16 @@ public class enemyBehaviour : MonoBehaviour
         if (!fireInSightRange && !fireInAttackRange) Patroling();
         if (fireInSightRange && !fireInAttackRange) GoToFire();
         if (fireInSightRange && fireInAttackRange) PutOutFire();
-        
     }
 
-    void createWaterBeam() {
-        //waterBeam beam = new waterBeam();
+    private void DeactivateWaterBeam()
+    {
+        waterBeam.Deactivate();
+        alreadyAttacked = false;
+    }
+
+    private void ActivateWaterBeam()
+    {
+        waterBeam.Activate();
     }
 }

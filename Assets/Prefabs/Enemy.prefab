@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7020048036650620582}
   - component: {fileID: 919001814238282257}
   - component: {fileID: 6113638003289083295}
+  - component: {fileID: 2778081645534757054}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -107,6 +108,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  waterBeam: {fileID: 2778081645534757054}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
   timeBetweenAttacks: 5
@@ -158,6 +160,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2778081645534757054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950899988651548352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c73ab22b0963c474faa635165c6a20cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterName: waterBeamPrefab
+  isOn: 0
+  sprayDistance: 10
+  BurningLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  timeBetweenHits: 1
 --- !u!1001 &2907460104541133870
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -64,7 +64,7 @@ public class Burnable : MonoBehaviour
     private GameObject fireEffectInstance;
     private GameObject waterSplashInstance;
     private bool wett = false;
-    private int BurningLayer = 1 << 6;
+    private int BurningLayer = 6;
 
     protected virtual void Start()
     {
@@ -166,6 +166,8 @@ public class Burnable : MonoBehaviour
             isOnFire = true;
             temperature = ignitionTemperature;
             StartFireEffect();
+
+            gameObject.layer = BurningLayer;
 
             GameOver gameOver = UnityEngine.Object.FindAnyObjectByType<GameOver>(); // Eventuell performance-probleme
             if (gameOver != null)

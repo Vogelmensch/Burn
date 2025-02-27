@@ -5,8 +5,8 @@ public class waterBeam : MonoBehaviour
     public string waterName = "waterBeamPrefab";
     public bool isOn = false;
     public float sprayDistance = 100; // distance the water is sprayed
-    public LayerMask BurningLayer = 1 << 6;
-    public float timeBetweenHits = 1f; // time in between reducing temperature so it doesnt happen every frame
+    public LayerMask BurningLayer = 6;
+    public float timeBetweenHits = 0.25f; // time in between reducing temperature so it doesnt happen every frame
 
     private bool canHit = true; // helper variable to save if curretnly a temperature can be reduced
     private GameObject waterPrefab;
@@ -14,19 +14,18 @@ public class waterBeam : MonoBehaviour
     private float duration = 10;
     private float cooldown = 3;
 
-    void Start()
-    {
-        Activate();
-    }
-
     void Update()
     {
         if (isOn && canHit) {
             // cast a ray forward 
             // TODO: change to the cone of the water effect instead of using a ray
-            Ray ray = new Ray(transform.position, Vector3.forward);
+            Ray ray = new Ray(transform.position, transform.forward);
+            
+            // Draw the ray in the Scene view for visualization
+            Debug.DrawRay(ray.origin, ray.direction * sprayDistance, Color.blue);
+
             // check if the ray hits anything
-            if (Physics.Raycast(ray, out RaycastHit hit)) {
+            if (Physics.Raycast(ray, out RaycastHit hit, sprayDistance)) {
                 // Check if the hit object is of type burnable
                 Burnable burnable = hit.collider.GetComponent<Burnable>();
                 if (burnable != null) {
@@ -39,16 +38,21 @@ public class waterBeam : MonoBehaviour
         }
     }
 
-    void Activate() {
+    public void Activate() {
         isOn = true;
         waterPrefab = Resources.Load<GameObject>(waterName);
         if (waterPrefab != null)
         {
-            waterEffectInstance = Instantiate(waterPrefab, GetFrontCenter(), Quaternion.identity, transform);
-            waterEffectInstance.transform.rotation = Quaternion.Euler(270, 0, 0); // Ensure water points forward
+            Vector3 position = GetFrontCenter() + (transform.forward * 0.25f); // Adjust the offset as needed
+            waterEffectInstance = Instantiate(waterPrefab, position, Quaternion.identity, transform);
+
+            // ensure the water effect is facing the right direction
+            waterEffectInstance.transform.rotation = transform.rotation * Quaternion.Euler(270, 0, 0);
+
+            // scale the water effect to the desired length
             waterEffectInstance.transform.localScale = new Vector3(1, sprayDistance / 50, 1);
-            Debug.Log("Started water effect");
-            Invoke(nameof(Deactivate), duration);
+            // TODO: here we wait for 10 sec and reset the water but the object isnt actually put out for 10 seconds
+            Invoke(nameof(Reset), cooldown);
         }
         else 
         {
@@ -56,18 +60,22 @@ public class waterBeam : MonoBehaviour
         }
     }
 
-    void Deactivate() {
+    void Reset() {
         isOn = false;
         Destroy(waterEffectInstance);
-        Debug.Log("stopped water effect");
-
         ResetHit();
-        Invoke(nameof(Activate), cooldown);
+        Activate();
     }
 
     void ResetHit()
     {
         canHit = true;
+    }
+
+    public void Deactivate() {
+        isOn = false;
+        canHit = true;
+        Destroy(waterEffectInstance);
     }
 
     protected virtual Vector3 GetFrontCenter()
