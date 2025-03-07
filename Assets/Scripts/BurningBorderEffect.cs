@@ -3,27 +3,24 @@ using UnityEngine.UI;
 
 public class BurningBorderEffect : MonoBehaviour
 {
-    public LayerMask burningLayer; // Der Layer, der alle brennenden Objekte enthält
-    public Image topBorder;       // UI Image für den oberen Bildschirmrand
-    public Image bottomBorder;    // UI Image für den unteren Bildschirmrand
-    public Image leftBorder;      // UI Image für den linken Bildschirmrand
-    public Image rightBorder;     // UI Image für den rechten Bildschirmrand
+    public LayerMask burningLayer; 
+    public Image topBorder;       
+    public Image bottomBorder;    
+    public Image leftBorder;      
+    public Image rightBorder;     
 
-    private Transform playerTransform; // Transform des Spielers (oder der Kamera)
+    private Transform playerTransform; 
 
     void Start()
     {
-        // Finde das Transform des Hauptspielers (angenommen, es ist die Hauptkamera)
         playerTransform = Camera.main.transform;
 
-        // Stelle sicher, dass die Border Images vorhanden sind
         if (topBorder == null || bottomBorder == null || leftBorder == null || rightBorder == null)
         {
             Debug.LogError("Nicht alle Border Images sind im Inspector zugewiesen!");
             return;
         }
 
-        // Stelle sicher, dass die Border Images anfänglich unsichtbar sind
         SetBorderAlpha(0f);
     }
 
@@ -42,12 +39,12 @@ public class BurningBorderEffect : MonoBehaviour
             // Berechne die Richtung vom Spieler zum brennenden Objekt
             Vector3 directionToBurningObject = (burningObject.transform.position - playerTransform.position);
 
-            // Berechne den Winkel in Grad (0-360°) im Uhrzeigersinn von "vorwärts" (0°) aus, um die Y-Achse
+            // Berechne den Winkel in Grad (0-360°) 
             float angleDegrees = GetAngleAroundYAxis(playerTransform.forward, directionToBurningObject);
 
-            //Debug.Log($"Winkel zum brennenden Objekt {burningObject.name}: {angleDegrees}"); // Für Debugging
+            //Debug.Log($"Winkel zum brennenden Objekt {burningObject.name}: {angleDegrees}");
 
-            // Ordne den Rand basierend auf dem Winkel zu
+            // Zuordnung zu den Rändern
             if (angleDegrees > 315f || angleDegrees <= 45f) // Vor dem Spieler (TopBorder) ~ 315° bis 45°
             {
                 SetImageAlpha(topBorder, 0.5f);
