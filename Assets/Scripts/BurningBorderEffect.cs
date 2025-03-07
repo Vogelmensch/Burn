@@ -8,7 +8,6 @@ public class BurningBorderEffect : MonoBehaviour
     public Image bottomBorder;    // UI Image für den unteren Bildschirmrand
     public Image leftBorder;      // UI Image für den linken Bildschirmrand
     public Image rightBorder;     // UI Image für den rechten Bildschirmrand
-    public float edgeThreshold = 0.8f; // Schwellenwert, ab wann der Rand als "nah genug" am Bildschirmrand betrachtet wird
 
     private Transform playerTransform; // Transform des Spielers (oder der Kamera)
 
@@ -40,25 +39,30 @@ public class BurningBorderEffect : MonoBehaviour
 
         foreach (GameObject burningObject in burningObjects)
         {
-            // Berechne die Richtung vom Spieler zum brennenden Objekt (normalisiert)
-            Vector3 directionToBurningObject = (burningObject.transform.position - playerTransform.position).normalized;
+            // Berechne die Richtung vom Spieler zum brennenden Objekt
+            Vector3 directionToBurningObject = (burningObject.transform.position - playerTransform.position);
 
-            // Überprüfe, ob das brennende Objekt in der Nähe eines Bildschirmrandes ist und aktiviere den entsprechenden Rand
-            if (directionToBurningObject.z > edgeThreshold) // Objekt ist 'vor' dem Spieler (in Blickrichtung) - Oberer Rand
+            // Berechne den Winkel in Grad (0-360°) im Uhrzeigersinn von "vorwärts" (0°) aus, um die Y-Achse
+            float angleDegrees = GetAngleAroundYAxis(playerTransform.forward, directionToBurningObject);
+
+            //Debug.Log($"Winkel zum brennenden Objekt {burningObject.name}: {angleDegrees}"); // Für Debugging
+
+            // Ordne den Rand basierend auf dem Winkel zu
+            if (angleDegrees > 315f || angleDegrees <= 45f) // Vor dem Spieler (TopBorder) ~ 315° bis 45°
             {
-                SetBorderAlphaForDirection(Vector3.forward, 0.5f); // Oberer Rand aktivieren
+                SetImageAlpha(topBorder, 0.5f);
             }
-            if (directionToBurningObject.z < -edgeThreshold) // Objekt ist 'hinter' dem Spieler - Unterer Rand
+            else if (angleDegrees > 45f && angleDegrees <= 135f) // Rechts vom Spieler (RightBorder) ~ 45° bis 135°
             {
-                 SetBorderAlphaForDirection(Vector3.back, 0.5f); // Unterer Rand aktivieren
+                SetImageAlpha(rightBorder, 0.5f);
             }
-            if (directionToBurningObject.x > edgeThreshold) // Objekt ist rechts vom Spieler - Rechter Rand
+            else if (angleDegrees > 135f && angleDegrees <= 225f) // Hinter dem Spieler (BottomBorder) ~ 135° bis 225°
             {
-                 SetBorderAlphaForDirection(Vector3.right, 0.5f); // Rechter Rand aktivieren
+                SetImageAlpha(bottomBorder, 0.5f);
             }
-            if (directionToBurningObject.x < -edgeThreshold) // Objekt ist links vom Spieler - Linker Rand
+            else if (angleDegrees > 225f && angleDegrees <= 315f) // Links vom Spieler (LeftBorder) ~ 225° bis 315°
             {
-                 SetBorderAlphaForDirection(Vector3.left, 0.5f); // Linker Rand aktivieren
+                SetImageAlpha(leftBorder, 0.5f);
             }
         }
     }
@@ -71,15 +75,6 @@ public class BurningBorderEffect : MonoBehaviour
         SetImageAlpha(bottomBorder, alphaValue);
         SetImageAlpha(leftBorder, alphaValue);
         SetImageAlpha(rightBorder, alphaValue);
-    }
-
-    // Setzt die Alpha-Transparenz für einen bestimmten Rand basierend auf der Richtung
-    void SetBorderAlphaForDirection(Vector3 direction, float alphaValue)
-    {
-        if (direction == Vector3.forward) SetImageAlpha(topBorder, alphaValue);
-        else if (direction == Vector3.back) SetImageAlpha(bottomBorder, alphaValue);
-        else if (direction == Vector3.left) SetImageAlpha(leftBorder, alphaValue);
-        else if (direction == Vector3.right) SetImageAlpha(rightBorder, alphaValue);
     }
 
 
@@ -112,5 +107,16 @@ public class BurningBorderEffect : MonoBehaviour
             return new GameObject[0];
         }
         return goList.ToArray();
+    }
+
+    // Hilfsfunktion, um den Winkel in Grad (0-360°) um die Y-Achse zwischen zwei Vektoren zu berechnen
+    float GetAngleAroundYAxis(Vector3 forward, Vector3 targetDir)
+    {
+        float angle = Vector3.SignedAngle(forward, targetDir, Vector3.up);
+        if (angle < 0)
+        {
+            angle += 360; // Winkel in den Bereich 0-360° bringen
+        }
+        return angle;
     }
 }
