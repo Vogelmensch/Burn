@@ -1,20 +1,27 @@
 using UnityEngine;
+using System.Collections;
 
 public class waterBeam : MonoBehaviour
 {
+    public bool activateOnStart = false;
     public string waterName = "waterBeamPrefab";
-    public bool isOn = false;
+    private bool isOn = false;
     public float sprayDistance = 100; // distance the water is sprayed
     public LayerMask BurningLayer = 6;
-    public float timeBetweenHits = 0.25f; // time in between reducing temperature so it doesnt happen every frame
-
+    private float timeBetweenHits = 0.5f; // time in between reducing temperature so it doesnt happen every frame
     private bool canHit = true; // helper variable to save if curretnly a temperature can be reduced
     private GameObject waterPrefab;
     private GameObject waterEffectInstance;
-    private float duration = 10;
-    private float cooldown = 3;
-
-    void Update()
+    private float duration = 9; // duration of the water beam
+    private float cooldown = 5; // cooldown before waterbeam turns back on
+    private float cooldownAmount = 20; // amount to reduce temperature by
+    void Start()
+    {
+        if(activateOnStart) {
+            Activate();
+        }
+    }
+    private void Update()
     {
         if (isOn && canHit) {
             // cast a ray forward 
@@ -30,7 +37,7 @@ public class waterBeam : MonoBehaviour
                 Burnable burnable = hit.collider.GetComponent<Burnable>();
                 if (burnable != null) {
                     // reduce temperature
-                    burnable.RainHit();
+                    burnable.WaterHit(cooldownAmount);
                     canHit = false;
                     Invoke(nameof(ResetHit), timeBetweenHits);
                 }
@@ -51,8 +58,7 @@ public class waterBeam : MonoBehaviour
 
             // scale the water effect to the desired length
             waterEffectInstance.transform.localScale = new Vector3(1, sprayDistance / 50, 1);
-            // TODO: here we wait for 10 sec and reset the water but the object isnt actually put out for 10 seconds
-            Invoke(nameof(Reset), cooldown);
+            StartCoroutine(TurnOffAfterDelay());            
         }
         else 
         {
@@ -60,10 +66,13 @@ public class waterBeam : MonoBehaviour
         }
     }
 
-    void Reset() {
+    private IEnumerator TurnOffAfterDelay()
+    {
+        yield return new WaitForSeconds(duration);
         isOn = false;
         Destroy(waterEffectInstance);
         ResetHit();
+        yield return new WaitForSeconds(cooldown);
         Activate();
     }
 
@@ -76,6 +85,7 @@ public class waterBeam : MonoBehaviour
         isOn = false;
         canHit = true;
         Destroy(waterEffectInstance);
+        StopCoroutine(TurnOffAfterDelay());
     }
 
     protected virtual Vector3 GetFrontCenter()

@@ -9,8 +9,6 @@ public class enemyBehaviour : MonoBehaviour
     public NavMeshAgent agent;
     private Transform target;
     public LayerMask whatIsGround;
-    public waterBeam waterBeam;
-
 
     [Header("Patroling")]
     public Vector3 walkPoint;
@@ -43,7 +41,15 @@ public class enemyBehaviour : MonoBehaviour
             Burnable burnable = col.GetComponent<Burnable>();
             if (burnable != null && burnable.isOnFire)
             {
-                burnables.Add(burnable);
+                Vector3 directionToBurnable = (burnable.transform.position - transform.position).normalized;
+                Debug.DrawRay(transform.position, directionToBurnable * range, Color.red);
+                //if (Physics.Raycast(transform.position, directionToBurnable, out RaycastHit hit, range))
+                {
+                    //if (hit.collider.GetComponent<Burnable>() == burnable)
+                    {
+                        burnables.Add(burnable);
+                    }
+                }
             }
         }
         return burnables;
@@ -72,7 +78,6 @@ public class enemyBehaviour : MonoBehaviour
     private void Patroling()
     {
         Debug.Log("Patroling");
-        DeactivateWaterBeam();
         if (!walkPointSet) SearchWalkPoint();
         if (walkPointSet)
             agent.SetDestination(walkPoint);
@@ -99,7 +104,6 @@ public class enemyBehaviour : MonoBehaviour
     private void GoToFire()
     {
         Debug.Log("Going to fire");
-        DeactivateWaterBeam();
         agent.SetDestination(target.position);
     }
     private void PutOutFire()
@@ -110,8 +114,8 @@ public class enemyBehaviour : MonoBehaviour
         if (!alreadyAttacked)
         {
             alreadyAttacked = true;
-            ActivateWaterBeam();
-            //Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            ThrowWater();
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }
     private void ResetAttack()
@@ -137,15 +141,24 @@ public class enemyBehaviour : MonoBehaviour
         if (fireInSightRange && !fireInAttackRange) GoToFire();
         if (fireInSightRange && fireInAttackRange) PutOutFire();
     }
-
-    private void DeactivateWaterBeam()
+    public void ThrowWater()
     {
-        waterBeam.Deactivate();
-        alreadyAttacked = false;
-    }
+        // Create a sphere
+        GameObject waterBall = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
-    private void ActivateWaterBeam()
-    {
-        waterBeam.Activate();
+        // make ball blue
+        waterBall.GetComponent<Renderer>().material.color = Color.blue;
+
+        // Add the WaterBall script to handle initialization and collisions
+        WaterBall waterBallScript = waterBall.AddComponent<WaterBall>();
+
+        // Initialize the water ball
+        Vector3 position = transform.position + transform.up + transform.forward * 1.5f; // Position it in front of the enemy
+        Vector3 direction = transform.forward;
+        float throwForce = 7f;
+        float upwardAngle = 30f;
+        direction = Quaternion.Euler(upwardAngle, 0, 0) * direction;
+        waterBallScript.Initialize(position, direction, throwForce);
+
     }
 }

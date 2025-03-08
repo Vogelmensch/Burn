@@ -93,13 +93,10 @@ public class Burnable : MonoBehaviour
         UpdateHelper();
     }
 
-    public void StartWaterEffect()
+    private IEnumerator StartWaterEffect()
     {
-        
-            // always when we want to make wett add 1 to wett
             wett = true;
             // only create a new instance if there is no existing one
-            Debug.Log(wett);
             if(waterSplashInstance == null){
                 waterSplashPrefab = Resources.Load<GameObject>(waterSplashName);
                 if (waterSplashPrefab != null)
@@ -109,15 +106,13 @@ public class Burnable : MonoBehaviour
                     waterSplashInstance.transform.localScale = transform.localScale;
                 }
             }
-            Invoke(nameof(makeDry), 1);
-        
+            yield return new WaitForSeconds(1);
+            makeDry();
     }
 
     public void makeDry()
     {
-        wett = false;
-    
-        // once all StartWaterEffect's are done destroy the effect
+        wett = false;    
         Destroy(waterSplashInstance);
     }
 
@@ -186,7 +181,17 @@ public class Burnable : MonoBehaviour
     public void RainHit()
     {
         temperature -= temperatureDecreaseAtRainHit; // decrease temp when raining
-        StartWaterEffect();
+        if(!wett){
+            StartCoroutine(StartWaterEffect());
+        }
+    }
+
+    public void WaterHit(float cool)
+    {
+        temperature -= cool; // decrease temp when hit by water beam
+        if(!wett){
+            StartCoroutine(StartWaterEffect());
+        }
     }
 
     public void FeedFireball()
