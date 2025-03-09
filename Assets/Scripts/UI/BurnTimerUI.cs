@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class BurnTimerUI : MonoBehaviour
+public class BurnTimerManager : MonoBehaviour
 {
     [Header("UI References")]
     public GameObject burnTimerPanel;      // The panel containing the burn timer UI
@@ -26,56 +26,77 @@ public class BurnTimerUI : MonoBehaviour
         
         if (!upPicker)
         {
-            Debug.LogError("BurnTimerUI: UpPicker component not found in scene!");
+            Debug.LogError("BurnTimerManager: UpPicker component not found in scene!");
         }
         
         // Hide the UI at start
-        burnTimerPanel.SetActive(false);
+        if (burnTimerPanel)
+        {
+            burnTimerPanel.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("BurnTimerManager: burnTimerPanel reference is missing!");
+        }
     }
     
     void Update()
     {
-        // Check if player is carrying an object
-        if (upPicker && upPicker.IsCurrentlyCarrying())
+        // Ensure required references exist
+        if (!burnTimerPanel || !upPicker || !burnTimerSlider || !sliderFillImage)
         {
-            GameObject carriedObject = upPicker.GetCurrentlyCarriedObject();
-            
-            if (carriedObject != null)
+            return;
+        }
+        
+        // Check if player is carrying an object
+        try {
+            if (upPicker.IsCurrentlyCarrying())
             {
-                // Try to get a Burnable component from the carried object
-                Burnable burnable = carriedObject.GetComponent<Burnable>();
-                if (!burnable)
-                {
-                    // Also check parent in case the CarryAndShoot component is on a parent object
-                    burnable = carriedObject.GetComponentInParent<Burnable>();
-                }
+                GameObject carriedObject = upPicker.GetCurrentlyCarriedObject();
                 
-                if (burnable && burnable.isOnFire)
+                if (carriedObject != null)
                 {
-                    // We have a burning object, update or initialize the UI
-                    if (currentBurnable != burnable)
+                    // Try to get a Burnable component
+                    Burnable burnable = carriedObject.GetComponent<Burnable>();
+                    if (!burnable)
                     {
-                        // New object being carried, initialize
-                        currentBurnable = burnable;
-                        maxBurnTime = burnable.hitPoints / burnable.GetDamageRate();
-                        burnTimerPanel.SetActive(true);
+                        burnable = carriedObject.GetComponentInParent<Burnable>();
                     }
                     
-                    UpdateBurnTimeDisplay();
-                }
-                else
-                {
-                    // Object not burning or no burnable component
-                    currentBurnable = null;
-                    burnTimerPanel.SetActive(false);
+                    if (burnable != null && burnable.isOnFire)
+                    {
+                        // Force activate the panel
+                        burnTimerPanel.SetActive(true);
+                        
+                        // We have a burning object, update or initialize the UI
+                        if (currentBurnable != burnable)
+                        {
+                            // New object being carried, initialize
+                            currentBurnable = burnable;
+                            
+                            try {
+                                maxBurnTime = burnable.hitPoints / burnable.GetDamageRate();
+                            }
+                            catch (System.Exception) {
+                                maxBurnTime = 10f; // Fallback
+                            }
+                        }
+                        
+                        UpdateBurnTimeDisplay();
+                        return; // Early return to avoid hiding the panel
+                    }
                 }
             }
+            
+            // If we got here, hide the panel
+            if (burnTimerPanel.activeSelf)
+            {
+                burnTimerPanel.SetActive(false);
+                currentBurnable = null;
+            }
         }
-        else
-        {
-            // Not carrying anything
-            currentBurnable = null;
-            burnTimerPanel.SetActive(false);
+        catch (System.Exception e) {
+            Debug.LogError("Error in BurnTimerManager Update: " + e.Message);
         }
     }
     
@@ -84,26 +105,28 @@ public class BurnTimerUI : MonoBehaviour
         if (currentBurnable == null)
             return;
             
-        // Calculate remaining time
-        float remainingHitPoints = currentBurnable.hitPoints;
-        float damageRate = currentBurnable.GetDamageRate();
-        float remainingTime = remainingHitPoints / damageRate;
-        
-        // Update slider value (1.0 = full, 0.0 = empty)
-        float fillAmount = remainingHitPoints / (maxBurnTime * damageRate);
-        burnTimerSlider.value = Mathf.Clamp01(fillAmount);
-        
-        // Update color based on remaining time
-        if (sliderFillImage != null)
-        {
+        try {
+            // Calculate remaining time
+            float remainingHitPoints = currentBurnable.hitPoints;
+            float damageRate = currentBurnable.GetDamageRate();
+            float remainingTime = remainingHitPoints / Mathf.Max(0.1f, damageRate);
+            
+            // Update slider value (1.0 = full, 0.0 = empty)
+            float fillAmount = remainingHitPoints / (maxBurnTime * Mathf.Max(0.1f, damageRate));
+            burnTimerSlider.value = Mathf.Clamp01(fillAmount);
+            
+            // Update color based on remaining time
             sliderFillImage.color = Color.Lerp(endColor, startColor, fillAmount);
+            
+            // Update text if it exists
+            if (burnTimerText != null)
+            {
+                string timeText = FormatTime(remainingTime);
+                burnTimerText.text = timeText;
+            }
         }
-        
-        // Update text if it exists
-        if (burnTimerText != null)
-        {
-            string timeText = FormatTime(remainingTime);
-            burnTimerText.text = timeText;
+        catch (System.Exception e) {
+            Debug.LogError("Error in UpdateBurnTimeDisplay: " + e.Message);
         }
     }
     
