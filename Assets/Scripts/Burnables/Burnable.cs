@@ -336,4 +336,10 @@ public class Burnable : MonoBehaviour
 
         rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, explosionUpward);
     }
+    // Add this method to the Burnable.cs class
+
+    public float GetDamageRate()
+    {
+        return damageCoefficient;
+    }
 }
