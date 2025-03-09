@@ -8,7 +8,8 @@ public class BurnTimerUI : MonoBehaviour
     public GameObject burnTimerPanel;      // The panel containing the burn timer UI
     public Slider burnTimerSlider;         // Slider for the timer bar
     public Image sliderFillImage;          // Reference to the fill image of the slider
-    public TextMeshProUGUI burnTimerText;  // Text displaying the timer
+    [Tooltip("Optional: Leave empty if you don't want text")]
+    public TextMeshProUGUI burnTimerText;  // Optional text displaying the timer
 
     [Header("Settings")]
     public Color startColor = Color.green;  // Color when burn just started
@@ -98,9 +99,12 @@ public class BurnTimerUI : MonoBehaviour
             sliderFillImage.color = Color.Lerp(endColor, startColor, fillAmount);
         }
         
-        // Update text
-        string timeText = FormatTime(remainingTime);
-        burnTimerText.text = timeText;
+        // Update text if it exists
+        if (burnTimerText != null)
+        {
+            string timeText = FormatTime(remainingTime);
+            burnTimerText.text = timeText;
+        }
     }
     
     string FormatTime(float seconds)
