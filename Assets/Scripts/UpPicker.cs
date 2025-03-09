@@ -66,4 +66,14 @@ public class UpPicker : MonoBehaviour
     {
         return carriedObject != null;
     }
+    // Add this method to the UpPicker.cs class
+
+    public GameObject GetCurrentlyCarriedObject()
+    {
+        if (carriedObject != null)
+        {
+            return carriedObject.gameObject;
+        }
+        return null;
+    }
 }
