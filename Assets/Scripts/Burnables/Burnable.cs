@@ -169,6 +169,8 @@ public class Burnable : MonoBehaviour
             {
                 gameOver.NotifyFireStarted();
             }
+            int burningLayerNumber = LayerMask.NameToLayer("Burning"); // jo
+            gameObject.layer = burningLayerNumber;  // jo
         }
     }
 
@@ -208,6 +210,7 @@ public class Burnable : MonoBehaviour
             if (fireEffectInstance != null)
             {
                 Destroy(fireEffectInstance);
+                gameObject.layer = 0;  // jo
             }
         }
     }
