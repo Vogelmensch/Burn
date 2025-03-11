@@ -6,14 +6,14 @@ public class BurnTimerManager : MonoBehaviour
 {
     [Header("UI References")]
     public GameObject burnTimerPanel;      // The panel containing the burn timer UI
-    public Slider burnTimerSlider;         // Slider for the timer bar
-    public Image sliderFillImage;          // Reference to the fill image of the slider
+    public Image burnTimerFill;            // Direct reference to fill image (not using slider anymore)
     [Tooltip("Optional: Leave empty if you don't want text")]
     public TextMeshProUGUI burnTimerText;  // Optional text displaying the timer
 
     [Header("Settings")]
     public Color startColor = Color.green;  // Color when burn just started
     public Color endColor = Color.red;      // Color when about to burn out
+    public float maxWidth = 100f;           // Maximum width of the fill image
     
     private UpPicker upPicker;             // Reference to the UpPicker script
     private Burnable currentBurnable;      // Reference to the currently carried Burnable object
@@ -27,6 +27,12 @@ public class BurnTimerManager : MonoBehaviour
         if (!upPicker)
         {
             Debug.LogError("BurnTimerManager: UpPicker component not found in scene!");
+        }
+        
+        // Store the maximum width of the fill image
+        if (burnTimerFill)
+        {
+            maxWidth = burnTimerFill.rectTransform.sizeDelta.x;
         }
         
         // Hide the UI at start
@@ -43,7 +49,7 @@ public class BurnTimerManager : MonoBehaviour
     void Update()
     {
         // Ensure required references exist
-        if (!burnTimerPanel || !upPicker || !burnTimerSlider || !sliderFillImage)
+        if (!burnTimerPanel || !upPicker || !burnTimerFill)
         {
             return;
         }
@@ -111,12 +117,18 @@ public class BurnTimerManager : MonoBehaviour
             float damageRate = currentBurnable.GetDamageRate();
             float remainingTime = remainingHitPoints / Mathf.Max(0.1f, damageRate);
             
-            // Update slider value (1.0 = full, 0.0 = empty)
+            // Calculate fill amount
             float fillAmount = remainingHitPoints / (maxBurnTime * Mathf.Max(0.1f, damageRate));
-            burnTimerSlider.value = Mathf.Clamp01(fillAmount);
+            fillAmount = Mathf.Clamp01(fillAmount);
+            
+            // Update the fill image width based on fill amount
+            RectTransform rt = burnTimerFill.rectTransform;
+            Vector2 sizeDelta = rt.sizeDelta;
+            sizeDelta.x = maxWidth * fillAmount;
+            rt.sizeDelta = sizeDelta;
             
             // Update color based on remaining time
-            sliderFillImage.color = Color.Lerp(endColor, startColor, fillAmount);
+            burnTimerFill.color = Color.Lerp(endColor, startColor, fillAmount);
             
             // Update text if it exists
             if (burnTimerText != null)
