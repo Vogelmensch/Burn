@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7020048036650620582}
   - component: {fileID: 919001814238282257}
   - component: {fileID: 6113638003289083295}
+  - component: {fileID: 3460423743024732822}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -111,7 +112,7 @@ MonoBehaviour:
   walkPointRange: 10
   timeBetweenAttacks: 4
   sightRange: 10
-  attackRange: 1
+  attackRange: 5
   fireInSightRange: 0
   fireInAttackRange: 0
   BurningLayer: 6
@@ -125,7 +126,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 3
   m_Acceleration: 12
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -158,6 +159,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3460423743024732822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950899988651548352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7325c0fc944544767ba5c083cd861e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireName: firePrefab
+  waterSplashName: waterSplashPrefab
+  burningCubePrefab: {fileID: 0}
+  colorationReduction: 100
+  hitPoints: 10
+  temperature: 0
+  isOnFire: 0
+  explosionForce: 0
+  explosionRadius: 4
+  explosionUpward: 0.4
 --- !u!1001 &2907460104541133870
 PrefabInstance:
   m_ObjectHideFlags: 0

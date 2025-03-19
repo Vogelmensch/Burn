@@ -26,6 +26,9 @@ public class enemyBehaviour : MonoBehaviour
     [SerializeField] private int BurningLayer = 6;
     private int BurningLayerMask;
 
+    private const int IgnoreLayer = 2;
+    private float viewAngle = 60f;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -36,22 +39,28 @@ public class enemyBehaviour : MonoBehaviour
     {
         List<Burnable> burnables = new List<Burnable>();
         Collider[] colliders = Physics.OverlapSphere(transform.position, range, BurningLayerMask);
+
         foreach (Collider col in colliders)
         {
             Burnable burnable = col.GetComponent<Burnable>();
             if (burnable != null && burnable.isOnFire)
             {
                 Vector3 directionToBurnable = (burnable.transform.position - transform.position).normalized;
-                Debug.DrawRay(transform.position, directionToBurnable * range, Color.red);
-                //if (Physics.Raycast(transform.position, directionToBurnable, out RaycastHit hit, range))
+                float angleToBurnable = Vector3.Angle(transform.forward, directionToBurnable);
+
+                // Check if the burnable is within the cone of vision
+                if (angleToBurnable <= viewAngle)
                 {
-                    //if (hit.collider.GetComponent<Burnable>() == burnable)
+                    // Optional: Perform a raycast to ensure there are no obstacles
+                    if (!Physics.Raycast(transform.position, directionToBurnable, out RaycastHit hit, range) || hit.collider.GetComponent<Burnable>() == burnable)
                     {
+                        Debug.DrawRay(transform.position, directionToBurnable * range, Color.red);
                         burnables.Add(burnable);
                     }
                 }
             }
         }
+
         return burnables;
     }
 
@@ -77,7 +86,7 @@ public class enemyBehaviour : MonoBehaviour
     }
     private void Patroling()
     {
-        Debug.Log("Patroling");
+        agent.isStopped = false;
         if (!walkPointSet) SearchWalkPoint();
         if (walkPointSet)
             agent.SetDestination(walkPoint);
@@ -87,32 +96,28 @@ public class enemyBehaviour : MonoBehaviour
     }
     private void SearchWalkPoint()
     {
-        // Calculate random point in range
-        float randomZ = Random.Range(-walkPointRange, walkPointRange);
-        float randomX = Random.Range(-walkPointRange, walkPointRange);
+        Vector3 randomDirection = Random.insideUnitSphere * walkPointRange; // Pick a random direction in a sphere
+        randomDirection += transform.position; // Offset it by the enemy's current position
 
-        // Create the walk point using the random offsets
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-
-        // Check if the walk point is on the ground
-        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(randomDirection, out hit, walkPointRange, NavMesh.AllAreas))
         {
-            // If the point is on the ground, set walkPointSet to true
+            walkPoint = hit.position; // Set the walk point to a valid position on the NavMesh
             walkPointSet = true;
         }
     }
     private void GoToFire()
     {
-        Debug.Log("Going to fire");
+        agent.isStopped = false;
         agent.SetDestination(target.position);
     }
     private void PutOutFire()
     {
-        Debug.Log("Putting out fire");
-        agent.SetDestination(transform.position);
-        transform.LookAt(target);
+        agent.isStopped = true;
+        agent.ResetPath();
         if (!alreadyAttacked)
         {
+            transform.LookAt(target);
             alreadyAttacked = true;
             ThrowWater();
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -128,17 +133,19 @@ public class enemyBehaviour : MonoBehaviour
         // set the new target to the closest burning object
         List<Burnable> targets = CheckForBurningObjects(sightRange);
         GameObject closestTarget = getClosest(targets);
+        float distanceToTarget = Mathf.Infinity;
         if (closestTarget != null)
         {
             Debug.Log("Found a target");
             target = closestTarget.transform;
+            distanceToTarget = Vector3.Distance(transform.position, target.position);
         }
 
         fireInAttackRange = CheckForBurningObjects(attackRange).Count > 0;
         fireInSightRange = targets.Count > 0;
 
-        if (!fireInSightRange && !fireInAttackRange) Patroling();
-        if (fireInSightRange && !fireInAttackRange) GoToFire();
+        if (!fireInSightRange && !fireInAttackRange && distanceToTarget > attackRange) Patroling();
+        if (fireInSightRange && !fireInAttackRange && distanceToTarget > attackRange) GoToFire();
         if (fireInSightRange && fireInAttackRange) PutOutFire();
     }
     public void ThrowWater()
@@ -155,10 +162,30 @@ public class enemyBehaviour : MonoBehaviour
         // Initialize the water ball
         Vector3 position = transform.position + transform.up + transform.forward * 1.5f; // Position it in front of the enemy
         Vector3 direction = transform.forward;
-        float throwForce = 7f;
+        float throwForce = 5f;
         float upwardAngle = 30f;
         direction = Quaternion.Euler(upwardAngle, 0, 0) * direction;
         waterBallScript.Initialize(position, direction, throwForce);
 
     }
+    private void OnDrawGizmosSelected()
+{
+    // Set the color for the viewfield visualization
+    Gizmos.color = Color.yellow;
+
+    // Draw the viewfield as two lines representing the edges of the cone
+    float range = sightRange; // Use the sight range for the cone's length
+
+    // Calculate the directions for the edges of the cone
+    Vector3 leftBoundary = Quaternion.Euler(0, -viewAngle, 0) * transform.forward * range;
+    Vector3 rightBoundary = Quaternion.Euler(0, viewAngle, 0) * transform.forward * range;
+
+    // Draw the lines for the cone
+    Gizmos.DrawLine(transform.position, transform.position + leftBoundary);
+    Gizmos.DrawLine(transform.position, transform.position + rightBoundary);
+
+    // Optionally, draw a sphere to represent the range
+    Gizmos.color = new Color(1, 1, 0, 0.2f); // Semi-transparent yellow
+    Gizmos.DrawWireSphere(transform.position, range);
+}
 }
