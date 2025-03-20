@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: dc5bd3b96a282306fa2a95c2fe2886c1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fireballPrefab: {fileID: 2416256779909037712, guid: 786a773faf2e053b79d51c6eecfcf1f8, type: 3}
+  - cameraTransform: {instanceID: 0}
+  - throwStrengthIndicator: {instanceID: 0}
+  - fireballCastSound: {instanceID: 0}
+  - castEffectPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
