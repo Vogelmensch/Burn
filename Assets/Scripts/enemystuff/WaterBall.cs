@@ -4,6 +4,7 @@ public class WaterBall : MonoBehaviour
 {
     private Rigidbody rb;
     private float throwForce;
+    private LayerMask ignoreLayer = 2;
 
     public void Initialize(Vector3 position, Vector3 direction, float force)
     {
@@ -13,6 +14,9 @@ public class WaterBall : MonoBehaviour
 
         // Add a Rigidbody component to the sphere
         rb = gameObject.AddComponent<Rigidbody>();
+
+        // Set the layer to ignore raycasts
+        gameObject.layer = ignoreLayer;
 
         // Apply a forward force to the sphere
         throwForce = force;

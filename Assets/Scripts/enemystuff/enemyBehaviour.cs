@@ -21,9 +21,10 @@ public class enemyBehaviour : MonoBehaviour
     // States
 
     public float sightRange, attackRange;
-    public bool fireInSightRange, fireInAttackRange;
+    public bool fireInSightRange ,fireInAttackRange;
 
     [SerializeField] private int BurningLayer = 6;
+    [SerializeField] private int ignoreLayer = 2;
     private int BurningLayerMask;
 
     private const int IgnoreLayer = 2;
@@ -51,11 +52,17 @@ public class enemyBehaviour : MonoBehaviour
                 // Check if the burnable is within the cone of vision
                 if (angleToBurnable <= viewAngle)
                 {
-                    // Optional: Perform a raycast to ensure there are no obstacles
-                    if (!Physics.Raycast(transform.position, directionToBurnable, out RaycastHit hit, range) || hit.collider.GetComponent<Burnable>() == burnable)
+                    // Perform a raycast to ensure there are no obstacles
+                    if (Physics.Raycast(transform.position, directionToBurnable, out RaycastHit hit, range, ~(1 << IgnoreLayer)))
                     {
                         Debug.DrawRay(transform.position, directionToBurnable * range, Color.red);
-                        burnables.Add(burnable);
+                        // Check if the hit object is the burnable
+                        //if (hit.collider.GetComponent<Burnable>() == burnable)
+                        // keine Ahnung warum das nicht funktioniert hat mit der Zeile oben drüber aber mit der hier unten scheint es zu funktionieren also bleibt uns nur beten das es auch wirklich funktioniert
+                        if (hit.collider.gameObject.layer == BurningLayer)
+                        {
+                            burnables.Add(burnable);
+                        }
                     }
                 }
             }
@@ -130,8 +137,12 @@ public class enemyBehaviour : MonoBehaviour
 
     private void Update()
     {
+        // we need to set these to false because oherwise they just stay true once they are set to true
+        fireInAttackRange = false;
+        fireInSightRange = false;
         // set the new target to the closest burning object
         List<Burnable> targets = CheckForBurningObjects(sightRange);
+        Debug.Log("Targets: " + targets.Count);
         GameObject closestTarget = getClosest(targets);
         float distanceToTarget = Mathf.Infinity;
         if (closestTarget != null)
@@ -139,13 +150,16 @@ public class enemyBehaviour : MonoBehaviour
             Debug.Log("Found a target");
             target = closestTarget.transform;
             distanceToTarget = Vector3.Distance(transform.position, target.position);
+            fireInSightRange = true;
+            fireInAttackRange = distanceToTarget < attackRange;
         }
-
-        fireInAttackRange = CheckForBurningObjects(attackRange).Count > 0;
-        fireInSightRange = targets.Count > 0;
-
+        // Fire not visible and not in attack range -> patrol
         if (!fireInSightRange && !fireInAttackRange && distanceToTarget > attackRange) Patroling();
+
+        // Fire visible but not in attack range -> go to fire
         if (fireInSightRange && !fireInAttackRange && distanceToTarget > attackRange) GoToFire();
+
+        // Fire visible and in attack range -> put out fire
         if (fireInSightRange && fireInAttackRange) PutOutFire();
     }
     public void ThrowWater()
@@ -169,23 +183,23 @@ public class enemyBehaviour : MonoBehaviour
 
     }
     private void OnDrawGizmosSelected()
-{
-    // Set the color for the viewfield visualization
-    Gizmos.color = Color.yellow;
+    {
+        // Set the color for the viewfield visualization
+        Gizmos.color = Color.yellow;
 
-    // Draw the viewfield as two lines representing the edges of the cone
-    float range = sightRange; // Use the sight range for the cone's length
+        // Draw the viewfield as two lines representing the edges of the cone
+        float range = sightRange; // Use the sight range for the cone's length
 
-    // Calculate the directions for the edges of the cone
-    Vector3 leftBoundary = Quaternion.Euler(0, -viewAngle, 0) * transform.forward * range;
-    Vector3 rightBoundary = Quaternion.Euler(0, viewAngle, 0) * transform.forward * range;
+        // Calculate the directions for the edges of the cone
+        Vector3 leftBoundary = Quaternion.Euler(0, -viewAngle, 0) * transform.forward * range;
+        Vector3 rightBoundary = Quaternion.Euler(0, viewAngle, 0) * transform.forward * range;
 
-    // Draw the lines for the cone
-    Gizmos.DrawLine(transform.position, transform.position + leftBoundary);
-    Gizmos.DrawLine(transform.position, transform.position + rightBoundary);
+        // Draw the lines for the cone
+        Gizmos.DrawLine(transform.position, transform.position + leftBoundary);
+        Gizmos.DrawLine(transform.position, transform.position + rightBoundary);
 
-    // Optionally, draw a sphere to represent the range
-    Gizmos.color = new Color(1, 1, 0, 0.2f); // Semi-transparent yellow
-    Gizmos.DrawWireSphere(transform.position, range);
-}
+        // Optionally, draw a sphere to represent the range
+        Gizmos.color = new Color(1, 1, 0, 0.2f); // Semi-transparent yellow
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
 }
