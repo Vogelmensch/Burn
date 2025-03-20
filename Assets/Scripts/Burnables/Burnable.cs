@@ -62,6 +62,7 @@ public class Burnable : MonoBehaviour
     public float explosionUpward = 0.4f; // Upward modifier for the explosion force
 
     private GameObject fireEffectInstance;
+
     private GameObject waterSplashInstance;
     private bool wett = false;
     private int BurningLayer = 6;
@@ -169,6 +170,8 @@ public class Burnable : MonoBehaviour
             {
                 gameOver.NotifyFireStarted();
             }
+            int burningLayerNumber = LayerMask.NameToLayer("Burning"); // XXXXXXXXXXXXXXXXXXXXXXXXXXX
+            gameObject.layer = burningLayerNumber;  // XXXXXXXXXXXXXXXXXXXXXXXXXXX
         }
     }
 
@@ -208,6 +211,7 @@ public class Burnable : MonoBehaviour
             if (fireEffectInstance != null)
             {
                 Destroy(fireEffectInstance);
+                gameObject.layer = 0;  // XXXXXXXXXXXXXXXXXXXXXXXXXXX
             }
         }
     }

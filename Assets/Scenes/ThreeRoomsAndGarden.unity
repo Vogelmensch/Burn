@@ -7582,6 +7582,71 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!108 &152079670
+Light:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152079668}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &152217543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13751,6 +13816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -14470,6 +14536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -14638,6 +14705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -15015,6 +15083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -16012,6 +16081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -19595,6 +19665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -20420,6 +20491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -21323,6 +21395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -21650,6 +21723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -22501,6 +22575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -23283,6 +23358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -25943,6 +26019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -26610,6 +26687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -27572,6 +27650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -27818,6 +27897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -27831,6 +27911,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2931857212258991049, guid: 21c9e8ce59bd468438a5f5228271a913, type: 3}
   m_PrefabInstance: {fileID: 2128344156}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &760623456
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 982674147251522745, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: topBorder
+      value: 
+      objectReference: {fileID: 1685026979}
+    - target: {fileID: 982674147251522745, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: leftBorder
+      value: 
+      objectReference: {fileID: 1385309144}
+    - target: {fileID: 982674147251522745, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: rightBorder
+      value: 
+      objectReference: {fileID: 1163531724}
+    - target: {fileID: 982674147251522745, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: bottomBorder
+      value: 
+      objectReference: {fileID: 1314117081}
+    - target: {fileID: 2131467736294588451, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 31.823317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131467736294588451, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1936638
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131467736294588451, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.8862224
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131467736294588451, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131467736294588451, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131467736294588451, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131467736294588451, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131467736294588451, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131467736294588451, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131467736294588451, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3965519142996980783, guid: c3877eda45ca1426090364306014298e, type: 3}
+      propertyPath: m_Name
+      value: BorderManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c3877eda45ca1426090364306014298e, type: 3}
 --- !u!1001 &761490846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28161,6 +28314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -31928,6 +32082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -32255,6 +32410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -33744,6 +33900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -34249,6 +34406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -35439,6 +35597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -36295,6 +36454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -36754,6 +36914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -37441,6 +37602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -37707,6 +37869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -38352,6 +38515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -38792,6 +38956,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4010414909479502, guid: 12e9b7c885d5efd4f8a9ce049c557867, type: 3}
   m_PrefabInstance: {fileID: 960764824}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &961925444
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 115645771395427257, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_Name
+      value: RedBorders
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054858671135937926, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
 --- !u!1001 &968926563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39068,6 +39329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -39293,6 +39555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -40144,6 +40407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -40956,6 +41220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: 
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -41108,6 +41373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -41134,6 +41400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -41358,6 +41625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -41785,6 +42053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
   hitPoints: 100
@@ -42075,6 +42344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -42726,6 +42996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -42918,6 +43189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -43723,6 +43995,71 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!108 &1077531304
+Light:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077531302}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &1079140214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44665,6 +45002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -44755,6 +45093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -45275,6 +45614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -46074,6 +46414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -46563,6 +46904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -46713,6 +47055,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4534264641828652, guid: 4663d5cca4ed98548946e758cd5979e2, type: 3}
   m_PrefabInstance: {fileID: 1155274845}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1163531724 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5442026107740564379, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+  m_PrefabInstance: {fileID: 961925444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1167204654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47024,6 +47377,71 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!108 &1178249819
+Light:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178249817}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &1183412421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47115,6 +47533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -47579,6 +47998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -47916,6 +48336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -49075,6 +49496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -50022,6 +50444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -51025,6 +51448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -51129,6 +51553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -51713,6 +52138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -51888,6 +52314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -52070,6 +52497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -52177,6 +52605,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 409632, guid: 471c1eb32c770a54ea8a1c3ffbda1de6, type: 3}
   m_PrefabInstance: {fileID: 1311036178}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1314117081 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2735213712117592056, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+  m_PrefabInstance: {fileID: 961925444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1314630538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52595,6 +53034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -52621,6 +53061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -52937,6 +53378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -53440,6 +53882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -53678,6 +54121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -53893,6 +54337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -53919,6 +54364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -54245,6 +54691,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000002, y: 0.05, z: 0.30000013}
   m_Center: {x: 0, y: 0.12, z: -0.10356685}
+--- !u!114 &1385309144 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3969278886467130056, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+  m_PrefabInstance: {fileID: 961925444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1385547472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54554,6 +55011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -55203,6 +55661,71 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!108 &1405268637
+Light:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405268635}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &1407079338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55426,6 +55949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -56373,6 +56897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -56536,6 +57061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -56626,6 +57152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -56779,6 +57306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -57223,6 +57751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -57966,6 +58495,71 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!108 &1453722697
+Light:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453722695}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &1460666045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58490,6 +59084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -58711,6 +59306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -58886,6 +59482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -59236,6 +59833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -59625,6 +60223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -60783,6 +61382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -61651,6 +62251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -61822,6 +62423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -62211,6 +62813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -62729,6 +63332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -63224,6 +63828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -63314,6 +63919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -64230,6 +64836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -64460,6 +65067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -64640,6 +65248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -65812,6 +66421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -65980,6 +66590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -67135,6 +67746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -67520,6 +68132,17 @@ MonoBehaviour:
   distanceWhileCarrying: 1
   drag: 6
   angularDrag: 1
+--- !u!114 &1685026979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 342693352573302413, guid: 022095a7c4aeb4073931365c371d5944, type: 3}
+  m_PrefabInstance: {fileID: 961925444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1687088341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67863,6 +68486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -68318,6 +68942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -68841,6 +69466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -68961,6 +69587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -69051,6 +69678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -69391,6 +70019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -69637,6 +70266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -70430,6 +71060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -70598,6 +71229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -70862,6 +71494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -71033,6 +71666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -71302,6 +71936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -71527,6 +72162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -72110,6 +72746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -72734,6 +73371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -72980,6 +73618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -73362,6 +74001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -73485,6 +74125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -73809,6 +74450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -74365,6 +75007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -74638,6 +75281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -75031,6 +75675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -75205,6 +75850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -75387,6 +76033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -75637,6 +76284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -75744,6 +76392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -75834,6 +76483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -76029,6 +76679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
   hitPoints: 100
@@ -76222,6 +76873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -77057,6 +77709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -77220,6 +77873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -77581,6 +78235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -78204,6 +78859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -78434,6 +79090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -78924,6 +79581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -79030,6 +79688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -79416,6 +80075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -79748,6 +80408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -79957,6 +80618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -80151,6 +80813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -80388,6 +81051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -80866,6 +81530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -81448,6 +82113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -81582,6 +82248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -81672,6 +82339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -82070,6 +82738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
   colorationReduction: 100
   hitPoints: 100
@@ -82212,6 +82881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -82458,6 +83128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -82626,6 +83297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -83248,6 +83920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -84376,6 +85049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -85056,6 +85730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -85256,6 +85931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -85346,6 +86022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 0}
   colorationReduction: 100
   hitPoints: 100
@@ -85884,3 +86561,5 @@ SceneRoots:
   - {fileID: 1856356992}
   - {fileID: 748180123}
   - {fileID: 2104284152}
+  - {fileID: 961925444}
+  - {fileID: 760623456}
