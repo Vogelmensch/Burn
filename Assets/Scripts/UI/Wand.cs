@@ -320,4 +320,64 @@ public class Wand : MonoBehaviour
             }
         }
     }
+        public GameObject GetAktiverZauberstab()
+    {
+        return aktiverZauberstab;
+    }
+
+// Prüft, ob der Zauberstab sichtbar ist
+    public bool IstSichtbar()
+    {
+        return istSichtbar;
+    }
+
+// Zeigt oder versteckt den Zauberstab
+    public void ZeigeZauberstab(bool zeigen)
+    {
+        if (zeigen && !istSichtbar && !istInAnimation)
+        {
+            StartCoroutine(ZauberstabAuspacken());
+        }
+        else if (!zeigen && istSichtbar && !istInAnimation)
+        {
+            StartCoroutine(ZauberstabEinpacken());
+        }
+    }
+    public bool TraegtObjekt()
+    {
+        return traegtObjekt;
+    }
+    public Transform GetZauberstabSpitze()
+{
+    if (aktiverZauberstab == null) return null;
+    
+    // Suche nach einem Kind-Objekt, das "Tip" oder "Spitze" heißt
+    Transform tipTransform = aktiverZauberstab.transform.Find("Tip");
+    if (tipTransform == null)
+        tipTransform = aktiverZauberstab.transform.Find("Spitze");
+    
+    // Wenn wir keines finden, erstelle ein neues an der vermuteten Position der Spitze
+    if (tipTransform == null)
+    {
+        GameObject tipObject = new GameObject("Tip");
+        tipTransform = tipObject.transform;
+        tipTransform.SetParent(aktiverZauberstab.transform);
+        
+        // Vermute die Spitze am Ende des Zauberstabes
+        Renderer renderer = aktiverZauberstab.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            float länge = renderer.bounds.size.z;
+            // Positioniere die Spitze am vorderen Ende des Zauberstabes
+            tipTransform.localPosition = new Vector3(0, 0, länge * 0.5f);
+        }
+        else
+        {
+            // Standardposition, falls kein Renderer gefunden wird
+            tipTransform.localPosition = new Vector3(0, 0, 0.25f);
+        }
+    }
+    
+    return tipTransform;
+}
 }
