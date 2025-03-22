@@ -129,6 +129,8 @@ public class FireballSpawner : MonoBehaviour
         else if (throwStrengthIndicator != null)
         {
             StartCoroutine(throwStrengthIndicator.PrintNoFireMessage());
+            // FIX: Pack wand away when there's no fire nearby
+            Invoke("PackZauberstabEin", 0.5f);
         }
     }
 
