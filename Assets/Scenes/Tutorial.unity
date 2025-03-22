@@ -3874,6 +3874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1836934675440148, guid: 31e886e829cf6e74995556552f6894ad, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreBorder
+      objectReference: {fileID: 0}
     - target: {fileID: 4077073470895792, guid: 31e886e829cf6e74995556552f6894ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.25
@@ -3943,6 +3947,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1614472132957846, guid: 31e886e829cf6e74995556552f6894ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 176284297}
+    - targetCorrespondingSourceObject: {fileID: 1614472132957846, guid: 31e886e829cf6e74995556552f6894ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 176284298}
   m_SourcePrefab: {fileID: 100100000, guid: 31e886e829cf6e74995556552f6894ad, type: 3}
 --- !u!4 &176284295 stripped
 Transform:
@@ -12237,6 +12244,32 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 787815669}
   m_SourcePrefab: {fileID: 100100000, guid: 14878b47cb26a4540bc3f098367b6d7b, type: 3}
+--- !u!1 &556121314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3965519142996980783, guid: c3877eda45ca1426090364306014298e, type: 3}
+  m_PrefabInstance: {fileID: 2229255774419736458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &556121317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556121314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b059eff96957ab67ad5147b8a493629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burningLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  topBorder: {fileID: 2055539061}
+  bottomBorder: {fileID: 1401373335}
+  leftBorder: {fileID: 1623178153}
+  rightBorder: {fileID: 1573557077}
+  maxBorderAlpha: 0.5
+  smoothTime: 0.3
 --- !u!1001 &556163331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27632,10 +27665,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1564418491}
     m_Modifications:
-    - target: {fileID: 4799982519216865147, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
-      propertyPath: m_Mass
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 6117026140062700152, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
       propertyPath: m_Name
       value: MedievalWoodCube
@@ -27695,6 +27724,10 @@ PrefabInstance:
     - target: {fileID: 8490520714802979198, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799982519216865147, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
+      propertyPath: m_Mass
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45972,10 +46005,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BorderManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 982674147251522745, guid: c3877eda45ca1426090364306014298e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3965519142996980783, guid: c3877eda45ca1426090364306014298e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 556121317}
   m_SourcePrefab: {fileID: 100100000, guid: c3877eda45ca1426090364306014298e, type: 3}
 --- !u!1001 &3333010970999934829
 PrefabInstance:

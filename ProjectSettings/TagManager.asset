@@ -9,6 +9,7 @@ TagManager:
   - Level2Block
   - TriggerArea1
   - EndTutorialBlock
+  - IgnoreBorder
   layers:
   - Default
   - TransparentFX
