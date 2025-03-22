@@ -7,8 +7,16 @@ public class CameraMovementNew : MonoBehaviour
     public Transform orientation;
     float xRotation;
     float yRotation;
+    public Vector2 initRotation;
     private void Start(){
         Cursor.lockState = CursorLockMode.Locked;
+
+        xRotation = initRotation.x;
+        yRotation = initRotation.y;
+
+        // rotate cam and orientation
+        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
+        orientation.rotation = Quaternion.Euler(0, yRotation, 0f);
     }
     private void Update(){
         float MouseX = Input.GetAxis("Mouse X") * sensX * Time.deltaTime;
