@@ -38,7 +38,8 @@ new string[]
     "However, with a controller, you may press Y to do so",
     "To regulate the force of your throw, use Q and E on the keyboard.",
     "On the controller, use the back-buttons.",
-    "Burn the Barrel behind the fence!"
+    "Burn the Barrel behind the fence!",
+    "But be careful to not hurt the Rabbits!"
 }
 
 
