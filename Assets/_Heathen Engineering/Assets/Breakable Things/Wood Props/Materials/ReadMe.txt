@@ -1,0 +1,2 @@
+The materials are not included in this asset because we support Built-in, URP and HDRP and have a few variants of each. 
+you can find all of the skins available for this asset on the Unity Asset Store at the links listed below.
