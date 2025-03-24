@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 7df6d3557d32c4c4fbb9b451607900c4
@@ -16,7 +13,7 @@ EditorBuildSettings:
     guid: e7ec4c385c3ad60439d793e4375c5808
   - enabled: 1
     path: Assets/Scenes/VikingHall.unity
-    guid: 0f6664ae90aef4ce18a76a8b3630316e
+    guid: 47c9a52362fd34650a3c0b4e8536cd77
   - enabled: 1
     path: Assets/Scenes/ThreeRoomsAndGarden.unity
     guid: 7ad224ff77e29d74aa43775542c96343

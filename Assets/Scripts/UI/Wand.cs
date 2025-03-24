@@ -32,6 +32,13 @@ public class Wand : MonoBehaviour
     private Burnable aktuellesBurnable;
     private bool traegtObjekt = false;
 
+    AudioManager audioManager;
+
+// finds the correct audiomanager, on wake up
+    private void Awake(){
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Start()
     {
         // UpPicker in der Szene finden
@@ -150,9 +157,10 @@ public class Wand : MonoBehaviour
         }
         
         // Sound abspielen
-        if (spieleSound && audioSource != null && zauberstabSound != null)
+        if (spieleSound)
         {
-            audioSource.PlayOneShot(zauberstabSound, soundVolume);
+            audioManager.PlaySound(audioManager.pickUp);
+           // audioSource.PlayOneShot(zauberstabSound, soundVolume);
         }
         
         // Start der Animation: Erscheinen und Rotation
@@ -189,9 +197,10 @@ public class Wand : MonoBehaviour
         istInAnimation = true;
         
         // Sound abspielen
-        if (spieleSound && audioSource != null && zauberstabSound != null)
+       if (spieleSound)
         {
-            audioSource.PlayOneShot(zauberstabSound, soundVolume);
+            audioManager.PlaySound(audioManager.pickUp);
+           // audioSource.PlayOneShot(zauberstabSound, soundVolume);
         }
         
         // Start der Animation: Verschwinden und Rotation
