@@ -23,6 +23,11 @@ public class Barrel : Burnable
                 {
                     burnable.IncreaseTemperature(explosionTemperatureIncrease);
                 }
+                explodableRock explodable = col.GetComponent<explodableRock>();
+                if (explodable != null)
+                {
+                    explodable.Explode();
+                }
             }
         }
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
