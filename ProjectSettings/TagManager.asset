@@ -10,6 +10,7 @@ TagManager:
   - TriggerArea1
   - EndTutorialBlock
   - IgnoreBorder
+  - Audio
   layers:
   - Default
   - TransparentFX
