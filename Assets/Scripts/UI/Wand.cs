@@ -34,6 +34,7 @@ public class Wand : MonoBehaviour
 
     AudioManager audioManager;
 
+// finds the correct audiomanager, on wake up
     private void Awake(){
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
