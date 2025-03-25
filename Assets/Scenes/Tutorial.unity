@@ -8011,7 +8011,7 @@ GameObject:
   - component: {fileID: 370178078}
   - component: {fileID: 370178079}
   m_Layer: 0
-  m_Name: Musiccplayer
+  m_Name: JukeBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8046,13 +8046,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd71afa8700461c4588f6fdd0a1e5a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicDuration: 0
-  goalTime: 0
   _audioSources:
   - {fileID: 302414023}
   - {fileID: 1963194880}
-  audioTogle: 1
+  musicduration: 136
   currentClip: {fileID: 8300000, guid: fdae21d0973f15a478c1d4b113656333, type: 3}
+  delay: 5
 --- !u!1001 &371770997
 PrefabInstance:
   m_ObjectHideFlags: 0
