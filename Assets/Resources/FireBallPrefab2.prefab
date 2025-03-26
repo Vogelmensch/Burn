@@ -24339,4 +24339,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireBallHitTemperatureIncrease: 100
-  explosionPrefab: {fileID: 1845955007268882, guid: 67a684e320da6e7439421a07e3fa265c, type: 3}
+  explosionPrefab: {fileID: 159918, guid: 8c8fa8c723ab159ec8ae0b64d4fa05b7, type: 3}

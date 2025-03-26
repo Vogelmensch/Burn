@@ -16,30 +16,28 @@ public class WizardDialogue : MonoBehaviour
     new string[] 
 {
     "Ah, welcome, young traveler!",
-    "In this trial, you must take one of the chairs before you.",
-    "Once you have done so, place it upon the table to your left – as if guided by unseen forces.",
-    "If you're using a mouse, press the right mouse button to do so",
-    "However, if you're playing with a controller, press X or the left shoulder button",
+    "In this trial, you must use the right mouse button to pick up a chair before you",
+    "If you are using a controller - press x",
+    "Once you have done so, place it upon the table to your left.",
     "May fate be on your side!"
 },
 new string[] 
 {
     "A most excellent deed!",
-    "Step forth into the next chamber – if you have not done so already!",
-    "Now, take a chair and let the sacred flame from the cupboard's candle consume it.",
-    "Once this is done, wield its burning remains to ignite the great fire in the hearth!"
+    "Step forth into the next chamber - if you have not done so already!",
+    "Now, take a chair and let the sacred flame from the tables candle consume it.",
+    "Once this is done, wield its burning remains to ignite the great fire in the fireplace!",
 },
 new string[]
 {
     "Splendid work, apprentice of the arcane arts!",
-    "Now, you shall learn a most potent craft – the art of hurling fire-laden objects!",
+    "Now, you shall learn a most potent craft – the art of hurling fireballs!",
     "With this newfound power, you shall set ablaze that which lies beyond your reach!",
     "With a keyboard, you shall press F to unleash a blazing orb of flame",
     "However, with a controller, you may press Y to do so",
-    "To regulate the force of your throw, use Q and E on the keyboard.",
+    "To regulate the durability of your flame, use Q and E on the keyboard.",
     "On the controller, use the back-buttons.",
-    "Burn the Barrel behind the fence!",
-    "But be careful to not hurt the Rabbits!"
+    "Kill the evil Wiking and safe the rabbits!",
 }
 
 
