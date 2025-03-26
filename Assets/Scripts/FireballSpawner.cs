@@ -24,10 +24,15 @@ public class FireballSpawner : MonoBehaviour
     public GameObject castEffectPrefab;     // Effekt beim Zaubern/Werfen
     public GameObject explosionPrefab;      // Effekt beim Aufprall auf Objekte
     
+    [Header("Cooldown-Einstellungen")]
+    public float fireballCooldown = 2.0f;   // Cooldown zwischen Feuerbällen in Sekunden
+    
     // Private Variablen
     private GameObject fireball;
     private Wand wandScript;
     private AudioSource audioSource;
+    private bool canThrowFireball = true;   // Flag für Cooldown-Steuerung
+    private bool isPackingWand = false;     // Flag um zu verhindern, dass die Wand mehrfach weggepackt wird
     
     // Input Actions
     private InputAction increaseStrengthAction;
@@ -72,7 +77,7 @@ public class FireballSpawner : MonoBehaviour
         // Zauberstab sichtbar machen, wenn wir einen Feuerball vorbereiten
         if ((increaseStrengthAction.IsPressed() || decreaseStrengthAction.IsPressed()) && wandScript != null)
         {
-            if (!wandScript.IstSichtbar())
+            if (!wandScript.IstSichtbar() && !isPackingWand)
             {
                 wandScript.ZeigeZauberstab(true);
             }
@@ -81,7 +86,7 @@ public class FireballSpawner : MonoBehaviour
     
     void CheckForFireballAction()
     {
-        if (throwAction.WasPressedThisFrame())
+        if (throwAction.WasPressedThisFrame() && canThrowFireball && !isPackingWand)
         {
             if (wandScript != null && !wandScript.IstSichtbar())
             {
@@ -120,18 +125,36 @@ public class FireballSpawner : MonoBehaviour
     
     void TryFireball()
     {
+        if (!canThrowFireball || isPackingWand) return;
+        
         Burnable nearbyFire = FindNearbyFire();
         if (nearbyFire != null)
         {
+            // Cooldown starten
+            canThrowFireball = false;
+            
             nearbyFire.FeedFireball();
             SpawnAndThrowFireball();
+            
+            // Cooldown nach bestimmter Zeit zurücksetzen
+            Invoke("ResetFireballCooldown", fireballCooldown);
         }
         else if (throwStrengthIndicator != null)
         {
             StartCoroutine(throwStrengthIndicator.PrintNoFireMessage());
-            // FIX: Pack wand away when there's no fire nearby
-            Invoke("PackZauberstabEin", 0.5f);
+            
+            // Pack den Zauberstab ein, wenn kein Feuer in der Nähe ist
+            if (!isPackingWand)
+            {
+                isPackingWand = true;
+                Invoke("PackZauberstabEin", 0.5f);
+            }
         }
+    }
+
+    void ResetFireballCooldown()
+    {
+        canThrowFireball = true;
     }
 
     Burnable FindNearbyFire()
@@ -221,8 +244,12 @@ public class FireballSpawner : MonoBehaviour
         PlayFireballSound();
         ThrowFireball(fireball);
         
-        // Zauberstab nach einer kurzen Verzögerung wieder einpacken
-        Invoke("PackZauberstabEin", 0.8f);
+        // Zauberstab nach einer kurzen Verzögerung einpacken, wenn ihn der Spieler nicht trägt
+        if (!isPackingWand)
+        {
+            isPackingWand = true;
+            Invoke("PackZauberstabEin", 0.8f);
+        }
     }
     
     void CreateCastEffect(Vector3 position, Quaternion rotation)
@@ -252,6 +279,9 @@ public class FireballSpawner : MonoBehaviour
                 wandScript.ZeigeZauberstab(false);
             }
         }
+        
+        // Flag zurücksetzen, nachdem die Einpack-Animation gestartet wurde
+        isPackingWand = false;
     }
 
     void AddTrailToFireball(GameObject ball)

@@ -10,7 +10,7 @@ public class LevelMenu : MonoBehaviour
     public Button[] buttons;
 
     private void Awake(){
-        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 3);
+        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 4); // workaround um bonus freizuschalten lg. leon
         for(int i = 0; i < buttons.Length; i++){
             buttons[i].interactable = false;
         }

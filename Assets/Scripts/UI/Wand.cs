@@ -20,6 +20,9 @@ public class Wand : MonoBehaviour
     [Range(0.1f, 2.0f)]
     public float soundVolume = 1.0f;              // Lautstärke des Sounds
     
+    [Header("Debug-Einstellungen")]
+    public bool debugModus = true;               // Debug-Modus aktivieren
+    
     // Animation Status
     private bool istInAnimation = false;
     private bool istSichtbar = false;
@@ -32,23 +35,56 @@ public class Wand : MonoBehaviour
     private Burnable aktuellesBurnable;
     private bool traegtObjekt = false;
 
-    AudioManager audioManager;
+    // Referenz zum AudioManager
+    private AudioManager audioManager;
 
-// finds the correct audiomanager, on wake up
+    // Findet den AudioManager beim Aufwachen
     private void Awake(){
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        GameObject audioObj = GameObject.FindGameObjectWithTag("Audio");
+        if(audioObj != null) {
+            audioManager = audioObj.GetComponent<AudioManager>();
+            if (debugModus) Debug.Log("[Wand] AudioManager gefunden");
+        } else {
+            Debug.LogWarning("[Wand] Kein GameObject mit Tag 'Audio' gefunden!");
+        }
     }
 
     void Start()
-    {
-        // UpPicker in der Szene finden
-        upPicker = FindObjectOfType<UpPicker>();
+    {   
+        Debug.Log("[Wand] Skript wird initialisiert");
         
+        // UpPicker in der Szene finden
+        FindeUpPicker();
+        
+        // Position und Audio initialisieren
+        InitialisierePosUndAudio();
+        
+        // Debug-Ausgabe
+        if (debugModus) Debug.Log("[Wand] Start abgeschlossen. UpPicker gefunden: " + (upPicker != null));
+    }
+
+    void Update()
+    {
+        // Überprüfen, ob der Spieler ein Objekt trägt
+        PruefeObjektStatus();
+        
+        // Zauberstab aktualisieren wenn nötig
+        AktualisiereZauberstab();
+    }
+    
+    // Sucht den UpPicker in der Szene
+    private void FindeUpPicker()
+    {
+        upPicker = FindObjectOfType<UpPicker>();
         if (upPicker == null)
         {
-            Debug.LogError("Wand.cs: Konnte UpPicker nicht in der Szene finden!");
+            Debug.LogError("[Wand] Konnte UpPicker nicht in der Szene finden!");
         }
-        
+    }
+    
+    // Initialisiert die Position und den AudioSource-Komponenten
+    private void InitialisierePosUndAudio()
+    {
         // Wenn zauberstabPosition nicht gesetzt ist, erstelle eine Standard-Position
         if (zauberstabPosition == null)
         {
@@ -56,6 +92,8 @@ public class Wand : MonoBehaviour
             positionObj.transform.parent = Camera.main.transform;
             positionObj.transform.localPosition = new Vector3(0.4f, -0.3f, 0.6f); // Unten rechts im Bild
             zauberstabPosition = positionObj.transform;
+            
+            if (debugModus) Debug.Log("[Wand] Neue ZauberstabPosition erstellt");
         }
         
         ausgangsPosition = Vector3.zero; // Lokale Position relativ zur zauberstabPosition
@@ -68,31 +106,52 @@ public class Wand : MonoBehaviour
             audioSource.spatialBlend = 0f; // 2D Sound
             audioSource.volume = 1.0f;     // Basis-Lautstärke (wird mit soundVolume multipliziert)
             audioSource.playOnAwake = false;
+            
+            if (debugModus) Debug.Log("[Wand] AudioSource hinzugefügt");
         }
     }
-
-    void Update()
+    
+    // Prüft, ob der Spieler ein Objekt trägt und passt den Status an
+    private void PruefeObjektStatus()
     {
-        // Überprüfen, ob der Spieler ein Objekt trägt
-        bool objektWirdGetragen = (upPicker != null && upPicker.IsCurrentlyCarrying());
+        if (upPicker == null) return;
+        
+        bool objektWirdGetragen = upPicker.IsCurrentlyCarrying();
         
         // Wenn der Zustand sich geändert hat und keine Animation läuft
-        if (objektWirdGetragen != traegtObjekt && !istInAnimation)
+        if (objektWirdGetragen != traegtObjekt)
         {
+            // Alte Animation abbrechen, falls noch aktiv
+            if (istInAnimation)
+            {
+                StopAllCoroutines();
+                istInAnimation = false;
+                if (debugModus) Debug.Log("[Wand] Alte Animation abgebrochen");
+            }
+            
             traegtObjekt = objektWirdGetragen;
             
             if (traegtObjekt)
             {
                 StartCoroutine(ZauberstabAuspacken());
+                if (debugModus) Debug.Log("[Wand] Objekt aufgenommen, zeige Zauberstab");
             }
             else
             {
                 StartCoroutine(ZauberstabEinpacken());
+                if (debugModus) Debug.Log("[Wand] Objekt abgelegt, verstecke Zauberstab");
             }
         }
+    }
+    
+    // Aktualisiert den Zauberstab, wenn er sichtbar ist
+    private void AktualisiereZauberstab()
+    {
+        // Kein Update nötig, wenn Zauberstab nicht sichtbar, Animation läuft, oder kein Objekt aktiv ist
+        if (!istSichtbar || aktiverZauberstab == null || istInAnimation) return;
         
-        // Wenn ein Objekt getragen wird und Zauberstab sichtbar ist, Zauberstab aktualisieren
-        if (traegtObjekt && istSichtbar && aktiverZauberstab != null && !istInAnimation)
+        // Wenn ein Objekt getragen wird
+        if (traegtObjekt)
         {
             ZauberstabAussehendAktualisieren();
             
@@ -100,6 +159,12 @@ public class Wand : MonoBehaviour
             {
                 ZauberstabAnimieren();
             }
+        }
+        // Notfallkorrektur: Zauberstab ausblenden, wenn kein Objekt getragen wird
+        else if (aktiverZauberstab.activeSelf)
+        {
+            aktiverZauberstab.SetActive(false);
+            if (debugModus) Debug.Log("[Wand] Notfall-Ausblenden");
         }
     }
     
@@ -132,35 +197,56 @@ public class Wand : MonoBehaviour
     
     // Auspack-Animation des Zauberstabs
     private IEnumerator ZauberstabAuspacken()
-    {
+    {   
+        Debug.Log("[Wand] ZauberstabAuspacken gestartet!");
+
         istInAnimation = true;
         
-        // Zauberstab erstellen falls noch nicht vorhanden
-        if (aktiverZauberstab == null && zauberstabPrefab != null)
+        // Vorhandenen Zauberstab entfernen, um sauberen Start zu garantieren
+        if (aktiverZauberstab != null)
         {
-            aktiverZauberstab = Instantiate(zauberstabPrefab, zauberstabPosition);
-            aktiverZauberstab.transform.localPosition = ausgangsPosition;
-            
-            // Initialen Zustand speichern
-            ausgangsScale = aktiverZauberstab.transform.localScale;
-            
-            // Auf Null skalieren für Animation
-            aktiverZauberstab.transform.localScale = Vector3.zero;
-            
-            // Zauberstab-Aussehen aktualisieren
-            ZauberstabAussehendAktualisieren();
+            Destroy(aktiverZauberstab);
+            aktiverZauberstab = null;
         }
-        else if (aktiverZauberstab != null)
+        
+        // Neuer Zauberstab - Prüfen ob Prefab vorhanden
+        if (zauberstabPrefab == null)
         {
-            aktiverZauberstab.SetActive(true);
-            aktiverZauberstab.transform.localScale = Vector3.zero;
+            Debug.LogError("[Wand] Zauberstab-Prefab fehlt!");
+            istInAnimation = false;
+            yield break;
         }
+        
+        // Zauberstab erstellen
+        aktiverZauberstab = Instantiate(zauberstabPrefab, zauberstabPosition);
+        aktiverZauberstab.transform.localPosition = ausgangsPosition;
+        
+        // Initialen Zustand speichern
+        ausgangsScale = aktiverZauberstab.transform.localScale;
+        
+        // Auf Null skalieren für Animation
+        aktiverZauberstab.transform.localScale = Vector3.zero;
+        
+        // Zauberstab-Aussehen aktualisieren
+        ZauberstabAussehendAktualisieren();
         
         // Sound abspielen
         if (spieleSound)
         {
-            audioManager.PlaySound(audioManager.pickUp);
-           // audioSource.PlayOneShot(zauberstabSound, soundVolume);
+            if (audioManager != null && audioManager.pickUp != null)
+            {
+                audioManager.PlaySound(audioManager.pickUp);
+                if (debugModus) Debug.Log("[Wand] AudioManager Sound abgespielt");
+            }
+            else if (audioSource != null && zauberstabSound != null)
+            {
+                audioSource.PlayOneShot(zauberstabSound, soundVolume);
+                if (debugModus) Debug.Log("[Wand] Fallback-Sound abgespielt");
+            }
+            else
+            {
+                if (debugModus) Debug.LogWarning("[Wand] Kein Sound verfügbar");
+            }
         }
         
         // Start der Animation: Erscheinen und Rotation
@@ -187,20 +273,36 @@ public class Wand : MonoBehaviour
         
         istSichtbar = true;
         istInAnimation = false;
+        
+        if (debugModus) Debug.Log("[Wand] Auspacken abgeschlossen. Sichtbar: " + istSichtbar);
     }
     
     // Einpack-Animation des Zauberstabs
     private IEnumerator ZauberstabEinpacken()
     {
-        if (aktiverZauberstab == null) yield break;
+        if (aktiverZauberstab == null) 
+        {
+            istSichtbar = false;
+            istInAnimation = false;
+            if (debugModus) Debug.LogWarning("[Wand] ZauberstabEinpacken: Zauberstab ist null!");
+            yield break;
+        }
         
         istInAnimation = true;
         
+        if (debugModus) Debug.Log("[Wand] ZauberstabEinpacken gestartet!");
+        
         // Sound abspielen
-       if (spieleSound)
+        if (spieleSound)
         {
-            audioManager.PlaySound(audioManager.pickUp);
-           // audioSource.PlayOneShot(zauberstabSound, soundVolume);
+            if (audioManager != null && audioManager.pickUp != null)
+            {
+                audioManager.PlaySound(audioManager.pickUp);
+            }
+            else if (audioSource != null && zauberstabSound != null)
+            {
+                audioSource.PlayOneShot(zauberstabSound, soundVolume);
+            }
         }
         
         // Start der Animation: Verschwinden und Rotation
@@ -226,6 +328,8 @@ public class Wand : MonoBehaviour
         
         istSichtbar = false;
         istInAnimation = false;
+        
+        if (debugModus) Debug.Log("[Wand] Einpacken abgeschlossen");
     }
     
     // Easing-Funktionen für sanftere Animationen
@@ -263,6 +367,7 @@ public class Wand : MonoBehaviour
         if (aktuellesBurnable != burnable)
         {
             aktuellesBurnable = burnable;
+            if (debugModus) Debug.Log("[Wand] Neues Burnable-Objekt: " + (burnable != null ? burnable.name : "keins"));
         }
         
         bool brennt = (burnable != null && burnable.isOnFire);
@@ -329,18 +434,22 @@ public class Wand : MonoBehaviour
             }
         }
     }
-        public GameObject GetAktiverZauberstab()
+    
+    // Öffentliche Methoden für den Zugriff von außen
+    
+    // Gibt den aktiven Zauberstab zurück
+    public GameObject GetAktiverZauberstab()
     {
         return aktiverZauberstab;
     }
 
-// Prüft, ob der Zauberstab sichtbar ist
+    // Prüft, ob der Zauberstab sichtbar ist
     public bool IstSichtbar()
     {
         return istSichtbar;
     }
 
-// Zeigt oder versteckt den Zauberstab
+    // Zeigt oder versteckt den Zauberstab
     public void ZeigeZauberstab(bool zeigen)
     {
         if (zeigen && !istSichtbar && !istInAnimation)
@@ -352,41 +461,46 @@ public class Wand : MonoBehaviour
             StartCoroutine(ZauberstabEinpacken());
         }
     }
+    
+    // Gibt zurück, ob ein Objekt getragen wird
     public bool TraegtObjekt()
     {
         return traegtObjekt;
     }
+    
+    // Gibt die Spitze des Zauberstabs zurück (oder erstellt sie, falls nicht vorhanden)
     public Transform GetZauberstabSpitze()
-{
-    if (aktiverZauberstab == null) return null;
-    
-    // Suche nach einem Kind-Objekt, das "Tip" oder "Spitze" heißt
-    Transform tipTransform = aktiverZauberstab.transform.Find("Tip");
-    if (tipTransform == null)
-        tipTransform = aktiverZauberstab.transform.Find("Spitze");
-    
-    // Wenn wir keines finden, erstelle ein neues an der vermuteten Position der Spitze
-    if (tipTransform == null)
     {
-        GameObject tipObject = new GameObject("Tip");
-        tipTransform = tipObject.transform;
-        tipTransform.SetParent(aktiverZauberstab.transform);
+        if (aktiverZauberstab == null) return null;
         
-        // Vermute die Spitze am Ende des Zauberstabes
-        Renderer renderer = aktiverZauberstab.GetComponent<Renderer>();
-        if (renderer != null)
+        // Suche nach einem Kind-Objekt, das "Tip" oder "Spitze" heißt
+        Transform tipTransform = aktiverZauberstab.transform.Find("Tip");
+        if (tipTransform == null)
+            tipTransform = aktiverZauberstab.transform.Find("Spitze");
+        
+        // Wenn wir keines finden, erstelle ein neues an der vermuteten Position der Spitze
+        if (tipTransform == null)
         {
-            float länge = renderer.bounds.size.z;
-            // Positioniere die Spitze am vorderen Ende des Zauberstabes
-            tipTransform.localPosition = new Vector3(0, 0, länge * 0.5f);
+            GameObject tipObject = new GameObject("Tip");
+            tipTransform = tipObject.transform;
+            tipTransform.SetParent(aktiverZauberstab.transform);
+            
+            // Vermute die Spitze am Ende des Zauberstabes
+            Renderer renderer = aktiverZauberstab.GetComponent<Renderer>();
+            if (renderer != null)
+            {
+                float länge = renderer.bounds.size.z;
+                // Positioniere die Spitze am vorderen Ende des Zauberstabes
+                tipTransform.localPosition = new Vector3(0, 0, länge * 0.5f);
+            }
+            else
+            {
+                // Standardposition, falls kein Renderer gefunden wird
+                tipTransform.localPosition = new Vector3(0, 0, 0.25f);
+            }
+            
+            if (debugModus) Debug.Log("[Wand] Neue Zauberstabspitze erstellt");
         }
-        else
-        {
-            // Standardposition, falls kein Renderer gefunden wird
-            tipTransform.localPosition = new Vector3(0, 0, 0.25f);
-        }
-    }
-    
-    return tipTransform;
-}
-}
+        
+        return tipTransform;
+    }}
