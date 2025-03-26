@@ -147,7 +147,7 @@ public class FireballSpawner : MonoBehaviour
             if (!isPackingWand)
             {
                 isPackingWand = true;
-                Invoke("PackZauberstabEin", 0.5f);
+                Invoke("PackZauberstabEin", 0.6f);
             }
         }
     }

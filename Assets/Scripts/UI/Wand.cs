@@ -163,7 +163,7 @@ public class Wand : MonoBehaviour
         // Notfallkorrektur: Zauberstab ausblenden, wenn kein Objekt getragen wird
         else if (aktiverZauberstab.activeSelf)
         {
-            aktiverZauberstab.SetActive(false);
+            ZauberstabEinpacken();
             if (debugModus) Debug.Log("[Wand] Notfall-Ausblenden");
         }
     }
