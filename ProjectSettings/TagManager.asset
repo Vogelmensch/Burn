@@ -11,6 +11,7 @@ TagManager:
   - EndTutorialBlock
   - IgnoreBorder
   - Audio
+  - LooseBlock
   layers:
   - Default
   - TransparentFX
