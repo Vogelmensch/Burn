@@ -7,6 +7,12 @@ public class FireballCollision : MonoBehaviour
     
     private bool hasCollided = false;
     
+    // Setzt den Kollisionsstatus zurück
+    private void ResetCollision()
+    {
+        hasCollided = false;
+    }
+    
     void Start()
     {
         Debug.Log("FireballCollision: Feuerball wurde erstellt!");
@@ -50,21 +56,90 @@ public class FireballCollision : MonoBehaviour
             if (explosionPrefab != null) 
             {
                 Debug.Log("FireballCollision: Erstelle Explosion");
-                Instantiate(explosionPrefab, aufprallPosition, Quaternion.identity);
+                GameObject explosion = Instantiate(explosionPrefab, aufprallPosition, Quaternion.identity);
+                // Zerstöre die Explosion nach 2 Sekunden
+                Destroy(explosion, 2.0f);
             }
             
             // Nur bei Burnable-Objekten den Feuerball zerstören
             Debug.Log("FireballCollision: Zerstöre Feuerball nach Treffer auf Burnable");
             Destroy(gameObject);
         }
+        else if (collision.gameObject.CompareTag("Viking") || collision.gameObject.CompareTag("EndTutorialBlock"))
+        {
+            Debug.Log("FireballCollision: Viking oder EndTutorialBlock getroffen!");
+            
+            // Kontaktpunkt für die Position der Explosion ermitteln
+            ContactPoint contact = collision.contacts[0];
+            Vector3 aufprallPosition = contact.point;
+            
+            // Explosion am Aufprallpunkt erzeugen
+            if (explosionPrefab != null) 
+            {
+                Debug.Log("FireballCollision: Erstelle Explosion");
+                GameObject explosion = Instantiate(explosionPrefab, aufprallPosition, Quaternion.identity);
+                // Zerstöre die Explosion nach 2 Sekunden
+                Destroy(explosion, 2.0f);
+            }
+            
+            // EndTutorial-Event suchen und auslösen
+            if (collision.gameObject.CompareTag("EndTutorialBlock"))
+            {
+                Level2Block block = collision.gameObject.GetComponent<Level2Block>();
+                if (block != null)
+                {
+                    Debug.Log("FireballCollision: Level2Block gefunden und Event auslösen");
+                    // Das Event wird automatisch ausgelöst, wenn das Objekt brennt
+                }
+            }
+            else if (collision.gameObject.CompareTag("Viking"))
+            {
+                // Direktes Auslösen des EndTutorial-Skripts
+                EndTutorial endTutorial = FindObjectOfType<EndTutorial>();
+                if (endTutorial != null)
+                {
+                    Debug.Log("FireballCollision: Viking getroffen und EndTutorial ausgelöst");
+                    endTutorial.SendMessage("FinishTut");
+                }
+            }
+            
+            // Feuerball zerstören
+            Destroy(gameObject);
+        }
         else
         {
-            // Bei Nicht-Burnable-Objekten: Kollisionseffekt, aber nicht zerstören
-            // Hier kannst du z.B. einen leichten Aufprall-Effekt hinzufügen, falls gewünscht
-            Debug.Log("FireballCollision: Nicht-Burnable getroffen, Feuerball bleibt erhalten");
+            // Bei Nicht-Burnable-Objekten: Kollisionseffekt erzeugen und abprallen lassen
+            Debug.Log("FireballCollision: Nicht-Burnable getroffen, Feuerball prallt ab");
             
-            // Warte kurz, um mehrfache Kollisionen zu vermeiden
-            hasCollided = false;
+            // Kontaktpunkt für die Position der Explosion ermitteln
+            ContactPoint contact = collision.contacts[0];
+            Vector3 aufprallPosition = contact.point;
+            
+            // Explosion am Aufprallpunkt erzeugen
+            if (explosionPrefab != null) 
+            {
+                Debug.Log("FireballCollision: Erstelle Explosion");
+                GameObject explosion = Instantiate(explosionPrefab, aufprallPosition, Quaternion.identity);
+                // Zerstöre die Explosion nach 2 Sekunden
+                Destroy(explosion, 2.0f);
+            }
+            
+            // Abprallvektor berechnen
+            Rigidbody rb = GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                // Normale der Kollision verwenden, um korrekt abzuprallen
+                Vector3 reflectionDir = Vector3.Reflect(rb.linearVelocity.normalized, contact.normal);
+                float speed = rb.linearVelocity.magnitude;
+                
+                // 20% Geschwindigkeitsverlust beim Abprallen
+                rb.linearVelocity = reflectionDir * speed * 0.8f;
+                
+                Debug.Log("FireballCollision: Feuerball abgeprallt mit Geschwindigkeit " + rb.linearVelocity.magnitude);
+            }
+            
+            // Kurze Verzögerung, um mehrfache Kollisionen zu vermeiden
+            Invoke("ResetCollision", 0.2f);
         }
     }
 }
