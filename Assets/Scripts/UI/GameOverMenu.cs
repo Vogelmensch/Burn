@@ -9,6 +9,7 @@ public class GameOverMenu : MonoBehaviour
 
     [Header("Settings")]
     public string looseBlockTag = "LooseBlock";
+    
     public float checkInterval = 0.5f; // How often to check for burning blocks
     
     private bool gameOver = false;
