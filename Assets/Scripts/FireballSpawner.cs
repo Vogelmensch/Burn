@@ -147,7 +147,7 @@ public class FireballSpawner : MonoBehaviour
             if (!isPackingWand)
             {
                 isPackingWand = true;
-                Invoke("PackZauberstabEin", 0.6f);
+                Invoke("PackZauberstabEin", 0.5f);
             }
         }
     }
@@ -199,7 +199,7 @@ public class FireballSpawner : MonoBehaviour
             if (spitze != null)
             {
                 // Verwende die definierte Spitze
-                spawnPosition = spitze.position;
+                spawnPosition = spitze.position + zauberstab.forward * 0.5f;
             }
             else
             {

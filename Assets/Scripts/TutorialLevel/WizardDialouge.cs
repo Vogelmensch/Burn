@@ -10,41 +10,40 @@ public class WizardDialogue : MonoBehaviour
     private RevealLevel3 doorDetector2;
     private bool hasTriggered = false;
     private bool hasTriggered2 = false;
-    private InputAction nextDialogueAction;
+    
     private string[][] dialogueSets = 
-{
-    new string[] 
-{
-    "Ah, welcome, young traveler!",
-    "In this trial, you must use the right mouse button to pick up a chair before you",
-    "If you are using a controller - press x",
-    "Once you have done so, place it upon the table to your left.",
-    "May fate be on your side!"
-},
-new string[] 
-{
-    "A most excellent deed!",
-    "Step forth into the next chamber - if you have not done so already!",
-    "Now, take a chair and let the sacred flame from the tables candle consume it.",
-    "Once this is done, wield its burning remains to ignite the great fire in the fireplace!",
-},
-new string[]
-{
-    "Splendid work, apprentice of the arcane arts!",
-    "Now, you shall learn a most potent craft – the art of hurling fireballs!",
-    "With this newfound power, you shall set ablaze that which lies beyond your reach!",
-    "With a keyboard, you shall press F to unleash a blazing orb of flame",
-    "However, with a controller, you may press Y to do so",
-    "To regulate the durability of your flame, use Q and E on the keyboard.",
-    "On the controller, use the back-buttons.",
-    "Kill the evil viking and safe the rabbits!",
-}
-
-
-};
+    {
+        new string[] 
+        {
+            "Ah, welcome, young traveler! \n (Press R for the next dialogue)",
+            "In this trial, you must use the right mouse button to pick up a chair before you",
+            "If you are using a controller - press x",
+            "Once you have done so, place it upon the table to your left.",
+            "May fate be on your side!"
+        },
+        new string[] 
+        {
+            "A most excellent deed!",
+            "Step forth into the next chamber - if you have not done so already!",
+            "Now, take a chair and let the sacred flame from the tables candle consume it.",
+            "Once this is done, wield its burning remains to ignite the great fire in the fireplace!",
+        },
+        new string[]
+        {
+            "Splendid work, apprentice of the arcane arts!",
+            "Now, you shall learn a most potent craft – the art of hurling fireballs!",
+            "With this newfound power, you shall set ablaze that which lies beyond your reach!",
+            "With a keyboard, you shall press F to unleash a blazing orb of flame",
+            "However, with a controller, you may press Y to do so",
+            "To regulate the durability of your flame, use Q and E on the keyboard.",
+            "On the controller, use the back-buttons.",
+            "Kill the evil viking and safe the rabbits!",
+        }
+    };
 
     private int currentIndex = 0;
     private int currentArray = 0;
+    
     private void Start()
     {
         if (doorDetector == null)
@@ -58,17 +57,18 @@ new string[]
         doorDetector.DoorOpenedEvent += OnDoorOpened;
         doorDetector2.DoorOpenedEvent2 += OnDoorOpened2;
         ShowDialogue(dialogueSets[currentArray][currentIndex]);
-        
-        nextDialogueAction = InputSystem.actions.FindAction("Jump");
     }
 
-    void Update(){
-        if(nextDialogueAction.WasPressedThisFrame())
+    void Update()
+    {
+        // Verwende R-Taste anstatt Leertaste zum Fortsetzen des Dialogs
+        if (Keyboard.current.rKey.wasPressedThisFrame)
         {
             NextDialogue();
-            Debug.Log("button pressed!");
+            Debug.Log("R button pressed!");
         }
     }
+    
     private void OnDoorOpened()
     {
         Debug.Log("Tür wurde geöffnet - Event empfangen!");
@@ -76,6 +76,7 @@ new string[]
         Debug.LogError("Invoke Next Dialoge");
         Invoke("ShowNextDialoge", 3f);
     }
+    
     private void OnDoorOpened2()
     {
         Debug.Log("Tür wurde geöffnet - Event empfangen!");
@@ -95,16 +96,15 @@ new string[]
          if (currentIndex >= dialogueSets[currentArray].Length - 1)
          {
             HideDialogue();
-            currentArray ++;
+            currentArray++;
             currentIndex = 0;
          }
          else
          {
-            currentIndex ++;
+            currentIndex++;
             ShowDialogue(dialogueSets[currentArray][currentIndex]);
          }
     }
-
 
     public void ShowDialogue(string text)
     {

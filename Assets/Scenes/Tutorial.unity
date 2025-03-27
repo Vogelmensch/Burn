@@ -1656,7 +1656,7 @@ PrefabInstance:
     - target: {fileID: 1863213617433584067, guid: a1f413e5f68b62c4b8f5d490492b7a79, type: 3}
       propertyPath: cameraTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1266798208}
     - target: {fileID: 1863213617433584067, guid: a1f413e5f68b62c4b8f5d490492b7a79, type: 3}
       propertyPath: explosionPrefab
       value: 
@@ -2309,6 +2309,11 @@ PrefabInstance:
       addedObject: {fileID: 556019710}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c51c05068cd08ba4b8ce24d868d221d8, type: 3}
+--- !u!1 &104214791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1303930925209722286, guid: d1100f5a32a3436bcabfe74c60ed7ec6, type: 3}
+  m_PrefabInstance: {fileID: 3333010970999934829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &104255478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27980,6 +27985,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41c2416439f912f4e89bd6b1167f45e5, type: 3}
+--- !u!4 &1266798208 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6096480076422389610, guid: c552d4a5d617b494f9901d7e3d9a1ef1, type: 3}
+  m_PrefabInstance: {fileID: 2027632518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1270799282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29085,10 +29095,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1564418491}
     m_Modifications:
-    - target: {fileID: 4799982519216865147, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
-      propertyPath: m_Mass
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 6117026140062700152, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
       propertyPath: m_Name
       value: MedievalWoodCube
@@ -29148,6 +29154,10 @@ PrefabInstance:
     - target: {fileID: 8490520714802979198, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799982519216865147, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
+      propertyPath: m_Mass
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4799982519216865147, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
@@ -45269,6 +45279,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1846283589323870034, guid: c552d4a5d617b494f9901d7e3d9a1ef1, type: 3}
+      propertyPath: zauberstabPrefab
+      value: 
+      objectReference: {fileID: 104214791}
     - target: {fileID: 5364931649715474084, guid: c552d4a5d617b494f9901d7e3d9a1ef1, type: 3}
       propertyPath: cameraPosition
       value: 
@@ -45322,7 +45336,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1141527493}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8780117615110910153, guid: c552d4a5d617b494f9901d7e3d9a1ef1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c552d4a5d617b494f9901d7e3d9a1ef1, type: 3}
@@ -48256,6 +48271,7 @@ RectTransform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2027632518}
   - {fileID: 1599149908}
   - {fileID: 38442892}
   - {fileID: 1443881027}
@@ -48275,4 +48291,3 @@ SceneRoots:
   - {fileID: 1824374611}
   - {fileID: 1320762735}
   - {fileID: 1141527491}
-  - {fileID: 2027632518}
