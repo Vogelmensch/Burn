@@ -5778,7 +5778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
-  distanceWhileCarrying: 1
+  distanceWhileCarrying: 2
   drag: 6
   angularDrag: 1
 --- !u!1001 &262228655
@@ -5912,7 +5912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
-  distanceWhileCarrying: 1
+  distanceWhileCarrying: 2
   drag: 6
   angularDrag: 1
 --- !u!54 &263479759
@@ -10396,7 +10396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
-  distanceWhileCarrying: 1
+  distanceWhileCarrying: 2
   drag: 6
   angularDrag: 1
 --- !u!54 &459219961
@@ -28649,7 +28649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
-  distanceWhileCarrying: 1
+  distanceWhileCarrying: 2
   drag: 6
   angularDrag: 1
 --- !u!1 &1310143473 stripped
@@ -30063,7 +30063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
-  distanceWhileCarrying: 1
+  distanceWhileCarrying: 2
   drag: 6
   angularDrag: 1
 --- !u!54 &1385368923
@@ -37680,7 +37680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
-  distanceWhileCarrying: 1
+  distanceWhileCarrying: 2
   drag: 6
   angularDrag: 1
 --- !u!1001 &1732045793
@@ -41803,7 +41803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
-  distanceWhileCarrying: 1
+  distanceWhileCarrying: 2
   drag: 6
   angularDrag: 1
 --- !u!54 &1885551822
@@ -45512,7 +45512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
-  distanceWhileCarrying: 1
+  distanceWhileCarrying: 2
   drag: 6
   angularDrag: 1
 --- !u!1001 &2035060388
