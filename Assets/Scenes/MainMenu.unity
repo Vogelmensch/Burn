@@ -4107,7 +4107,7 @@ AudioSource:
   m_GameObject: {fileID: 1235127038}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -9174748499305475912, guid: 1a3033cff3d9e4e43af549ed4d0b4dca, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -5148,7 +5148,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sound Effects
+  m_text: Master Volume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7712,6 +7712,8 @@ GameObject:
   - component: {fileID: 1962088501}
   - component: {fileID: 1962088500}
   - component: {fileID: 1962088502}
+  - component: {fileID: 1962088504}
+  - component: {fileID: 1962088503}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -7768,6 +7770,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSoundClip: {fileID: 8300000, guid: ad7f97acdce7f9d9ab22895ba228bc1a, type: 3}
+--- !u!114 &1962088503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962088499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4630f9e4861cb6b4cba453170a5d9c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 1235127039}
+  backgroundMusic: {fileID: 8300000, guid: 7bdf51a521d790c4cb7152a983c77f4e, type: 3}
+--- !u!114 &1962088504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962088499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499281eae342720428ffadc15881242c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundSource: {fileID: 1593545771}
+  death: {fileID: 8300000, guid: a783769f6ecffd545a967d974b81e0bb, type: 3}
+  doorOpen: {fileID: 8300000, guid: 78badf48194e6ac588de780b5db3be62, type: 3}
+  pickUp: {fileID: 8300000, guid: 3adc45d2257cb96a8a592ef55d8e2c8b, type: 3}
+  fireBall: {fileID: 8300000, guid: d3c4129f2bf50cb14b9c4111a0a2ef7a, type: 3}
 --- !u!1 &1969058819
 GameObject:
   m_ObjectHideFlags: 0
