@@ -37,7 +37,7 @@ new string[]
     "However, with a controller, you may press Y to do so",
     "To regulate the durability of your flame, use Q and E on the keyboard.",
     "On the controller, use the back-buttons.",
-    "Kill the evil Wiking and safe the rabbits!",
+    "Kill the evil viking and safe the rabbits!",
 }
 
 
