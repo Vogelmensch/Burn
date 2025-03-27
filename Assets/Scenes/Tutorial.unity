@@ -28869,7 +28869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 647500953}
   soundSource: {fileID: 54321921}
-  backgroundMusic: {fileID: 8300000, guid: 9e9941a16baeba14981a7ef19ffe40d0, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: be9e17e45805b7943b519c74d033d358, type: 3}
   death: {fileID: 8300000, guid: a783769f6ecffd545a967d974b81e0bb, type: 3}
   doorOpen: {fileID: 8300000, guid: 78badf48194e6ac588de780b5db3be62, type: 3}
   pickUp: {fileID: 8300000, guid: 3adc45d2257cb96a8a592ef55d8e2c8b, type: 3}
