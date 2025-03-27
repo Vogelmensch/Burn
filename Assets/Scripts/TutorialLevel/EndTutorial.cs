@@ -56,8 +56,6 @@ public class EndTutorial : MonoBehaviour
         // Markiere als ausgelöst
         hasTriggeredDeath = true;
         
-        Cursor.lockState = CursorLockMode.Confined;
-        
         // Animation abspielen
         if (characterAnimator != null)
         {
@@ -71,6 +69,8 @@ public class EndTutorial : MonoBehaviour
             audioSource.PlayOneShot(deathSound);
             Debug.Log("Death-Sound abgespielt");
         }
+        
+        // Keine Änderung an Cursor oder Bewegung hier
         
         StartCoroutine(LoadMainMenuWithDelay());
     }
@@ -88,12 +88,16 @@ public class EndTutorial : MonoBehaviour
             fireDetector.FireOnEvent2 -= FinishTut;
         }
     }
+    
     void ShowGameOver(){
         if (gameOver){
             return;
         }
             
         gameOver = true;
+        
+        // Jetzt erst die Spielersteuerung deaktivieren
+        DisablePlayerControls();
         
         // Pause the game
         Time.timeScale = 0f;
@@ -107,9 +111,6 @@ public class EndTutorial : MonoBehaviour
         // Lock cursor to screen
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-        
-        // Disable player input
-        DisablePlayerControls();
     }
     
     void DisablePlayerControls()
@@ -135,6 +136,7 @@ public class EndTutorial : MonoBehaviour
             altCameraMovement.enabled = false;
         }
     }
+    
     public void ReturnToMainMenu()
     {
         // Reset time scale
