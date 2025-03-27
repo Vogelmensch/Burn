@@ -60050,6 +60050,7 @@ GameObject:
   - component: {fileID: 1648492981}
   - component: {fileID: 1648492980}
   - component: {fileID: 1648492979}
+  - component: {fileID: 1648492985}
   - component: {fileID: 1648492978}
   - component: {fileID: 1648492977}
   - component: {fileID: 1648492975}
@@ -60308,6 +60309,20 @@ MonoBehaviour:
   zauberstabSound: {fileID: 8300000, guid: 3adc45d2257cb96a8a592ef55d8e2c8b, type: 3}
   soundVolume: 1
   debugModus: 1
+--- !u!114 &1648492985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648492973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7477241ca3be434fbc6dc86169cfed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FOVSlider: {fileID: 0}
+  cam: {fileID: 1648492980}
 --- !u!1001 &1649640048
 PrefabInstance:
   m_ObjectHideFlags: 0
