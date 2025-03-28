@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
+    private LayerMask navMeshMask = 1 << 10;
     bool grounded;
     [Header("Jumping")]
     public float jumpForce;
@@ -35,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         currentMoveSpeed = moveSpeed; // Initialisiere currentMoveSpeed mit der normalen moveSpeed
     }
     private void Update(){
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround | navMeshMask);
         MyInput();
         SpeedControl();
         // handle drag
