@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-        currentMoveSpeed = moveSpeed; // Initialisiere currentMoveSpeed mit der normalen moveSpeed
+        currentMoveSpeed = moveSpeed; // Initialisiere currentMoveSpeed mit der normalen moveSpeed 
     }
     private void Update(){
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround | navMeshMask);
