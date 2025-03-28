@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5802945789193967451}
   - component: {fileID: 227426697167660572}
   - component: {fileID: 6387486224549545760}
-  - component: {fileID: 4736132064387973033}
   m_Layer: 0
   m_Name: Planks burnable
   m_TagString: Untagged
@@ -160,19 +159,3 @@ MonoBehaviour:
   explosionForce: 0
   explosionRadius: 4
   explosionUpward: 0.4
---- !u!114 &4736132064387973033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5933517357121154117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47a0c4a5432e909f18e51cc0b227d83c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 100
-  distanceWhileCarrying: 2
-  drag: 45
-  angularDrag: 1

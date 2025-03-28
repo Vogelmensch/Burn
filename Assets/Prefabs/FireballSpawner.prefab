@@ -44,11 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5bd3b96a282306fa2a95c2fe2886c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireballPrefab: {fileID: 2416256779909037712, guid: 786a773faf2e053b79d51c6eecfcf1f8, type: 3}
+  fireballPrefab: {fileID: 1725317912486240, guid: e55149ba6f4d00741984987e258c3378, type: 3}
   cameraTransform: {fileID: 0}
+  constantSpeed: 15
   forceStrength: 300
   forceLowerLimit: 100
   forceUpperLimit: 350
   forceChangeRate: 300
   fireAccessRadius: 2
+  fireballThrowTemperatureDecrease: 100
   throwStrengthIndicator: {fileID: 0}
+  fireballCastSound: {fileID: 8300000, guid: d3c4129f2bf50cb14b9c4111a0a2ef7a, type: 3}
+  castEffectPrefab: {fileID: 5238538877814813142, guid: 47096eff328e11a418ace7db2d72aa97, type: 3}
+  explosionPrefab: {fileID: 1845955007268882, guid: 67a684e320da6e7439421a07e3fa265c, type: 3}
+  fireballCooldown: 2
