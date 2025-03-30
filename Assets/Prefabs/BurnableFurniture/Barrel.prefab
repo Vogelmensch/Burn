@@ -394,17 +394,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireName: firePrefab
+  waterSplashName: waterSplashPrefab
   burningCubePrefab: {fileID: 6117026140062700152, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
   colorationReduction: 20
   hitPoints: 100
   temperature: 0
-  spreadRadius: 1
   isOnFire: 0
   explosionForce: 0
   explosionRadius: 4
   explosionUpward: 0.4
   explosionPrefab: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
-  barrelExplosionRadius: 5
 --- !u!114 &4326003763637522470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,7 +417,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
-  distanceWhileCarrying: 1.5
-  heightOfObjects: 0.1
+  distanceWhileCarrying: 2
   drag: 6
   angularDrag: 1

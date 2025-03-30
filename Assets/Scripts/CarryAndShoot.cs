@@ -28,6 +28,11 @@ public class CarryAndShoot : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         playerCamera = GameObject.Find("Main Camera");
+        // add outline script for highlighting carryable objects
+        gameObject.AddComponent<Outline>();
+        gameObject.GetComponent<Outline>().OutlineColor = Color.green;
+        gameObject.GetComponent<Outline>().OutlineWidth = 4f;
+        gameObject.GetComponent<Outline>().enabled = false;
     }
 
     void Update()
@@ -36,6 +41,17 @@ public class CarryAndShoot : MonoBehaviour
         {
             MoveInFrontOfPlayer();
             HandleRotationInput();
+        }
+        HandleOutline();
+    }
+
+    private void HandleOutline() {
+        Outline outline = gameObject.GetComponent<Outline>();
+        if (isBeingCarried) {
+            outline.OutlineColor = Color.yellow;
+            outline.enabled = true;
+        } else {
+            outline.OutlineColor = Color.green;
         }
     }
 
