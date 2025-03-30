@@ -3826,6 +3826,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &151303460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4507,6 +4518,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!108 &176284298
 Light:
   m_ObjectHideFlags: 8
@@ -9349,6 +9371,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &375073542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11002,6 +11035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FOVSlider: {fileID: 1019843011}
   cam: {fileID: 2027632519}
+  mouseSlider: {fileID: 0}
 --- !u!4 &432808156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 14878b47cb26a4540bc3f098367b6d7b, type: 3}
@@ -17144,6 +17178,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &660013646
 GameObject:
   m_ObjectHideFlags: 0
@@ -25914,6 +25959,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &1026912890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26814,6 +26870,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!4 &1045031538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d1036e9bede007244859666e135887a1, type: 3}
@@ -34023,6 +34090,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1564418491}
     m_Modifications:
+    - target: {fileID: 4799982519216865147, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6117026140062700152, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
       propertyPath: m_Name
       value: MedievalWoodCube
@@ -34082,10 +34153,6 @@ PrefabInstance:
     - target: {fileID: 8490520714802979198, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4799982519216865147, guid: 0e13d1751cf424d6896df76f0b74db13, type: 3}
-      propertyPath: m_Mass
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4799982519216865147, guid: 80eb4f380d4436bc688951e41960d964, type: 3}
@@ -52063,6 +52130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FOVSlider: {fileID: 1019843011}
   cam: {fileID: 2027632519}
+  mouseSlider: {fileID: 0}
 --- !u!1001 &2030347577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54900,6 +54968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FOVSlider: {fileID: 0}
   cam: {fileID: 2027632519}
+  mouseSlider: {fileID: 0}
 --- !u!1001 &1877167570718652786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55046,6 +55115,10 @@ PrefabInstance:
       propertyPath: winScreen
       value: 
       objectReference: {fileID: 875102059}
+    - target: {fileID: 4968143498992401586, guid: 3d2ae8df03dc6b9e9a495a569cae3c10, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300146, guid: ee1aa8dd1fc49614d89b7eb3f8af788b, type: 3}
     - target: {fileID: 5868856434215268225, guid: 3d2ae8df03dc6b9e9a495a569cae3c10, type: 3}
       propertyPath: m_LocalPosition.y
       value: -536
