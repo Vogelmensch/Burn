@@ -28,6 +28,11 @@ public class CameraMovementNew : MonoBehaviour
     }
 
     private void Update(){
+
+        if(PlayerPrefs.GetFloat("MouseSensitivity")*100.0f != sensX){
+            setSense();
+        }
+
         float MouseX = Input.GetAxis("Mouse X") * sensX * Time.deltaTime;
         float MouseY = Input.GetAxis("Mouse Y") * sensY * Time.deltaTime;
 
