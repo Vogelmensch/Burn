@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  sneakSpeed: 0
+  sneakSpeed: 1
   groundDrag: 4
   sneakKey: 304
   playerHeight: 2
