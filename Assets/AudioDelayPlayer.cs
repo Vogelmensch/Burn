@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioDelayPlayer : MonoBehaviour
+public class SimpleAudioPlayer : MonoBehaviour
 {
     [Tooltip("Die Audiodatei, die abgespielt werden soll")]
     public AudioClip audioClip;
@@ -14,35 +12,29 @@ public class AudioDelayPlayer : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float volume = 1.0f;
     
-    private AudioSource audioSource;
-    
     void Start()
     {
-        // AudioSource-Komponente prüfen oder hinzufügen
-        audioSource = GetComponent<AudioSource>();
+        // Stelle sicher, dass wir eine AudioSource haben
+        AudioSource audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
         
-        // AudioClip und Volume setzen
+        // AudioSource einrichten
         audioSource.clip = audioClip;
         audioSource.volume = volume;
+        audioSource.playOnAwake = false;
         
-        // Audio nach 2 Sekunden abspielen
-        Invoke("PlayAudio", delay);
-    }
-    
-    void PlayAudio()
-    {
-        if (audioSource != null && audioClip != null)
+        // Audio nach der angegebenen Verzögerung abspielen
+        if (audioClip != null)
         {
-            audioSource.Play();
-            Debug.Log("Audio wird abgespielt: " + audioClip.name);
+            audioSource.PlayDelayed(delay);
+            Debug.Log("Audio wird abgespielt nach " + delay + " Sekunden");
         }
         else
         {
-            Debug.LogWarning("Audio konnte nicht abgespielt werden. AudioSource oder AudioClip fehlt.");
+            Debug.LogWarning("Kein AudioClip zugewiesen!");
         }
     }
 }

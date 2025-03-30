@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/cutsceneviking.unity
     guid: 7b0da5ebbdd08c319aab176c85063548
   - enabled: 1
-    path: Assets/Scenes/ThreeRoomsAndGarden.unity
-    guid: 7ad224ff77e29d74aa43775542c96343
+    path: Assets/Scenes/cutscenethreerooms.unity
+    guid: 80dd34231f0dc2e6391d2e5bb9a0fd29
   - enabled: 1
     path: Assets/Scenes/level3.unity
     guid: e1f40cb0ef72347bfbab465aee77f6ec
@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VikingHall.unity
     guid: 47c9a52362fd34650a3c0b4e8536cd77
+  - enabled: 1
+    path: Assets/Scenes/ThreeRoomsAndGarden.unity
+    guid: 7ad224ff77e29d74aa43775542c96343
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
