@@ -47610,7 +47610,7 @@ AudioSource:
   m_GameObject: {fileID: 1244267611}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5067213136495270303, guid: 1a3033cff3d9e4e43af549ed4d0b4dca, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -51437,6 +51437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FOVSlider: {fileID: 49612526}
   cam: {fileID: 1728597235}
+  mouseSlider: {fileID: 0}
 --- !u!1 &1326353908
 GameObject:
   m_ObjectHideFlags: 0
@@ -57350,6 +57351,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3618510923197669894, guid: 0dd043b835712c724a5cd4cdca532827, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1467729557}
+    - targetCorrespondingSourceObject: {fileID: 3618510923197669894, guid: 0dd043b835712c724a5cd4cdca532827, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1467729556}
     - targetCorrespondingSourceObject: {fileID: 3618510923197669894, guid: 0dd043b835712c724a5cd4cdca532827, type: 3}
@@ -57418,6 +57422,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1882180233}
+--- !u!114 &1467729557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467729553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7dc8129fc2733f42a11baaadc784780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMixer: {fileID: 24100000, guid: 1a3033cff3d9e4e43af549ed4d0b4dca, type: 2}
+  soundSlider: {fileID: 0}
+  musicSlider: {fileID: 0}
 --- !u!1 &1467813172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1543330774605174, guid: 12e9b7c885d5efd4f8a9ce049c557867, type: 3}

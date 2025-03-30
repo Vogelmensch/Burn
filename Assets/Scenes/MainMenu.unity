@@ -2600,6 +2600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FOVSlider: {fileID: 1583075411}
   cam: {fileID: 1367861096}
+  mouseSlider: {fileID: 0}
 --- !u!114 &504555473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7401,6 +7402,7 @@ GameObject:
   - component: {fileID: 1367194534}
   - component: {fileID: 1367194533}
   - component: {fileID: 1367194536}
+  - component: {fileID: 1367194537}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -7483,6 +7485,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FOVSlider: {fileID: 1583075411}
   cam: {fileID: 1367861096}
+  mouseSlider: {fileID: 0}
+--- !u!114 &1367194537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367194532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e245309f4cdf8954aada9b55e673a3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMixer: {fileID: 24100000, guid: 1a3033cff3d9e4e43af549ed4d0b4dca, type: 2}
 --- !u!1 &1367861094
 GameObject:
   m_ObjectHideFlags: 0
@@ -7590,6 +7606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FOVSlider: {fileID: 1583075411}
   cam: {fileID: 1367861096}
+  mouseSlider: {fileID: 0}
 --- !u!1 &1377250573
 GameObject:
   m_ObjectHideFlags: 0
