@@ -64,21 +64,36 @@ public class PlayerMovement : MonoBehaviour
         {
             isSneaking = true;
             currentMoveSpeed = sneakSpeed; // Setze die aktuelle Geschwindigkeit auf die Sneak-Geschwindigkeit, wenn die Sneak-Taste gedrückt wird
+            transform.localScale = new Vector3(1f, 0.5f, 1f); // Verkleinere den Spieler
         }
         else
         {
             isSneaking = false;
             currentMoveSpeed = moveSpeed; // Setze die aktuelle Geschwindigkeit zurück zur normalen Geschwindigkeit, wenn die Sneak-Taste losgelassen wird
+            transform.localScale = new Vector3(1f, 1f, 1f); // Setze die Spielergröße zurück
         }
     }
-    private void MovePlayer(){
+    private void MovePlayer()
+    {
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+
         // on ground
-        if (grounded){
-            rb.AddForce(moveDirection.normalized * currentMoveSpeed * 10f, ForceMode.Force); // Verwende currentMoveSpeed anstelle von moveSpeed
-        } else if (!grounded){
-            rb.AddForce(moveDirection.normalized * currentMoveSpeed * 10f * airMultiplier, ForceMode.Force); // Verwende currentMoveSpeed hier auch
+        if (grounded)
+        {
+            if (horizontalInput == 0 && verticalInput == 0)
+            {
+                // Apply damping to reduce velocity when no input is detected
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x * 0.9f, rb.linearVelocity.y, rb.linearVelocity.z * 0.9f);
+            }
+            else
+            {
+                rb.AddForce(moveDirection.normalized * currentMoveSpeed * 10f, ForceMode.Force); // Use currentMoveSpeed
+            }
+        }
+        else if (!grounded)
+        {
+            rb.AddForce(moveDirection.normalized * currentMoveSpeed * 10f * airMultiplier, ForceMode.Force); // Use currentMoveSpeed
             rb.AddForce(Vector3.down * rb.mass * extraGravityMultiplier, ForceMode.Acceleration);
         }
     }
