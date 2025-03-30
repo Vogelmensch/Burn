@@ -12,6 +12,7 @@ TagManager:
   - IgnoreBorder
   - Audio
   - LooseBlock
+  - movieeee
   layers:
   - Default
   - TransparentFX
