@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isSneaking = false;
             currentMoveSpeed = moveSpeed; // Setze die aktuelle Geschwindigkeit zurück zur normalen Geschwindigkeit, wenn die Sneak-Taste losgelassen wird
-            transform.localScale = new Vector3(1f, 1f, 1f); // Setze die Spielergröße zurück
+            transform.localScale = new Vector3(1f, 0.8f, 1f); // Setze die Spielergröße zurück
         }
     }
     private void MovePlayer()
