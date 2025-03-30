@@ -5035,7 +5035,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FOVSlider: {fileID: 1224460710}
   cam: {fileID: 654192967}
-  mouseSlider: {fileID: 0}
 --- !u!1001 &324806523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8145,6 +8144,7 @@ GameObject:
   - component: {fileID: 608630352}
   - component: {fileID: 608630348}
   - component: {fileID: 608630347}
+  - component: {fileID: 608630353}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -8253,6 +8253,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1137168807}
+--- !u!114 &608630353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608630346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b4aacc73f1bd17395d618d7bfc199e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4a1f9b77dc58e7ee39184fb687bd1026, type: 3}
+  delay: 1
+  volume: 1
 --- !u!1001 &608876034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12838,26 +12853,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
-  m_BuildHeightMesh: 0
 --- !u!4 &983423981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4289402460677342, guid: 512245daca745f64693d790c6c69d575, type: 3}
