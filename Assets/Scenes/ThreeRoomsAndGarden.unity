@@ -50935,7 +50935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7182430190006573866, guid: a55c312e510344696867456d81deba61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.77
+      value: 13.51
       objectReference: {fileID: 0}
     - target: {fileID: 7182430190006573866, guid: a55c312e510344696867456d81deba61, type: 3}
       propertyPath: m_LocalPosition.y
@@ -50943,7 +50943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7182430190006573866, guid: a55c312e510344696867456d81deba61, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.9
+      value: -13.54
       objectReference: {fileID: 0}
     - target: {fileID: 7182430190006573866, guid: a55c312e510344696867456d81deba61, type: 3}
       propertyPath: m_LocalRotation.w
@@ -76106,6 +76106,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 136070, guid: a5b31c0f3705bb44d8ad2d28adacc898, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1824473399}
+    - targetCorrespondingSourceObject: {fileID: 136070, guid: a5b31c0f3705bb44d8ad2d28adacc898, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1824473400}
     - targetCorrespondingSourceObject: {fileID: 133908, guid: a5b31c0f3705bb44d8ad2d28adacc898, type: 3}
       insertIndex: -1
       addedObject: {fileID: 960593835}
@@ -76202,6 +76205,33 @@ MonoBehaviour:
   explosionForce: 0
   explosionRadius: 4
   explosionUpward: 0.4
+--- !u!54 &1824473400
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824473395}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1827918542
 PrefabInstance:
   m_ObjectHideFlags: 0
