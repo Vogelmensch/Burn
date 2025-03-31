@@ -1,3 +1,6 @@
+
+![ChatGPT Image Mar 31, 2025 at 07_00_11 PM](https://github.com/user-attachments/assets/8a09b05c-9e78-44d0-b7c0-0021933f16fb)
+
 # 🔥 Burn! – The Ultimate Fire-Spreading Puzzle Game 🔥
 *The fire is in your hands – but beware, too much and you'll be extinguished!*
 
