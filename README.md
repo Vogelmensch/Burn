@@ -64,7 +64,46 @@ Can you move the candle's flame through the castle to burn down the glowing ston
 ## 📢 Follow Us!  
 _TODO_ 
 
----
+## 🗒️Credits
+### Assets
++ Realistic Fences Pack - WhiteXopc
++ The Red Prison - PolySoft3D
++ Free Viking Starter Pack - Prodigious Creations  
++ White Rabbit - Niwashi Games  
++ Wood Props Materials: Standard URP - Heathen Engineering  
++ Modular Medieval Lanterns - Alexandr Voevodov  
++ Medieval props - Lukas Bobor  
++ Old Wooden Bench PBR - TetianaAndronova  
++ Medieval Barrows and Wagons - Kiria  
++ Sitting Lion Statue - AK STUDIO ART  
++ Aged Medieval Weapons-Free - Alvarolopz98  
++ Medieval Tavern Pack - 3DeLucas  
++ Conifers [BOTD] - forst  
++ Dark Fantasy Kit [Lite] - Runemark Studio  
++ Candle VFX - URP - Vefects  
++ Free Quick Effects Vol. 1 - Gabriel Aguiar Prod  
++ Realistic Tree Pack Vol.1 - PolyFix  
++ Realistic Tree 9 [Rainbow Tree] - Pixel Games  
++ Big Oak Tree FREE - ALP  
++ Persiang Carpets - URP - CGPAL  
++ GravelTexture4k - Deep Field Development  
++ Books - VIS Games  
++ Rain Maker - 2D and 3D Rain Particle System for Unity - Digital Ruby (Jeff Johnson)  
++ Stylized Rocks with Magic Rune - Comeback  
++ Level Design Modular Starter Pack - VertexModeler Team  
++ lowpoly medieval buildings - Szymon Łukaszuk  
++ Roof textures - langvv  
++ Medieval Town Exteriors - Lylek Games  
++ Medieval Fantasy Town Village Environment - Demo Scenes  
++ Infinity PBR / Magic Pig Games  
++ Stylized Grass Texture - LowlyPoly  
++ Explosive Realistic VFX Texture Free - Gustav Hagerling  
++ [Free Asset] VFX Particles: Fireball Pack - SOLODREAM CREATION  
++ Free Fire VFX - URP - Vefects  
++ Mine - Gregory Seguru
+### OST
++ Kevchen - Dan of War
++ Kevchen - Pettersons Pfeifenreiniger
 
 🔥 **Are you ready to play with fire?** 🔥  
 **Download Burn! now and see if you can master the flames!**  
