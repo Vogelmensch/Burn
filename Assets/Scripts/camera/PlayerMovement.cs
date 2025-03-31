@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     private LayerMask navMeshMask = 1 << 10;
-    bool grounded;
+    public bool grounded = true;
     [Header("Jumping")]
     public float jumpForce;
     public float jumpCooldown = 0.25f;
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontalInput;
     float verticalInput;
     Vector3 moveDirection;
-    Rigidbody rb;
+    public Rigidbody rb;
 
     private void Start()
     {

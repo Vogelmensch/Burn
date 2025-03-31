@@ -193,12 +193,14 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  grounded: 1
   jumpForce: 7
   jumpCooldown: 0.25
   extraGravityMultiplier: 2.5
   airMultiplier: 1.5
   jumpKey: 32
   orientation: {fileID: 2263073064664340165}
+  rb: {fileID: 0}
 --- !u!1 &4490244192678811810
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6102723310968711785}
+  - component: {fileID: 4634717855606236698}
   m_Layer: 0
   m_Name: CameraPos
   m_TagString: Untagged
@@ -230,6 +233,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7182430190006573866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4634717855606236698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490244192678811810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006edb126ad084665b440f7a964767c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobFrequency: 10
+  bobAmplitude: 0.04
+  shakeIntensity: 0.02
+  shakeSpeed: 15
+  reference: {fileID: 4425491644783687026}
 --- !u!1 &8935500841267302067
 GameObject:
   m_ObjectHideFlags: 0
