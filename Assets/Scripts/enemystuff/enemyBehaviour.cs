@@ -137,6 +137,7 @@ public class enemyBehaviour : MonoBehaviour
 
     private void Update()
     {
+        if (!alreadyAttacked){
         // we need to set these to false because oherwise they just stay true once they are set to true
         fireInAttackRange = false;
         fireInSightRange = false;
@@ -161,26 +162,51 @@ public class enemyBehaviour : MonoBehaviour
 
         // Fire visible and in attack range -> put out fire
         if (fireInSightRange && fireInAttackRange) PutOutFire();
+        }
     }
     public void ThrowWater()
     {
+        if (target == null) return;
+
         // Create a sphere
         GameObject waterBall = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
-        // make ball blue
+        // Make the ball blue
         waterBall.GetComponent<Renderer>().material.color = Color.blue;
 
         // Add the WaterBall script to handle initialization and collisions
         WaterBall waterBallScript = waterBall.AddComponent<WaterBall>();
 
-        // Initialize the water ball
-        Vector3 position = transform.position + transform.up + transform.forward * 1.5f; // Position it in front of the enemy
-        Vector3 direction = transform.forward;
-        float throwForce = 5f;
-        float upwardAngle = 30f;
-        direction = Quaternion.Euler(upwardAngle, 0, 0) * direction;
-        waterBallScript.Initialize(position, direction, throwForce);
+        // Calculate the position and direction
+        Vector3 startPosition = transform.position + transform.up + transform.forward * 1.5f; // Position it in front of the enemy
+        Vector3 targetPosition = target.position;
 
+        // Add height offset based on the target's collider
+        Collider targetCollider = target.GetComponent<Collider>();
+        if (targetCollider != null)
+        {
+            targetPosition.y += targetCollider.bounds.extents.y; // Add half the height of the collider
+        }
+
+        // Calculate the direction and force needed to hit the target
+        Vector3 direction = targetPosition - startPosition;
+        float distance = direction.magnitude;
+        direction.Normalize();
+
+        // Physics calculations for projectile motion
+        float gravity = Physics.gravity.y; // Gravity value
+        float heightDifference = targetPosition.y - startPosition.y;
+
+        // Calculate the required throw force
+        float angle = 45f; // Optimal angle for projectile motion
+        float throwForce = Mathf.Sqrt((distance * Mathf.Abs(gravity)) / Mathf.Sin(2 * Mathf.Deg2Rad * angle));
+        throwForce = throwForce * 1.5f; // Adjust the force to make it more powerful
+        // Adjust the direction to include the vertical component
+        float angleToTarget = Mathf.Atan2(heightDifference, distance) * Mathf.Rad2Deg;
+        direction = Quaternion.Euler(-angleToTarget, 0, 0) * direction;
+
+        // Initialize the water ball
+        waterBallScript.Initialize(startPosition, direction, throwForce);
     }
     private void OnDrawGizmosSelected()
     {

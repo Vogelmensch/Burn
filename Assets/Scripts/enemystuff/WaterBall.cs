@@ -33,14 +33,38 @@ public class WaterBall : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Check if the collided object is burnable
-        Burnable burnable = other.GetComponent<Burnable>();
+        Burnable burnable = CheckBurnable(other.transform);
+
         if (burnable != null)
         {
-            // Perform any additional logic here, e.g., extinguish the fire
+            // Put out the fire
             burnable.WaterHit(50f);
+
+            // Optionally, you can add a visual effect or sound here
+            Debug.Log("Fire extinguished!");
+        }
+        else
+        {
+            // If not burnable, just ignore the collision
+            Debug.Log("Not burnable: " + other.name);
         }
         
         // Destroy the water ball
         Destroy(gameObject);
+    }
+
+    private Burnable CheckBurnable(Transform currentTransform)
+    {
+        if (currentTransform == null) return null;
+
+        // Check if the current transform has a Burnable component
+        Burnable burnable = currentTransform.GetComponent<Burnable>();
+        if (burnable != null)
+        {
+            return burnable;
+        }
+
+        // Recursively check the parent
+        return CheckBurnable(currentTransform.parent);
     }
 }
