@@ -25,7 +25,13 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Tutorial.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/level1.unity
+    m_path: Assets/Scenes/cutsceneviking.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/cutscenethreerooms.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/level3.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/VikingHall.unity
   - m_enabled: 1
     m_path: Assets/Scenes/ThreeRoomsAndGarden.unity
   m_ScriptingDefines: []
@@ -34,6 +40,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 3843287427805609984
       type: {class: WindowsPlatformSettings, ns: UnityEditor.WindowsStandalone, asm: UnityEditor.WindowsStandalone.Extensions}
       data:
