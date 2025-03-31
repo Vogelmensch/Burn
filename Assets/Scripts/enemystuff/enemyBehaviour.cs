@@ -158,6 +158,7 @@ public class enemyBehaviour : MonoBehaviour
             transform.LookAt(target);
             alreadyAttacked = true;
             ThrowWater();
+            target.GetComponent<Burnable>().WaterHit(50f);
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }

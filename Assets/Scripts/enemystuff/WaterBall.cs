@@ -38,10 +38,7 @@ public class WaterBall : MonoBehaviour
         if (burnable != null)
         {
             // Put out the fire
-            burnable.WaterHit(50f);
 
-            // Optionally, you can add a visual effect or sound here
-            Debug.Log("Fire extinguished!");
         }
         else
         {
