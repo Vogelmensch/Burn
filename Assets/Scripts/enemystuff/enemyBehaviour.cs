@@ -23,6 +23,13 @@ public class enemyBehaviour : MonoBehaviour
     public float sightRange, attackRange;
     public bool fireInSightRange ,fireInAttackRange;
 
+    [Header("Animation")]
+    public Animator animator;
+    private bool isWalking = false;
+    private bool isRunning = false;
+    private bool isAttacking = false;
+    private float speed = 1f;
+
     [SerializeField] private int BurningLayer = 6;
     [SerializeField] private int ignoreLayer = 2;
     private int BurningLayerMask;
@@ -93,6 +100,15 @@ public class enemyBehaviour : MonoBehaviour
     }
     private void Patroling()
     {
+        // Handle animation
+        isWalking = true;
+        isRunning = false;
+        isAttacking = false;
+        speed = 1f;
+        agent.speed = speed;
+        animator.SetFloat("speed", speed);
+        animator.SetBool("puttingOutFire", false);
+
         agent.isStopped = false;
         if (!walkPointSet) SearchWalkPoint();
         if (walkPointSet)
@@ -115,11 +131,26 @@ public class enemyBehaviour : MonoBehaviour
     }
     private void GoToFire()
     {
+        // Handle animation
+        isWalking = false;
+        isRunning = true;
+        isAttacking = false;
+        speed = 3f;
+        agent.speed = speed;
+        animator.SetFloat("speed", speed);
+        animator.SetBool("puttingOutFire", false);
+
         agent.isStopped = false;
         agent.SetDestination(target.position);
     }
     private void PutOutFire()
     {
+        // Handle animation
+        isWalking = false;
+        isRunning = false;
+        isAttacking = true;
+        animator.SetBool("puttingOutFire", isAttacking);
+
         agent.isStopped = true;
         agent.ResetPath();
         if (!alreadyAttacked)
