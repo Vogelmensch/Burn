@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: faba48a56f0c87c46b755dbeeba0dc1c
+timeCreated: 1529900944
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 116281
+  packageName: Free Viking Starter Pack
+  packageVersion: 1.0
+  assetPath: Assets/Free Viking Starter Pack/Prefabs/Longship_Clan_A.prefab
+  uploadId: 257032

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a198827e867492b4c8aa8f25af889a15
+timeCreated: 1529901190
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 116281
+  packageName: Free Viking Starter Pack
+  packageVersion: 1.0
+  assetPath: Assets/Free Viking Starter Pack/Prefabs/Shield_C_Clan_A.prefab
+  uploadId: 257032
