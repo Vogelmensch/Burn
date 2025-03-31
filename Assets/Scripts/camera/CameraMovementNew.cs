@@ -75,5 +75,11 @@ public class CameraMovementNew : MonoBehaviour
         if (obj.GetComponent<Outline>() != null) {
             obj.GetComponent<Outline>().enabled = state;
         }
+
+        // Notify the CarryAndShoot script about outline control
+        CarryAndShoot carryAndShoot = obj.GetComponent<CarryAndShoot>();
+        if (carryAndShoot != null) {
+            carryAndShoot.SetOutlineControlByCamera(state);
+        }
     }
 }

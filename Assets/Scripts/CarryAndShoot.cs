@@ -11,6 +11,8 @@ public class CarryAndShoot : MonoBehaviour
     private GameObject playerCamera;
     public float rotationSpeed = 100f; // Speed of rotation
 
+    private bool isOutlineControlledByCamera = false;
+
     Quaternion initialRelativeRotation;
     // 0 -> ground; 1 -> 45°
     [Header("Carry and Shoot Settings")]
@@ -47,11 +49,17 @@ public class CarryAndShoot : MonoBehaviour
 
     private void HandleOutline() {
         Outline outline = gameObject.GetComponent<Outline>();
-        if (isBeingCarried) {
+
+        if (isBeingCarried && !isOutlineControlledByCamera) {
             outline.OutlineColor = Color.yellow;
             outline.enabled = true;
         } else {
-            outline.OutlineColor = Color.green;
+            if (isBeingCarried) {
+                outline.OutlineColor = Color.yellow;
+            } else {
+                outline.OutlineColor = Color.green;
+            }
+            outline.enabled = isOutlineControlledByCamera; // Ensure it's disabled when not carried
         }
     }
 
@@ -123,6 +131,11 @@ public class CarryAndShoot : MonoBehaviour
         // re-apply original drag
         rb.linearDamping = 0;
         rb.angularDamping = 0.05f;
+    }
+
+    // Add these methods to allow the camera script to control the outline
+    public void SetOutlineControlByCamera(bool state) {
+        isOutlineControlledByCamera = state;
     }
 
 }
