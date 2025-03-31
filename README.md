@@ -4,7 +4,7 @@
 ## 🌟 About the Game
 **Burn!** is an intense and strategic fire-spreading puzzle game where you play as a **mischievous witch** with the ability to **move objects and manipulate fire**. Your goal:  
 - Ignite **specific objects** to set off a **chain reaction**.  
-- Avoid setting too much ablaze, or **rain will extinguish your progress!**  
+- Avoid setting too much ablaze, or **evil vikings will extinguish your progress!**  
 - Carefully plan **fire propagation** to reach and ignite the **final target**.  
 - If all flames are put out, **you lose the game!**  
 
@@ -15,7 +15,6 @@ Can you master the **art of controlled destruction** and outsmart the elements?
 |✅ **Physics-Based Fire Simulation** – Fire spreads realistically based on object materials. | ![Spread fire](Images/gifs/fire_spread.gif)|
 |---|---|
 |✅ **Tactical Object Manipulation** – Move crates, barrels, and other objects to control the fire’s path.|![Move Objects](Images/gifs/carry_and_shoot.gif)|
-|✅ **Dynamic Weather System** – If things burn out of control, the sky may respond with rain!|![Weather](Images/gifs/rain.gif)|
 |✅ **Multiple Puzzle Levels** – Each level presents a new challenge in fire-spreading strategy.|![Use a fireball](Images/gifs/fireball.gif)|
 |✅ **Risk & Reward Mechanics** – The closer you are to losing, the higher the stakes!|![Risk burning it all](Images/gifs/barrel.gif)|
 
@@ -34,7 +33,14 @@ You are our last hope: Can you ignite the fire in the hearth to fill our Great H
 
 ### &#x1F3F0; The Castle
 The kind-hearted witch Ellen has been captured by the Evil! They have cursed her with a spell of eternal sleep.<br> 
-Can you move the candle's flame through the castle to burn down the glowing stone which holds the curse? There is no time to waste: A storm is coming!
+Can you move the candle's flame through the castle to burn down the glowing stone which holds the curse? There is no time to waste!
+|![Castle 1](Images/pngs/burn_castle1.png)|![Castle 2](Images/pngs/burn_castle2.png)|
+|---|---|
+
+### &#x1F3F0; The Mine
+Ellen wakes up in the deep mines of the castle. Her shackles are loose, but the only path to freedom leads through the darkness beneath her prison. Damp walls and forgotten tunnels stretch out before her, flooded with shadows and the echo of ancient voices.
+The path winds through narrow tunnels, past collapsing bridges and deep ravines. 
+Her goal is the crystal! Burn it to reach the exit.
 |![Castle 1](Images/pngs/burn_castle1.png)|![Castle 2](Images/pngs/burn_castle2.png)|
 |---|---|
 
@@ -42,6 +48,7 @@ Can you move the candle's flame through the castle to burn down the glowing ston
 🚀 Developed with **Unity Engine** for smooth performance on all platforms.  
 🔥 **High-Definition Textures** bring fire and destruction to life.  
 🎵 **Immersive Sound Design** featuring crackling flames, rainfall, and magical effects.  
+🔊 **Excellent soundtrack** listen to BURN! excellent OST by Kevchen.
 ⚙️ **Super-Modern UI/UX** ensuring seamless gameplay and accessibility.  
 🎮 **Controller & Keyboard Support** for flexible and comfortable controls.  
 
@@ -59,10 +66,50 @@ Can you move the candle's flame through the castle to burn down the glowing ston
 - Simply download and run the version for your operating system!
 
 ## 🛠️ Development Team  
-👨‍💻 Lightning Group
+👨‍💻 Lightning Group  
 
-## 📢 Follow Us!  
-_TODO_ 
+## 🗒️Credits
+### Assets
++ Realistic Fences Pack - WhiteXopc
++ The Red Prison - PolySoft3D
++ Free Viking Starter Pack - Prodigious Creations  
++ White Rabbit - Niwashi Games  
++ Wood Props Materials: Standard URP - Heathen Engineering  
++ Modular Medieval Lanterns - Alexandr Voevodov  
++ Medieval props - Lukas Bobor  
++ Old Wooden Bench PBR - TetianaAndronova  
++ Medieval Barrows and Wagons - Kiria  
++ Sitting Lion Statue - AK STUDIO ART  
++ Aged Medieval Weapons-Free - Alvarolopz98  
++ Medieval Tavern Pack - 3DeLucas  
++ Conifers [BOTD] - forst  
++ Dark Fantasy Kit [Lite] - Runemark Studio  
++ Candle VFX - URP - Vefects  
++ Free Quick Effects Vol. 1 - Gabriel Aguiar Prod  
++ Realistic Tree Pack Vol.1 - PolyFix  
++ Realistic Tree 9 [Rainbow Tree] - Pixel Games  
++ Big Oak Tree FREE - ALP  
++ Persiang Carpets - URP - CGPAL  
++ GravelTexture4k - Deep Field Development  
++ Books - VIS Games  
++ Rain Maker - 2D and 3D Rain Particle System for Unity - Digital Ruby (Jeff Johnson)  
++ Stylized Rocks with Magic Rune - Comeback  
++ Level Design Modular Starter Pack - VertexModeler Team  
++ lowpoly medieval buildings - Szymon Łukaszuk  
++ Roof textures - langvv  
++ Medieval Town Exteriors - Lylek Games  
++ Medieval Fantasy Town Village Environment - Demo Scenes  
++ Infinity PBR / Magic Pig Games  
++ Stylized Grass Texture - LowlyPoly  
++ Explosive Realistic VFX Texture Free - Gustav Hagerling  
++ [Free Asset] VFX Particles: Fireball Pack - SOLODREAM CREATION  
++ Free Fire VFX - URP - Vefects  
++ Mine - Gregory Seguru
+  
+### OST
++ Kevchen - Dan of War
++ Kevchen - Pettersons Pfeifenreiniger
+
 
 ---
 
