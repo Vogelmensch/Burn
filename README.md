@@ -41,8 +41,7 @@ Can you move the candle's flame through the castle to burn down the glowing ston
 Ellen wakes up in the deep mines of the castle. Her shackles are loose, but the only path to freedom leads through the darkness beneath her prison. Damp walls and forgotten tunnels stretch out before her, flooded with shadows and the echo of ancient voices.
 The path winds through narrow tunnels, past collapsing bridges and deep ravines. 
 Her goal is the crystal! Burn it to reach the exit.
-|![Castle 1](Images/pngs/burn_castle1.png)|![Castle 2](Images/pngs/burn_castle2.png)|
-|---|---|
+![Screenshot 2025-04-01 145505](https://github.com/user-attachments/assets/5f021c67-9ead-4988-874c-779e086bd73a)
 
 ## 🖥️ Technical Features
 🚀 Developed with **Unity Engine** for smooth performance on all platforms.  
