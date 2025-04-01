@@ -18,11 +18,26 @@ MonoBehaviour:
   m_PlatformId: cb423bfea44b4d658edb8bc5d91a3024
   m_PlatformBuildProfile:
     rid: 1770858344412872704
-  m_OverrideGlobalSceneList: 0
+  m_OverrideGlobalSceneList: 1
   m_Scenes:
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Scenes/SampleScene.unity
-  m_ScriptingDefines: []
+  - m_enabled: 1
+    m_path: Assets/Scenes/MainMenu.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Tutorial.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/cutsceneviking.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/cutscenethreerooms.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/level3.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/VikingHall.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/ThreeRoomsAndGarden.unity
+  m_ScriptingDefines:
+  - 
   m_PlayerSettingsYaml:
     m_Settings:
     - line: '| PlayerSettings:'
@@ -36,7 +51,7 @@ MonoBehaviour:
     - line: '|   targetDevice: 2'
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
-    - line: '|   companyName: DefaultCompany'
+    - line: '|   companyName: LightningGroup'
     - line: '|   productName: BURN!'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
@@ -977,8 +992,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 1770858344412872704
       type: {class: LinuxPlatformSettings, ns: UnityEditor.LinuxStandalone, asm: UnityEditor.LinuxStandalone.Extensions}
       data:
